@@ -13,7 +13,8 @@ CREATE TABLE Clientes (
 	NoExt INT,
 	NoInt INT,
 	Colonia NVARCHAR(50),
-	CodigoPostal INT
+	CodigoPostal INT,
+	ClienteActivo BIT
 );
 
 CREATE TABLE Factura (
@@ -24,7 +25,7 @@ CREATE TABLE Factura (
 	Productos INT,
 	NoVenta INT,
 	Cliente INT,
-
+	FacturaActiva BIT
 )
 
 CREATE TABLE Ventas (
@@ -32,11 +33,12 @@ CREATE TABLE Ventas (
 	Fecha DATE,
 	Total INT,
 	Empleado INT,
-	Detalle INT
+	Detalle INT,
+	VentaActiva BIT
 )
 
 CREATE TABLE DetalleVentas (
-	IdDetalleVenta INT NOT NULL IDENTITY(1,1) primary key,
+	IdDetalleVenta INT,
 	Producto int
 )
 
@@ -54,7 +56,8 @@ create table Empleado(
 	Vender BIT,
 	Fecha_alta date,
 	Salario float,
-	Contraseña nvarchar(50)
+	Contraseña nvarchar(50),
+	EmpleadoActivo BIT
 )
 
 create table Producto(
@@ -65,11 +68,12 @@ create table Producto(
 	--No_exist int, 
 	Categoria nvarchar(50),
 	Descripcion ntext,
-	Proveedor int
+	Proveedor int,
+	ProductoActivo BIT
 )
 
 create table Inventario(
-	Productos int not null IDENTITY(1,1) primary key,
+	Productos int,
 	NumeroExistencias int
 )
 
@@ -80,5 +84,6 @@ create table Relacion_Proveedor_Producto(
 
 create table Proveedor(
 	Id_proveedor int not null IDENTITY(1,1) primary key,
-	Nombre nvarchar(50)
+	Nombre nvarchar(50),
+	ProveedorActivo BIT
 )
