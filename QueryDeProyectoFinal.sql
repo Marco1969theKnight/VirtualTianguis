@@ -22,8 +22,8 @@ CREATE TABLE Factura (
 	UsuarioEmisor NVARCHAR(50),
 	Pago MONEY,
 	Productos INT,
-	NoVenta INT NOT NULL,
-	Cliente INT NOT NULL,
+	NoVenta INT,
+	Cliente INT,
 
 )
 
@@ -31,13 +31,13 @@ CREATE TABLE Ventas (
 	NoVenta INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	Fecha DATE,
 	Total INT,
-	Empleado INT NOT NULL,
-	Detalle INT  NOT NULL
+	Empleado INT,
+	Detalle INT
 )
 
 CREATE TABLE DetalleVentas (
 	IdDetalleVenta INT NOT NULL IDENTITY(1,1) primary key,
-	Producto int not null
+	Producto int
 )
 
 create table Empleado(
@@ -54,7 +54,7 @@ create table Empleado(
 	Vender BIT,
 	Fecha_alta date,
 	Salario money,
-	Contraseña nvarchar(50)
+	ContraseÃ±a nvarchar(50)
 )
 
 create table Producto(
@@ -65,7 +65,7 @@ create table Producto(
 	--No_exist int, 
 	Categoria nvarchar(50),
 	Descripcion ntext,
-	Proveedor int not null
+	Proveedor int
 )
 
 create table Inventario(
@@ -74,8 +74,8 @@ create table Inventario(
 )
 
 create table Relacion_Proveedor_Producto(
-	Proveedor int not null,
-	Producto int not null
+	Proveedor int,
+	Producto int
 )
 
 create table Proveedor(
