@@ -20,7 +20,7 @@ CREATE TABLE Factura (
 	ID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	FechaFacturacion DATE,
 	UsuarioEmisor NVARCHAR(50),
-	Pago MONEY,
+	Pago FLOAT,
 	Productos INT,
 	NoVenta INT,
 	Cliente INT,
@@ -53,7 +53,7 @@ create table Empleado(
 	Almacen BIT,
 	Vender BIT,
 	Fecha_alta date,
-	Salario money,
+	Salario float,
 	Contraseña nvarchar(50)
 )
 
@@ -61,7 +61,7 @@ create table Producto(
 	Id_producto int not null IDENTITY(1,1) primary key,
 	Nombre nvarchar(50),
 	Marca nvarchar(50),
-	Precio money,
+	Precio float,
 	--No_exist int, 
 	Categoria nvarchar(50),
 	Descripcion ntext,
