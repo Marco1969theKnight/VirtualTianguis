@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheVirtualTianguisProyect
 {
-    public partial class Form1 : Form
+    public partial class VirtualTianguis : Form
     {
-        public Form1()
+        public VirtualTianguis()
         {
             InitializeComponent();
         }
