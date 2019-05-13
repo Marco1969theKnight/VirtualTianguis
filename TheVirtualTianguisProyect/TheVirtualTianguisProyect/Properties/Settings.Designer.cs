@@ -32,5 +32,17 @@ namespace TheVirtualTianguisProyect.Properties {
                 return ((string)(this["Conexion"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDOtros {
+            get {
+                return ((int)(this["IDOtros"]));
+            }
+            set {
+                this["IDOtros"] = value;
+            }
+        }
     }
 }
