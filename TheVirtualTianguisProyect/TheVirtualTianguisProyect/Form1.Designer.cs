@@ -35,6 +35,7 @@
             this.NomUsuTB = new System.Windows.Forms.TextBox();
             this.ConTB = new System.Windows.Forms.TextBox();
             this.RegButon = new System.Windows.Forms.Button();
+            this.InButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,10 +44,9 @@
             this.NomUsuLabel.AutoSize = true;
             this.NomUsuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomUsuLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.NomUsuLabel.Location = new System.Drawing.Point(262, 49);
-            this.NomUsuLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NomUsuLabel.Location = new System.Drawing.Point(349, 36);
             this.NomUsuLabel.Name = "NomUsuLabel";
-            this.NomUsuLabel.Size = new System.Drawing.Size(248, 31);
+            this.NomUsuLabel.Size = new System.Drawing.Size(300, 38);
             this.NomUsuLabel.TabIndex = 0;
             this.NomUsuLabel.Text = "Nombre de Usuario";
             // 
@@ -55,20 +55,19 @@
             this.ConLabel.AutoSize = true;
             this.ConLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ConLabel.Location = new System.Drawing.Point(262, 195);
-            this.ConLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConLabel.Location = new System.Drawing.Point(349, 158);
             this.ConLabel.Name = "ConLabel";
-            this.ConLabel.Size = new System.Drawing.Size(155, 31);
+            this.ConLabel.Size = new System.Drawing.Size(186, 38);
             this.ConLabel.TabIndex = 1;
             this.ConLabel.Text = "Contraseña";
             // 
             // LogoEmpresa
             // 
             this.LogoEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("LogoEmpresa.Image")));
-            this.LogoEmpresa.Location = new System.Drawing.Point(27, 29);
-            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogoEmpresa.Location = new System.Drawing.Point(36, 36);
+            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogoEmpresa.Name = "LogoEmpresa";
-            this.LogoEmpresa.Size = new System.Drawing.Size(195, 171);
+            this.LogoEmpresa.Size = new System.Drawing.Size(260, 210);
             this.LogoEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoEmpresa.TabIndex = 2;
             this.LogoEmpresa.TabStop = false;
@@ -76,20 +75,20 @@
             // NomUsuTB
             // 
             this.NomUsuTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomUsuTB.Location = new System.Drawing.Point(262, 98);
-            this.NomUsuTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NomUsuTB.Location = new System.Drawing.Point(349, 97);
+            this.NomUsuTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NomUsuTB.Name = "NomUsuTB";
-            this.NomUsuTB.Size = new System.Drawing.Size(271, 37);
+            this.NomUsuTB.Size = new System.Drawing.Size(360, 45);
             this.NomUsuTB.TabIndex = 3;
             // 
             // ConTB
             // 
             this.ConTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConTB.Location = new System.Drawing.Point(262, 244);
-            this.ConTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConTB.Location = new System.Drawing.Point(349, 218);
+            this.ConTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConTB.Name = "ConTB";
             this.ConTB.PasswordChar = '*';
-            this.ConTB.Size = new System.Drawing.Size(271, 37);
+            this.ConTB.Size = new System.Drawing.Size(360, 45);
             this.ConTB.TabIndex = 4;
             this.ConTB.UseSystemPasswordChar = true;
             // 
@@ -98,27 +97,42 @@
             this.RegButon.BackColor = System.Drawing.SystemColors.ControlDark;
             this.RegButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegButon.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.RegButon.Location = new System.Drawing.Point(45, 232);
-            this.RegButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegButon.Location = new System.Drawing.Point(60, 286);
+            this.RegButon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegButon.Name = "RegButon";
-            this.RegButon.Size = new System.Drawing.Size(158, 49);
+            this.RegButon.Size = new System.Drawing.Size(211, 60);
             this.RegButon.TabIndex = 5;
             this.RegButon.Text = "Registrar";
             this.RegButon.UseVisualStyleBackColor = false;
             this.RegButon.Click += new System.EventHandler(this.button1_Click);
             // 
+            // InButton
+            // 
+            this.InButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.InButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.InButton.Location = new System.Drawing.Point(414, 286);
+            this.InButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.InButton.Name = "InButton";
+            this.InButton.Size = new System.Drawing.Size(211, 60);
+            this.InButton.TabIndex = 6;
+            this.InButton.Text = "Iniciar Sesión";
+            this.InButton.UseVisualStyleBackColor = false;
+            this.InButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // VirtualTianguis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 327);
+            this.ClientSize = new System.Drawing.Size(763, 402);
+            this.Controls.Add(this.InButton);
             this.Controls.Add(this.RegButon);
             this.Controls.Add(this.ConTB);
             this.Controls.Add(this.NomUsuTB);
             this.Controls.Add(this.LogoEmpresa);
             this.Controls.Add(this.ConLabel);
             this.Controls.Add(this.NomUsuLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VirtualTianguis";
             this.Text = "Virtual Tianguis";
             ((System.ComponentModel.ISupportInitialize)(this.LogoEmpresa)).EndInit();
@@ -135,6 +149,7 @@
         private System.Windows.Forms.TextBox NomUsuTB;
         private System.Windows.Forms.TextBox ConTB;
         private System.Windows.Forms.Button RegButon;
+        private System.Windows.Forms.Button InButton;
     }
 }
 
