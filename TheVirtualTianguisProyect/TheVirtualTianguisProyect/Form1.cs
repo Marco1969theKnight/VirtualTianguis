@@ -19,7 +19,8 @@ namespace TheVirtualTianguisProyect
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TheVirtualTianguisProyect.Formas.Cliente Forma = new TheVirtualTianguisProyect.Formas.Cliente();
+            Forma.ShowDialog();
         }
     }
 }

@@ -44,5 +44,41 @@ namespace TheVirtualTianguisProyect.Properties {
                 this["IDOtros"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDEmpleados {
+            get {
+                return ((int)(this["IDEmpleados"]));
+            }
+            set {
+                this["IDEmpleados"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDSupervisores {
+            get {
+                return ((int)(this["IDSupervisores"]));
+            }
+            set {
+                this["IDSupervisores"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDGerentes {
+            get {
+                return ((int)(this["IDGerentes"]));
+            }
+            set {
+                this["IDGerentes"] = value;
+            }
+        }
     }
 }
