@@ -148,5 +148,8 @@
     <Folder Include="CapaEntidades\" />
     <Folder Include="CapaNegocios\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\VirtualTinguis_apka.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
