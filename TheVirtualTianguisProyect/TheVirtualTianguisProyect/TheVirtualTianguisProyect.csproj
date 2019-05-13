@@ -66,11 +66,29 @@
     <Compile Include="Formas\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\FormEmpleado.cs">
+    <Compile Include="Formas\Editar\FormEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\FormEmpleado.Designer.cs">
-      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    <Compile Include="Formas\Editar\FormEmpleados.Designer.cs">
+      <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Editar\FormGerentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Editar\FormGerentes.Designer.cs">
+      <DependentUpon>FormGerentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Editar\FormOtros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Editar\FormOtros.Designer.cs">
+      <DependentUpon>FormOtros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Editar\FormSupervisores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Editar\FormSupervisores.Designer.cs">
+      <DependentUpon>FormSupervisores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,8 +98,17 @@
     <EmbeddedResource Include="Formas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\FormEmpleado.resx">
-      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="Formas\Editar\FormEmpleados.resx">
+      <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Editar\FormGerentes.resx">
+      <DependentUpon>FormGerentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Editar\FormOtros.resx">
+      <DependentUpon>FormOtros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Editar\FormSupervisores.resx">
+      <DependentUpon>FormSupervisores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
