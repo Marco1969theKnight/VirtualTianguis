@@ -90,6 +90,8 @@
     <Compile Include="Formas\Editar\FormSupervisores.Designer.cs">
       <DependentUpon>FormSupervisores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\Datos\DatosCliente.cs" />
+    <Compile Include="Negocios\Datos\DatosEmpleado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -147,7 +149,6 @@
     <Folder Include="Formas\Almacen\" />
     <Folder Include="Formas\Vender\" />
     <Folder Include="Negocios\Administradores\" />
-    <Folder Include="Negocios\Datos\" />
     <Folder Include="Persistencia\" />
   </ItemGroup>
   <ItemGroup>
