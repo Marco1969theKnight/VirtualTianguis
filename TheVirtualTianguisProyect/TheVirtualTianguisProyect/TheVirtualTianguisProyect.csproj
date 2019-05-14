@@ -144,9 +144,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CapaDatos\" />
-    <Folder Include="CapaEntidades\" />
-    <Folder Include="CapaNegocios\" />
+    <Folder Include="Formas\Almacen\" />
+    <Folder Include="Formas\Vender\" />
+    <Folder Include="Negocios\Administradores\" />
+    <Folder Include="Negocios\Datos\" />
+    <Folder Include="Persistencia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\VirtualTinguis_apka.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
