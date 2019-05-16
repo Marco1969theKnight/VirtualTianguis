@@ -97,6 +97,7 @@
     <Compile Include="Negocios\Datos\DatosProducto.cs" />
     <Compile Include="Negocios\Datos\DatosProveedor.cs" />
     <Compile Include="Negocios\Datos\DatosVenta.cs" />
+    <Compile Include="Persistencia\AdministradorDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -155,7 +156,6 @@
   <ItemGroup>
     <Folder Include="Formas\Almacen\" />
     <Folder Include="Formas\Vender\" />
-    <Folder Include="Persistencia\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\VirtualTinguis_apka.png" />
