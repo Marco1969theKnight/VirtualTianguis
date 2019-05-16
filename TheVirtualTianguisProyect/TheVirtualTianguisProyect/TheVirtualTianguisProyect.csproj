@@ -90,6 +90,12 @@
     <Compile Include="Formas\Editar\FormSupervisores.Designer.cs">
       <DependentUpon>FormSupervisores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocios\Administradores\AdministradorDatosCliente.cs" />
     <Compile Include="Negocios\Datos\DatosCliente.cs" />
     <Compile Include="Negocios\Datos\DatosEmpleado.cs" />
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Editar\FormSupervisores.resx">
       <DependentUpon>FormSupervisores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
