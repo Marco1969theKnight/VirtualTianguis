@@ -32,7 +32,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
                 else
                 {
                     DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
-                    if(TablaEmpleado == "Otros")
+                    if (TablaEmpleado == "Otros")
                         TheVirtualTianguisProyect.Properties.Settings.Default.IDOtros = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
                     else if (TablaEmpleado == "Empleado")
                         TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
@@ -133,41 +133,28 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosUsuario(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
-        public static void ActualizaDatosUsuario(DigitalDent.Negocios.Datos.DatosUsuario DatosUsuario)
+        public static void ActualizaDatosUsuario(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
         {
-            String ConnectionString = String.Format(DigitalDent.Properties.Settings.Default.ConexionDB);
-            String query = "update Usuarios set IDUsuario = " + DatosUsuario.IDUsuario + ", IDTipoUsuario = " + DatosUsuario.IDTipoUsuario + ", APaterno = '" + DatosUsuario.APaterno + "', AMaterno = '" + DatosUsuario.AMaterno + "', Direccion = '" + DatosUsuario.Direccion + "', Telefono = '" + DatosUsuario.Telefono + "', Ciudad = '" + DatosUsuario.Ciudad + "', Estado = '" + DatosUsuario.Estado + "', Usuario = '" + DatosUsuario.Usuario + "', Contraseña = '" + DatosUsuario.Contraseña + "', Activo = '" + DatosUsuario.Activo + "' where IDUsuario = " + DatosUsuario.IDUsuario;
+            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
+            String query = "update Empleado set id_empleado = " + DatosEmpleado.id_empleado + ", Oficio = '" + DatosEmpleado.Oficio + "', APaterno = '" + DatosEmpleado.APaterno + "', AMaterno = '" + DatosEmpleado.AMaterno + "', Nombre_usuario = '" + DatosEmpleado.Nombre_usuario + "', Edad = " + DatosEmpleado.Edad + ", Oficio = '" + DatosEmpleado.Oficio + "', Fecha_alta = '" + DatosEmpleado.Fecha_alta + "', Salario = " + DatosEmpleado.Salario + ", Contraseña = '" + DatosEmpleado.Contraseña + "', EmpleadoActivo = '" + DatosEmpleado.EmpleadoActivo + "' where id_empleado = " + DatosEmpleado.id_empleado;
 
-            DigitalDent.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
+            TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static DigitalDent.Negocios.Datos.DatosUsuario ObtenerDatosCompleto(System.String NombreCompleto)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosCompleto(System.String NombreCompleto, String TablaEmpleado)
         {
-            String ConnectionString = String.Format(DigitalDent.Properties.Settings.Default.ConexionDB);
-            String query = "SELECT * FROM Usuarios WHERE Nombre+' '+APaterno+' '+AMaterno = '" + NombreCompleto + "'";
+            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
+            String query = "SELECT * FROM Empleado WHERE Nombre+' '+APaterno+' '+AMaterno = '" + NombreCompleto + "'";
 
-            DataTable dt = DigitalDent.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Usuarios");
+            DataTable dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
             if (dt.Rows.Count == 0)
             {
                 return null;
             }
-            return new DigitalDent.Negocios.Datos.DatosUsuario(dt.Rows[0]); ;
-        }
-
-        public static DigitalDent.Negocios.Datos.DatosUsuario VerificaMedico(System.String Nombre)
-        {
-            String ConnectionString = String.Format(DigitalDent.Properties.Settings.Default.ConexionDB);
-            String query = "select * from Empleados where Nombre + ' ' + APaterno + ' ' + AMaterno = '" + Nombre + "'";
-
-            DataTable Dt = DigitalDent.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Usuarios");
-            if (Dt.Rows.Count == 0)
-            {
-                return null;
-            }
-
-            return new DigitalDent.Negocios.Datos.DatosUsuario(Dt.Rows[0]);
+                return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(dt.Rows[0]); ;
         }
     }
+}
