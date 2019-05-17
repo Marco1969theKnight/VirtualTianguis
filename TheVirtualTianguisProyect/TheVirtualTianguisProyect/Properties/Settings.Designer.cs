@@ -80,5 +80,17 @@ namespace TheVirtualTianguisProyect.Properties {
                 this["IDGerentes"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDCliente {
+            get {
+                return ((int)(this["IDCliente"]));
+            }
+            set {
+                this["IDCliente"] = value;
+            }
+        }
     }
 }
