@@ -36,7 +36,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaCliente(TheVirtualTianguisProyect.Negocios.Datos.DatosCliente DatosUsuario)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Clientes( ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, Colonia, CodigoPostal, ClienteActivo) values ( " + DatosUsuario.ID + ", " + "'" + DatosUsuario.RFC + "', " + "'" + DatosUsuario.Nombre + "', " + "'" + DatosUsuario.APaterno + "', " + "'" + DatosUsuario.AMaterno + "', " + "'" + DatosUsuario.Estado + "', " + "'" + DatosUsuario.Ciudad + "', " +  "'" + DatosUsuario.Calle + "', " + DatosUsuario.NoExt + ", " + ", " + DatosUsuario.NoInt + ", " + "'" + DatosUsuario.Colonia + "', " + DatosUsuario.CodigoPostal + ", " + DatosUsuario.ClienteActivo + "') ";
+            String query = "insert into Clientes( ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, Colonia, CodigoPostal, ClienteActivo) values ( " + DatosUsuario.ID + ", " + "'" + DatosUsuario.RFC + "', " + "'" + DatosUsuario.Nombre + "', " + "'" + DatosUsuario.APaterno + "', " + "'" + DatosUsuario.AMaterno + "', " + "'" + DatosUsuario.Estado + "', " + "'" + DatosUsuario.Ciudad + "', " +  "'" + DatosUsuario.Calle + "', " + DatosUsuario.NoExt + ", " + ", " + DatosUsuario.NoInt + ", " + "'" + DatosUsuario.Colonia + "', " + DatosUsuario.CodigoPostal + ", " + "'" + DatosUsuario.ClienteActivo + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
