@@ -61,6 +61,7 @@ namespace TheVirtualTianguisProyect
                                 {
                                     MessageBox.Show("Login Vendedor");
 
+
                                 }
 
 
@@ -73,6 +74,10 @@ namespace TheVirtualTianguisProyect
                                 if (Editar && Vender && Almacen)
                                 {
                                     MessageBox.Show("Login Gerente");
+                                    
+                                    TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
+                                    FormaP.ShowDialog();
+                                    
                                 }
 
 
