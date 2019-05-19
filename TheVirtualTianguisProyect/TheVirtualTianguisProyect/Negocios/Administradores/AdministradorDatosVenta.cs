@@ -9,44 +9,44 @@ using System.Threading.Tasks;
 
 namespace TheVirtualTianguisProyect.Negocios.Administradores
 {
-    class AdministradorDatosFactura
+    class AdministradorDatosVenta
     {
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatosFactura(System.Double IDFactura)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosVenta ObtenerDatosVenta(System.Double NoVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "select * from Factura where ID = " + IDFactura;
+            String query = "select * from Ventas where NoVenta = " + NoVenta;
 
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Factura");
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Ventas");
             if (Dt.Rows.Count == 0)
             {
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosVenta(Dt.Rows[0]);
         }
 
-        public static void BajaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void BajaVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set FacturaActiva = '" + false + "' where ID = " + DatosFactura.ID;
+            String query = "update Ventas set VentaActiva = '" + false + "' where NoVenta = " + DatosVenta.NoVenta;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static void AltaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void AltaVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Factura( ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( " + DatosFactura.ID + ",  " + "'" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", " + DatosFactura.Cliente + ", '" + DatosFactura.FacturaActiva + "') ";
+            String query = "insert into Ventas( NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva ) values ( " + DatosVenta.NoVenta + ",  " + "'" + DatosVenta.Fecha + "', " + DatosVenta.Total + ", " + DatosVenta.Empleado + ", " + DatosVenta.Detalle + ", '" + DatosVenta.VentaActiva + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static Double VerificaFacturaAlta(System.Int32 NoVenta)
+        public static Double VerificaVentaAlta(System.Int32 NoVenta)
         {
             int Bandera;
             SqlDataReader Encontrado;
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Ventas WHERE NoVenta = '" + NoVenta + "'";
 
             SqlConnection myConnection = new SqlConnection(ConnectionString);
             try
@@ -77,26 +77,26 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return Bandera;
         }
 
-        public static void ActualizaDatosFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void ActualizaDatosVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set ID = " + DatosFactura.ID + ", FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = " + DatosFactura.Cliente + ", FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
+            String query = "update Ventas set Fecha = '" + DatosVenta.Fecha + "', " + ", Total = " + DatosVenta.Total + ", Empleado = " + DatosVenta.Empleado + ", Detalle = " + DatosVenta.Detalle + ", VentaActiva = '" + DatosVenta.VentaActiva + "' where NoVenta = " + DatosVenta.NoVenta;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatos(System.String NoVenta)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosProducto ObtenerVenta(System.Int32 NoVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Ventas WHERE NoVenta= " + NoVenta;
 
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Factura");
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Ventas");
             if (Dt.Rows.Count == 0)
             {
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto(Dt.Rows[0]);
         }
     }
 }

@@ -9,44 +9,44 @@ using System.Threading.Tasks;
 
 namespace TheVirtualTianguisProyect.Negocios.Administradores
 {
-    class AdministradorDatosFactura
+    class AdministradorDatosProducto
     {
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatosFactura(System.Double IDFactura)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosProducto ObtenerDatosProducto(System.Double IDProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "select * from Factura where ID = " + IDFactura;
+            String query = "select * from Producto where Id_proveedor = " + IDProducto;
 
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Factura");
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Producto");
             if (Dt.Rows.Count == 0)
             {
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto(Dt.Rows[0]);
         }
 
-        public static void BajaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void BajaProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set FacturaActiva = '" + false + "' where ID = " + DatosFactura.ID;
+            String query = "update Producto set ProductoActivo = '" + false + "' where Id_producto = " + DatosProducto.Id_producto;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static void AltaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void AltaProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Factura( ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( " + DatosFactura.ID + ",  " + "'" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", " + DatosFactura.Cliente + ", '" + DatosFactura.FacturaActiva + "') ";
+            String query = "insert into Producto( Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, ProductoActivo ) values ( " + DatosProducto.Id_producto + ",  " + "'" + DatosProducto.Nombre + "', " + "'" + DatosProducto.Marca + "', " + DatosProducto.Precio + ", '" + DatosProducto.Categoria + "' , '" + DatosProducto.Descripcion + "', " + DatosProducto.Proveedor + ", '" + DatosProducto.ProductoActivo + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static Double VerificaFacturaAlta(System.Int32 NoVenta)
+        public static Double VerificaProductoAlta(System.String Nombre)
         {
             int Bandera;
             SqlDataReader Encontrado;
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Producto WHERE Nombre = '" + Nombre + "'";
 
             SqlConnection myConnection = new SqlConnection(ConnectionString);
             try
@@ -77,26 +77,26 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return Bandera;
         }
 
-        public static void ActualizaDatosFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
+        public static void ActualizaDatosProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set ID = " + DatosFactura.ID + ", FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = " + DatosFactura.Cliente + ", FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
+            String query = "update Producto set Id_producto = " + DatosProducto.Id_producto + ", Marca = '" + DatosProducto.Marca + "', Precio = " + DatosProducto.Precio + ", Categoria = '" + DatosProducto.Categoria + "', Descripcion = '" + DatosProducto.Descripcion + "', Proveedor = " + DatosProducto.Proveedor + ", ProductoActivo = '" + DatosProducto.ProductoActivo + "' where Id_producto = " + DatosProducto.Id_producto;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatos(System.String NoVenta)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosProducto ObtenerDatos(System.String Nombre)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Producto WHERE Nombre= " + Nombre;
 
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Factura");
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Producto");
             if (Dt.Rows.Count == 0)
             {
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto(Dt.Rows[0]);
         }
     }
 }
