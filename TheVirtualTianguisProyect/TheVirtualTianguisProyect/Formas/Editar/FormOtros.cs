@@ -19,9 +19,8 @@ namespace TheVirtualTianguisProyect.Formas.Editar
 
         private void FormOtros_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Otros' Puede moverla o quitarla según sea necesario.
-            this.otrosTableAdapter.Fill(this.datosTianguis.Otros);
-
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Empleado' Puede moverla o quitarla según sea necesario.
+            this.empleadoTableAdapter.FillByOtros(this.datosTianguis.Empleado);
         }
 
         private void fechAltDateTime_ValueChanged(object sender, EventArgs e)
@@ -112,6 +111,86 @@ namespace TheVirtualTianguisProyect.Formas.Editar
         private void aMatTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void fillByOtrosToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByOtros(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByEmpleadosToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByEmpleadosToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByEmpleadosToolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.Fill(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillByOtrosToolStripButton_Click_1(object sender, EventArgs e)
+        {
+           
         }
     }
 }

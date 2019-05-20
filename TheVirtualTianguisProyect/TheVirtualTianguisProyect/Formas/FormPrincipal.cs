@@ -56,25 +56,29 @@ namespace TheVirtualTianguisProyect.Formas
         private void gerenteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Formas.Editar.FormGerentes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormGerentes();
-            Forma.ShowDialog();
+            Forma.MdiParent = this;
+            Forma.Show();
         }
 
         private void supervisorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Formas.Editar.FormSupervisores Forma = new TheVirtualTianguisProyect.Formas.Editar.FormSupervisores();
-            Forma.ShowDialog();
+            Forma.MdiParent = this;
+            Forma.Show();
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TheVirtualTianguisProyect.Formas.Editar.FormGerentes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormGerentes();
-            Forma.ShowDialog();
+            TheVirtualTianguisProyect.Formas.Editar.FormEmpleados Forma = new TheVirtualTianguisProyect.Formas.Editar.FormEmpleados();
+            Forma.MdiParent = this;
+            Forma.Show();
         }
 
         private void otrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Formas.Editar.FormOtros Forma = new TheVirtualTianguisProyect.Formas.Editar.FormOtros();
-            Forma.ShowDialog();
+            Forma.MdiParent = this;
+            Forma.Show();
         }
     }
 }

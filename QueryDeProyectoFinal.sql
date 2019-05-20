@@ -39,7 +39,9 @@ CREATE TABLE Ventas (
 
 CREATE TABLE DetalleVentas (
 	IdDetalleVenta INT,
-	Producto int
+	Producto int,
+	Cantidad int,
+	NoVenta int
 )
 
 create table Empleado(
@@ -87,3 +89,9 @@ create table Proveedor(
 	Nombre nvarchar(50),
 	ProveedorActivo BIT
 )
+
+USE VirTian
+
+SELECT DV.IdDetalleVenta, DV.Producto, DV.Cantidad, DV.NoVenta
+FROM     DetalleVentas AS DV, Ventas AS V, Producto AS P
+WHERE	 (DV.NoVenta = V.NoVenta) AND (DV.Producto = p.Id_producto)

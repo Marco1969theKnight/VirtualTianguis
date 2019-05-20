@@ -19,8 +19,17 @@ namespace TheVirtualTianguisProyect.Formas.Editar
 
         private void FormSupervisores_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Supervisor' Puede moverla o quitarla según sea necesario.
-            this.supervisorTableAdapter.Fill(this.datosTianguis.Supervisor);
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Empleado' Puede moverla o quitarla según sea necesario.
+            this.empleadoTableAdapter.FillBySupervisores(this.datosTianguis.Empleado);
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

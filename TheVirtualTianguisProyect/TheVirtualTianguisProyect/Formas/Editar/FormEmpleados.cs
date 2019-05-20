@@ -20,7 +20,33 @@ namespace TheVirtualTianguisProyect.Formas.Editar
         private void FormEmpleados_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Empleado' Puede moverla o quitarla según sea necesario.
-            this.empleadoTableAdapter.Fill(this.datosTianguis.Empleado);
+            this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+
+        }
+
+        private void fillByEmpleadosToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByEmpleadosToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

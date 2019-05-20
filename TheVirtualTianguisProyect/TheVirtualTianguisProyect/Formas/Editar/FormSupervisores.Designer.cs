@@ -38,7 +38,6 @@
             this.CanButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.SalButton = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.conTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.salNumeric = new System.Windows.Forms.NumericUpDown();
@@ -57,10 +56,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nomtTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.datosTianguisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supervisorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supervisorTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.SupervisorTableAdapter();
+            this.empleadoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.EmpleadoTableAdapter();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,12 +75,11 @@
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edadNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -100,6 +98,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(822, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // AgregarButton
             // 
@@ -154,35 +153,6 @@
             this.SalButton.Size = new System.Drawing.Size(62, 24);
             this.SalButton.Text = "Salir";
             this.SalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idempleadoDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apaternoDataGridViewTextBoxColumn,
-            this.amaternoDataGridViewTextBoxColumn,
-            this.nombreusuarioDataGridViewTextBoxColumn,
-            this.edadDataGridViewTextBoxColumn,
-            this.oficioDataGridViewTextBoxColumn,
-            this.editarDataGridViewCheckBoxColumn,
-            this.almacenDataGridViewCheckBoxColumn,
-            this.venderDataGridViewCheckBoxColumn,
-            this.fechaaltaDataGridViewTextBoxColumn,
-            this.salarioDataGridViewTextBoxColumn,
-            this.contraseñaDataGridViewTextBoxColumn,
-            this.empleadoActivoDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.supervisorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(786, 150);
-            this.dataGridView1.TabIndex = 22;
             // 
             // conTextBox
             // 
@@ -347,24 +317,49 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Nombre:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idempleadoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apaternoDataGridViewTextBoxColumn,
+            this.amaternoDataGridViewTextBoxColumn,
+            this.nombreusuarioDataGridViewTextBoxColumn,
+            this.edadDataGridViewTextBoxColumn,
+            this.oficioDataGridViewTextBoxColumn,
+            this.editarDataGridViewCheckBoxColumn,
+            this.almacenDataGridViewCheckBoxColumn,
+            this.venderDataGridViewCheckBoxColumn,
+            this.fechaaltaDataGridViewTextBoxColumn,
+            this.salarioDataGridViewTextBoxColumn,
+            this.contraseñaDataGridViewTextBoxColumn,
+            this.empleadoActivoDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.empleadoBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 48);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(750, 180);
+            this.dataGridView1.TabIndex = 58;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // datosTianguis
             // 
             this.datosTianguis.DataSetName = "DatosTianguis";
             this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // datosTianguisBindingSource
+            // empleadoTableAdapter
             // 
-            this.datosTianguisBindingSource.DataSource = this.datosTianguis;
-            this.datosTianguisBindingSource.Position = 0;
+            this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
-            // supervisorBindingSource
+            // empleadoBindingSource
             // 
-            this.supervisorBindingSource.DataMember = "Supervisor";
-            this.supervisorBindingSource.DataSource = this.datosTianguisBindingSource;
-            // 
-            // supervisorTableAdapter
-            // 
-            this.supervisorTableAdapter.ClearBeforeFill = true;
+            this.empleadoBindingSource.DataMember = "Empleado";
+            this.empleadoBindingSource.DataSource = this.datosTianguis;
             // 
             // idempleadoDataGridViewTextBoxColumn
             // 
@@ -387,16 +382,16 @@
             // 
             this.apaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.apaternoDataGridViewTextBoxColumn.DataPropertyName = "Apaterno";
-            this.apaternoDataGridViewTextBoxColumn.HeaderText = "A. paterno";
+            this.apaternoDataGridViewTextBoxColumn.HeaderText = "A. Paterno";
             this.apaternoDataGridViewTextBoxColumn.Name = "apaternoDataGridViewTextBoxColumn";
             this.apaternoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apaternoDataGridViewTextBoxColumn.Width = 103;
+            this.apaternoDataGridViewTextBoxColumn.Width = 104;
             // 
             // amaternoDataGridViewTextBoxColumn
             // 
             this.amaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.amaternoDataGridViewTextBoxColumn.DataPropertyName = "Amaterno";
-            this.amaternoDataGridViewTextBoxColumn.HeaderText = "A. materno";
+            this.amaternoDataGridViewTextBoxColumn.HeaderText = "A. Materno";
             this.amaternoDataGridViewTextBoxColumn.Name = "amaternoDataGridViewTextBoxColumn";
             this.amaternoDataGridViewTextBoxColumn.ReadOnly = true;
             this.amaternoDataGridViewTextBoxColumn.Width = 106;
@@ -405,10 +400,10 @@
             // 
             this.nombreusuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.nombreusuarioDataGridViewTextBoxColumn.DataPropertyName = "Nombre_usuario";
-            this.nombreusuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.nombreusuarioDataGridViewTextBoxColumn.HeaderText = "Nom. Usuario";
             this.nombreusuarioDataGridViewTextBoxColumn.Name = "nombreusuarioDataGridViewTextBoxColumn";
             this.nombreusuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreusuarioDataGridViewTextBoxColumn.Width = 86;
+            this.nombreusuarioDataGridViewTextBoxColumn.Width = 123;
             // 
             // edadDataGridViewTextBoxColumn
             // 
@@ -485,12 +480,14 @@
             this.empleadoActivoDataGridViewCheckBoxColumn.HeaderText = "EmpleadoActivo";
             this.empleadoActivoDataGridViewCheckBoxColumn.Name = "empleadoActivoDataGridViewCheckBoxColumn";
             this.empleadoActivoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.empleadoActivoDataGridViewCheckBoxColumn.Visible = false;
             // 
             // FormSupervisores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 553);
+            this.ClientSize = new System.Drawing.Size(822, 613);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.conTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.salNumeric);
@@ -509,19 +506,21 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nomtTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
+            this.MaximumSize = new System.Drawing.Size(840, 660);
+            this.MinimumSize = new System.Drawing.Size(840, 660);
             this.Name = "FormSupervisores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Supervisores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSupervisores_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edadNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,7 +536,6 @@
         private System.Windows.Forms.ToolStripButton CanButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton SalButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox conTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown salNumeric;
@@ -556,10 +554,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nomtTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource datosTianguisBindingSource;
         private DatosTianguis datosTianguis;
-        private System.Windows.Forms.BindingSource supervisorBindingSource;
-        private DatosTianguisTableAdapters.SupervisorTableAdapter supervisorTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DatosTianguisTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
+        private System.Windows.Forms.BindingSource empleadoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apaternoDataGridViewTextBoxColumn;

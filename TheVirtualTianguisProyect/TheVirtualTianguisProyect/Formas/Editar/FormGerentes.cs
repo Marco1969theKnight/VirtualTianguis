@@ -24,9 +24,8 @@ namespace TheVirtualTianguisProyect.Formas.Editar
 
         private void FormGerentes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Gerente' Puede moverla o quitarla según sea necesario.
-            this.gerenteTableAdapter.Fill(this.datosTianguis.Gerente);
-
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Empleado' Puede moverla o quitarla según sea necesario.
+            this.empleadoTableAdapter.FillByGerentes(this.datosTianguis.Empleado);
         }
     }
 }
