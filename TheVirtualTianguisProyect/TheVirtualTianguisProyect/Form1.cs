@@ -57,7 +57,7 @@ namespace TheVirtualTianguisProyect
 
 
                             {
-                                if (Editar && Vender && !Almacen)
+                                if (!Editar && Vender && !Almacen)
                                 {
                                     MessageBox.Show("Login Vendedor");
 
@@ -65,13 +65,13 @@ namespace TheVirtualTianguisProyect
                                 }
 
 
-                                if (Almacen && Vender && !Editar)
+                                else if (Almacen && Vender && !Editar)
                                 {
                                     MessageBox.Show("Login Supervisor");
                                 }
 
 
-                                if (Editar && Vender && Almacen)
+                                else if (Editar && Vender && Almacen)
                                 {
                                     MessageBox.Show("Login Gerente");
                                     
@@ -81,7 +81,7 @@ namespace TheVirtualTianguisProyect
                                 }
 
 
-                                if (!(Editar && Vender && Almacen))
+                                else if (!(Editar && !Vender && !Almacen))
                                 {
                                     MessageBox.Show("Login Otros");
                                 }

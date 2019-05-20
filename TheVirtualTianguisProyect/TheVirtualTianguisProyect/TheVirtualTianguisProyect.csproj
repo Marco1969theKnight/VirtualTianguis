@@ -100,6 +100,9 @@
     <Compile Include="Negocios\Administradores\AdministradorDatosCliente.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosEmpleado.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosFactura.cs" />
+    <Compile Include="Negocios\Administradores\AdministradorDatosProducto.cs" />
+    <Compile Include="Negocios\Administradores\AdministradorDatosProveedor.cs" />
+    <Compile Include="Negocios\Administradores\AdministradorDatosVenta.cs" />
     <Compile Include="Negocios\Datos\DatosCliente.cs" />
     <Compile Include="Negocios\Datos\DatosEmpleado.cs" />
     <Compile Include="Negocios\Datos\DatosFactura.cs" />
