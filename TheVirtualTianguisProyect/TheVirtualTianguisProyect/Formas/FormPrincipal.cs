@@ -52,5 +52,29 @@ namespace TheVirtualTianguisProyect.Formas
             TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
             Application.Exit();
         }
+
+        private void gerenteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Editar.FormGerentes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormGerentes();
+            Forma.ShowDialog();
+        }
+
+        private void supervisorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Editar.FormSupervisores Forma = new TheVirtualTianguisProyect.Formas.Editar.FormSupervisores();
+            Forma.ShowDialog();
+        }
+
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Editar.FormGerentes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormGerentes();
+            Forma.ShowDialog();
+        }
+
+        private void otrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Editar.FormOtros Forma = new TheVirtualTianguisProyect.Formas.Editar.FormOtros();
+            Forma.ShowDialog();
+        }
     }
 }
