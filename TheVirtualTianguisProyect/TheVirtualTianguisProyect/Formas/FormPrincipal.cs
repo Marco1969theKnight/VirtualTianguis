@@ -24,7 +24,7 @@ namespace TheVirtualTianguisProyect.Formas
 
         private void cerrarEsiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,6 +45,12 @@ namespace TheVirtualTianguisProyect.Formas
         private void almacénToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
+            Application.Exit();
         }
     }
 }

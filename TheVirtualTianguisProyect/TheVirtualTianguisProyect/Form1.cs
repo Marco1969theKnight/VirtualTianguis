@@ -29,6 +29,9 @@ namespace TheVirtualTianguisProyect
         private void button1_Click_1(object sender, EventArgs e)
         {
             logins();
+            NomUsuTB.Text = String.Empty;
+            ConTB.Text = String.Empty;
+            NomUsuTB.Focus();
         }
 
         private void VirtualTianguis_Load(object sender, EventArgs e)

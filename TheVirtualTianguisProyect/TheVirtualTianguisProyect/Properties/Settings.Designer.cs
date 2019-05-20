@@ -92,5 +92,29 @@ namespace TheVirtualTianguisProyect.Properties {
                 this["IDCliente"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CloseApplication {
+            get {
+                return ((bool)(this["CloseApplication"]));
+            }
+            set {
+                this["CloseApplication"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ContinueUser {
+            get {
+                return ((bool)(this["ContinueUser"]));
+            }
+            set {
+                this["ContinueUser"] = value;
+            }
+        }
     }
 }
