@@ -63,14 +63,17 @@ namespace TheVirtualTianguisProyect
                                 if (!Editar && Vender && !Almacen)
                                 {
                                     MessageBox.Show("Login Vendedor");
-
-
+                                    TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
+                                    FormaP.ShowDialog();
                                 }
 
 
                                 else if (Almacen && Vender && !Editar)
                                 {
                                     MessageBox.Show("Login Supervisor");
+
+                                    TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
+                                    FormaP.ShowDialog();
                                 }
 
 
@@ -87,6 +90,8 @@ namespace TheVirtualTianguisProyect
                                 else if (!(Editar && !Vender && !Almacen))
                                 {
                                     MessageBox.Show("Login Otros");
+                                    TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
+                                    FormaP.ShowDialog();
                                 }
 
                             }
