@@ -31,5 +31,20 @@ namespace TheVirtualTianguisProyect.Formas
         {
 
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void venderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void almacénToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

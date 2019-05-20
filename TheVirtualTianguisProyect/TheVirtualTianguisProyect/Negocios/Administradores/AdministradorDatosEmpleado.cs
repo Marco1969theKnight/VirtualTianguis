@@ -70,6 +70,18 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario, String TablaEmpleado)
+        {
+            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
+            String query = "select * from Empleado where Nombre_usuario = " + Usuario;
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
+            if (Dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
+        }
+
         public static void BajaEmpleado(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);

@@ -37,6 +37,7 @@
             this.supervisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,7 @@
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // gerenteToolStripMenuItem
             // 
@@ -124,6 +125,12 @@
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
+            // otrosToolStripMenuItem
+            // 
+            this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
+            this.otrosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.otrosToolStripMenuItem.Text = "Otros";
+            // 
             // venderToolStripMenuItem
             // 
             this.venderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -132,17 +139,18 @@
             this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
             this.venderToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.venderToolStripMenuItem.Text = "Vender";
+            this.venderToolStripMenuItem.Click += new System.EventHandler(this.venderToolStripMenuItem_Click);
             // 
             // nuevaVentaToolStripMenuItem
             // 
             this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
-            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.nuevaVentaToolStripMenuItem.Text = "Nueva Venta";
             // 
             // registroDeVentasToolStripMenuItem
             // 
             this.registroDeVentasToolStripMenuItem.Name = "registroDeVentasToolStripMenuItem";
-            this.registroDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.registroDeVentasToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.registroDeVentasToolStripMenuItem.Text = "Registro de Ventas";
             // 
             // almacénToolStripMenuItem
@@ -150,6 +158,7 @@
             this.almacénToolStripMenuItem.Name = "almacénToolStripMenuItem";
             this.almacénToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.almacénToolStripMenuItem.Text = "Almacén";
+            this.almacénToolStripMenuItem.Click += new System.EventHandler(this.almacénToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -212,12 +221,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Tipo de Puesto";
             // 
-            // otrosToolStripMenuItem
-            // 
-            this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
-            this.otrosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.otrosToolStripMenuItem.Text = "Otros";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,7 +235,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
