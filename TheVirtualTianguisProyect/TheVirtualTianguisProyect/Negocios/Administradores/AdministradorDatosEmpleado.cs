@@ -11,7 +11,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
 {
     class AdministradorDatosEmpleado
     {
-        public static Double VerificaEmpleado(System.String Usuario, System.String Contraseña, String TablaEmpleado)
+        public static Double VerificaEmpleado(System.String Usuario, System.String Contraseña)
         {
             int Bandera;
             SqlDataReader Encontrado;
@@ -31,15 +31,8 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
                 }
                 else
                 {
-                    DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
-                    if (TablaEmpleado == "Otros")
-                        TheVirtualTianguisProyect.Properties.Settings.Default.IDOtros = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
-                    else if (TablaEmpleado == "Empleado")
-                        TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
-                    else if (TablaEmpleado == "Supervisiores")
-                        TheVirtualTianguisProyect.Properties.Settings.Default.IDSupervisores = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
-                    else
-                        TheVirtualTianguisProyect.Properties.Settings.Default.IDGerentes = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
+                    DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
+                    TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = Int32.Parse(Dt.Rows[0].ItemArray[0].ToString());
                     Bandera = 1;
                 }
             }
@@ -57,11 +50,11 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return Bandera;
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado(System.Int32 IDEmpleado, String TablaEmpleado)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado(System.Int32 IDEmpleado)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
             String query = "select * from Empleado where id_empleado = " + IDEmpleado;
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
             if (Dt.Rows.Count == 0)
             {
                 return null;
@@ -70,11 +63,11 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario, String TablaEmpleado)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
             String query = "select * from Empleado where Nombre_usuario = " + Usuario;
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
             if (Dt.Rows.Count == 0)
             {
                 return null;

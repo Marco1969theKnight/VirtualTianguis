@@ -27,5 +27,10 @@ namespace TheVirtualTianguisProyect.Formas.Editar
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Empleado' Puede moverla o quitarla según sea necesario.
             this.empleadoTableAdapter.FillByGerentes(this.datosTianguis.Empleado);
         }
+
+        private void SalButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

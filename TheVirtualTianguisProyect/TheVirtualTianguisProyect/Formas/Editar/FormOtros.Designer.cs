@@ -57,9 +57,6 @@
             this.nomtTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.empleadoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.EmpleadoTableAdapter();
             this.idempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +71,9 @@
             this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.empleadoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.EmpleadoTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edadNumeric)).BeginInit();
@@ -153,6 +153,7 @@
             this.SalButton.Size = new System.Drawing.Size(62, 24);
             this.SalButton.Text = "Salir";
             this.SalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SalButton.Click += new System.EventHandler(this.SalButton_Click);
             // 
             // conTextBox
             // 
@@ -365,20 +366,6 @@
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataMember = "Empleado";
-            this.empleadoBindingSource.DataSource = this.datosTianguis;
-            // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadoTableAdapter
-            // 
-            this.empleadoTableAdapter.ClearBeforeFill = true;
-            // 
             // idempleadoDataGridViewTextBoxColumn
             // 
             this.idempleadoDataGridViewTextBoxColumn.DataPropertyName = "Id_empleado";
@@ -499,6 +486,20 @@
             this.empleadoActivoDataGridViewCheckBoxColumn.Name = "empleadoActivoDataGridViewCheckBoxColumn";
             this.empleadoActivoDataGridViewCheckBoxColumn.ReadOnly = true;
             this.empleadoActivoDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "Empleado";
+            this.empleadoBindingSource.DataSource = this.datosTianguis;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadoTableAdapter
+            // 
+            this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
             // FormOtros
             // 

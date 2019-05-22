@@ -152,6 +152,7 @@
             this.SalButton.Size = new System.Drawing.Size(62, 24);
             this.SalButton.Text = "Salir";
             this.SalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SalButton.Click += new System.EventHandler(this.SalButton_Click);
             // 
             // empleadoBindingSource
             // 

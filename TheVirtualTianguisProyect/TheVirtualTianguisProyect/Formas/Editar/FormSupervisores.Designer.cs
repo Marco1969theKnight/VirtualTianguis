@@ -57,9 +57,6 @@
             this.nomtTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.empleadoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.EmpleadoTableAdapter();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,12 +71,15 @@
             this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.empleadoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.EmpleadoTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edadNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -153,6 +153,7 @@
             this.SalButton.Size = new System.Drawing.Size(62, 24);
             this.SalButton.Text = "Salir";
             this.SalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SalButton.Click += new System.EventHandler(this.SalButton_Click);
             // 
             // conTextBox
             // 
@@ -347,20 +348,6 @@
             this.dataGridView1.TabIndex = 58;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadoTableAdapter
-            // 
-            this.empleadoTableAdapter.ClearBeforeFill = true;
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataMember = "Empleado";
-            this.empleadoBindingSource.DataSource = this.datosTianguis;
-            // 
             // idempleadoDataGridViewTextBoxColumn
             // 
             this.idempleadoDataGridViewTextBoxColumn.DataPropertyName = "Id_empleado";
@@ -482,6 +469,20 @@
             this.empleadoActivoDataGridViewCheckBoxColumn.ReadOnly = true;
             this.empleadoActivoDataGridViewCheckBoxColumn.Visible = false;
             // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "Empleado";
+            this.empleadoBindingSource.DataSource = this.datosTianguis;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadoTableAdapter
+            // 
+            this.empleadoTableAdapter.ClearBeforeFill = true;
+            // 
             // FormSupervisores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -519,8 +520,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.salNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edadNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
