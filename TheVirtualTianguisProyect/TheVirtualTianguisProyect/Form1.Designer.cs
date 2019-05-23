@@ -67,7 +67,7 @@
             // 
             this.LogoEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("LogoEmpresa.Image")));
             this.LogoEmpresa.Location = new System.Drawing.Point(27, 29);
-            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.LogoEmpresa.Name = "LogoEmpresa";
             this.LogoEmpresa.Size = new System.Drawing.Size(195, 171);
             this.LogoEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +78,7 @@
             // 
             this.NomUsuTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomUsuTB.Location = new System.Drawing.Point(262, 79);
-            this.NomUsuTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NomUsuTB.Margin = new System.Windows.Forms.Padding(2);
             this.NomUsuTB.Name = "NomUsuTB";
             this.NomUsuTB.Size = new System.Drawing.Size(271, 37);
             this.NomUsuTB.TabIndex = 3;
@@ -87,12 +87,13 @@
             // 
             this.ConTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConTB.Location = new System.Drawing.Point(262, 177);
-            this.ConTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConTB.Margin = new System.Windows.Forms.Padding(2);
             this.ConTB.Name = "ConTB";
             this.ConTB.PasswordChar = '*';
             this.ConTB.Size = new System.Drawing.Size(271, 37);
             this.ConTB.TabIndex = 4;
             this.ConTB.UseSystemPasswordChar = true;
+            this.ConTB.TextChanged += new System.EventHandler(this.ConTB_TextChanged);
             // 
             // RegButon
             // 
@@ -100,7 +101,7 @@
             this.RegButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegButon.ForeColor = System.Drawing.SystemColors.Highlight;
             this.RegButon.Location = new System.Drawing.Point(45, 232);
-            this.RegButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegButon.Margin = new System.Windows.Forms.Padding(2);
             this.RegButon.Name = "RegButon";
             this.RegButon.Size = new System.Drawing.Size(158, 49);
             this.RegButon.TabIndex = 5;
@@ -114,7 +115,7 @@
             this.InButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InButton.ForeColor = System.Drawing.SystemColors.Highlight;
             this.InButton.Location = new System.Drawing.Point(310, 232);
-            this.InButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InButton.Margin = new System.Windows.Forms.Padding(2);
             this.InButton.Name = "InButton";
             this.InButton.Size = new System.Drawing.Size(158, 49);
             this.InButton.TabIndex = 6;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.LogoEmpresa);
             this.Controls.Add(this.ConLabel);
             this.Controls.Add(this.NomUsuLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VirtualTianguis";
             this.Text = "Virtual Tianguis";
             this.Load += new System.EventHandler(this.VirtualTianguis_Load);

@@ -183,5 +183,15 @@
   <ItemGroup>
     <Content Include="imagenes\VirtualTinguis_apka.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CEntidades_Login\CEntidades_Login.csproj">
+      <Project>{8bf10e7e-705f-4947-8a77-936880462095}</Project>
+      <Name>CEntidades_Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CNegocios_Login\CNegocios_Login.csproj">
+      <Project>{de01d79e-b539-4e39-8a9f-40542a56b875}</Project>
+      <Name>CNegocios_Login</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
