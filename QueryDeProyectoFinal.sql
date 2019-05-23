@@ -62,6 +62,15 @@ create table Empleado(
 	EmpleadoActivo BIT
 )
 
+create proc sp_login
+@usu nvarchar(50),
+@pass nvarchar(50),
+@editar bit,
+@almacen bit,
+@vender bit
+as select Nombre_usuario,Contraseña,Editar,Almacen,Vender from Empleado where Nombre_usuario=@usu and Contraseña=@pass
+
+select * from Empleado
 create table Producto(
 	Id_producto int not null IDENTITY(1,1) primary key,
 	Nombre nvarchar(50),

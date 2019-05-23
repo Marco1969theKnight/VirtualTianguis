@@ -46,8 +46,13 @@ namespace TheVirtualTianguisProyect
             if(dt.Rows.Count > 0)
             {
                 obje.usuario1 = dt.Rows[0][0].ToString();
-                obje.password1 = dt.Rows[0][0].ToString();
-                MessageBox.Show("Bienvenido" + obje.usuario1);
+                obje.password1 = dt.Rows[0][1].ToString();
+                obje.editar1 = Convert.ToBoolean(dt.Rows[0][2]);
+                //obje.almacen1 = dt.Rows[0][3].ToString();
+                //obje.vender1 = dt.Rows[0][4].ToString();
+                
+                MessageBox.Show("Bienvenido " + obje.usuario1 + obje.editar1
+                    + obje.almacen1 + obje.vender1);
             }
             else
             {
