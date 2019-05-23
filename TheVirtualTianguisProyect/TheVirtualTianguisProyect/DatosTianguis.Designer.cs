@@ -5733,7 +5733,7 @@ namespace TheVirtualTianguisProyect.DatosTianguisTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Clientes] WHERE (([ID] = @Original_ID) AND ([RFC] = @Original_RFC) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_APaterno = 1 AND [APaterno] IS NULL) OR ([APaterno] = @Original_APaterno)) AND ((@IsNull_AMaterno = 1 AND [AMaterno] IS NULL) OR ([AMaterno] = @Original_AMaterno)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Ciudad = 1 AND [Ciudad] IS NULL) OR ([Ciudad] = @Original_Ciudad)) AND ((@IsNull_Calle = 1 AND [Calle] IS NULL) OR ([Calle] = @Original_Calle)) AND ((@IsNull_NoExt = 1 AND [NoExt] IS NULL) OR ([NoExt] = @Original_NoExt)) AND ((@IsNull_NoInt = 1 AND [NoInt] IS NULL) OR ([NoInt] = @Original_NoInt)) AND ((@IsNull_Colonia = 1 AND [Colonia] IS NULL) OR ([Colonia] = @Original_Colonia)) AND ((@IsNull_CodigoPostal = 1 AND [CodigoPostal] IS NULL) OR ([CodigoPostal] = @Original_CodigoPostal)) AND ((@IsNull_ClienteActivo = 1 AND [ClienteActivo] IS NULL) OR ([ClienteActivo] = @Original_ClienteActivo)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Clientes] WHERE (([ID] = @Original_ID) AND ([RFC] = @Original_RFC) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_APaterno = 1 AND [APaterno] IS NULL) OR ([APaterno] = @Original_APaterno)) AND ((@IsNull_AMaterno = 1 AND [AMaterno] IS NULL) OR ([AMaterno] = @Original_AMaterno)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Ciudad = 1 AND [Ciudad] IS NULL) OR ([Ciudad] = @Original_Ciudad)) AND ((@IsNull_Calle = 1 AND [Calle] IS NULL) OR ([Calle] = @Original_Calle)) AND ((@IsNull_NoExt = 1 AND [NoExt] IS NULL) OR ([NoExt] = @Original_NoExt)) AND ((@IsNull_NoInt = 1 AND [NoInt] IS NULL) OR ([NoInt] = @Original_NoInt)) AND ((@IsNull_Colonia = 1 AND [Colonia] IS NULL) OR ([Colonia] = @Original_Colonia)) AND ((@IsNull_CodigoPostal = 1 AND [CodigoPostal] IS NULL) OR ([CodigoPostal] = @Original_CodigoPostal)) AND ((@IsNull_ClienteActivo = 1 AND [ClienteActivo] IS NULL) OR ([ClienteActivo] = @Original_ClienteActivo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RFC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RFC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5761,7 +5761,7 @@ namespace TheVirtualTianguisProyect.DatosTianguisTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClienteActivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteActivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Clientes] ([RFC], [Nombre], [APaterno], [AMaterno], [Estado], [Ciudad], [Calle], [NoExt], [NoInt], [Colonia], [CodigoPostal], [ClienteActivo]) VALUES (@RFC, @Nombre, @APaterno, @AMaterno, @Estado, @Ciudad, @Calle, @NoExt, @NoInt, @Colonia, @CodigoPostal, @ClienteActivo);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Clientes] ([RFC], [Nombre], [APaterno], [AMaterno], [Estado], [Ciudad], [Calle], [NoExt], [NoInt], [Colonia], [CodigoPostal], [ClienteActivo]) VALUES (@RFC, @Nombre, @APaterno, @AMaterno, @Estado, @Ciudad, @Calle, @NoExt, @NoInt, @Colonia, @CodigoPostal, @ClienteActivo);
 SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, Colonia, CodigoPostal, ClienteActivo FROM Clientes WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RFC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RFC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5778,7 +5778,7 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClienteActivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClienteActivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Clientes] SET [RFC] = @RFC, [Nombre] = @Nombre, [APaterno] = @APaterno, [AMaterno] = @AMaterno, [Estado] = @Estado, [Ciudad] = @Ciudad, [Calle] = @Calle, [NoExt] = @NoExt, [NoInt] = @NoInt, [Colonia] = @Colonia, [CodigoPostal] = @CodigoPostal, [ClienteActivo] = @ClienteActivo WHERE (([ID] = @Original_ID) AND ([RFC] = @Original_RFC) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_APaterno = 1 AND [APaterno] IS NULL) OR ([APaterno] = @Original_APaterno)) AND ((@IsNull_AMaterno = 1 AND [AMaterno] IS NULL) OR ([AMaterno] = @Original_AMaterno)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Ciudad = 1 AND [Ciudad] IS NULL) OR ([Ciudad] = @Original_Ciudad)) AND ((@IsNull_Calle = 1 AND [Calle] IS NULL) OR ([Calle] = @Original_Calle)) AND ((@IsNull_NoExt = 1 AND [NoExt] IS NULL) OR ([NoExt] = @Original_NoExt)) AND ((@IsNull_NoInt = 1 AND [NoInt] IS NULL) OR ([NoInt] = @Original_NoInt)) AND ((@IsNull_Colonia = 1 AND [Colonia] IS NULL) OR ([Colonia] = @Original_Colonia)) AND ((@IsNull_CodigoPostal = 1 AND [CodigoPostal] IS NULL) OR ([CodigoPostal] = @Original_CodigoPostal)) AND ((@IsNull_ClienteActivo = 1 AND [ClienteActivo] IS NULL) OR ([ClienteActivo] = @Original_ClienteActivo)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Clientes] SET [RFC] = @RFC, [Nombre] = @Nombre, [APaterno] = @APaterno, [AMaterno] = @AMaterno, [Estado] = @Estado, [Ciudad] = @Ciudad, [Calle] = @Calle, [NoExt] = @NoExt, [NoInt] = @NoInt, [Colonia] = @Colonia, [CodigoPostal] = @CodigoPostal, [ClienteActivo] = @ClienteActivo WHERE (([ID] = @Original_ID) AND ([RFC] = @Original_RFC) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_APaterno = 1 AND [APaterno] IS NULL) OR ([APaterno] = @Original_APaterno)) AND ((@IsNull_AMaterno = 1 AND [AMaterno] IS NULL) OR ([AMaterno] = @Original_AMaterno)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Ciudad = 1 AND [Ciudad] IS NULL) OR ([Ciudad] = @Original_Ciudad)) AND ((@IsNull_Calle = 1 AND [Calle] IS NULL) OR ([Calle] = @Original_Calle)) AND ((@IsNull_NoExt = 1 AND [NoExt] IS NULL) OR ([NoExt] = @Original_NoExt)) AND ((@IsNull_NoInt = 1 AND [NoInt] IS NULL) OR ([NoInt] = @Original_NoInt)) AND ((@IsNull_Colonia = 1 AND [Colonia] IS NULL) OR ([Colonia] = @Original_Colonia)) AND ((@IsNull_CodigoPostal = 1 AND [CodigoPostal] IS NULL) OR ([CodigoPostal] = @Original_CodigoPostal)) AND ((@IsNull_ClienteActivo = 1 AND [ClienteActivo] IS NULL) OR ([ClienteActivo] = @Original_ClienteActivo)));
 SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, Colonia, CodigoPostal, ClienteActivo FROM Clientes WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RFC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RFC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5834,27 +5834,28 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
-                "Colonia, CodigoPostal, ClienteActivo FROM dbo.Clientes";
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
-                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE (ClienteActivo = " +
-                "1) AND (AMaterno LIKE @AMaterno)\r\nORDER BY APaterno, AMaterno, Nombre";
+            this._commandCollection[1].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
+                "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
+                " (AMaterno LIKE @AMaterno) ORDER BY APaterno, AMaterno, Nombre";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AMaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AMaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
-                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE (ClienteActivo = " +
-                "1) AND ( APaterno LIKE @APaterno)\r\nORDER BY APaterno, AMaterno, Nombre";
+            this._commandCollection[2].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
+                "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
+                " (APaterno LIKE @APaterno) ORDER BY APaterno, AMaterno, Nombre";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@APaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "APaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
-                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE (ClienteActivo = " +
-                "1) AND ( Nombre LIKE @Nombre)\r\nORDER BY APaterno, AMaterno, Nombre";
+            this._commandCollection[3].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
+                "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
+                " (Nombre LIKE @Nombre) ORDER BY APaterno, AMaterno, Nombre";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

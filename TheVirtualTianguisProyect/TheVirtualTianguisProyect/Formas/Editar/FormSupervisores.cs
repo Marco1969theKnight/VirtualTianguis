@@ -205,7 +205,7 @@ namespace TheVirtualTianguisProyect.Formas.Editar
                 {
                     if (pageAction != "EDIT")
                     {
-                        MessageBox.Show("No hay EMPLEADOS_Empleados dados de alta en el sistema", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No hay SUPERVISORES_Empleados dados de alta en el sistema", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         EstablecerEstadoEditable(false);
                         return;
                     }
