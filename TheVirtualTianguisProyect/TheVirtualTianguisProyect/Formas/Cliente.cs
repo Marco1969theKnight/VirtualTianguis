@@ -17,6 +17,21 @@ namespace TheVirtualTianguisProyect.Formas
             InitializeComponent();
         }
 
+        private void ClearFields()
+        {
+            rfc.Text = String.Empty;
+            nombre.Text = String.Empty;
+            aPaterno.Text = String.Empty;
+            aMaterno.Text = String.Empty;
+            estado.Text = String.Empty;
+            ciudad.Text = String.Empty;
+            colonia.Text = String.Empty;
+            calle.Text = String.Empty;
+            NumExt.Value = 0;
+            NumInt.Value = 0;
+            CodPost.Value = 0;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +81,10 @@ namespace TheVirtualTianguisProyect.Formas
             DatosCliente.ClienteActivo = true;
 
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosCliente.AltaCliente(DatosCliente);
+
+            MessageBox.Show("Cliente creado");
+
+            ClearFields();
         }
     }
 }
