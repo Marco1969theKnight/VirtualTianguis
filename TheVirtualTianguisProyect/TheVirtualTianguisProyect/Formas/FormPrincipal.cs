@@ -80,5 +80,12 @@ namespace TheVirtualTianguisProyect.Formas
             Forma.MdiParent = this;
             Forma.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Editar.FormClientes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormClientes();
+            Forma.MdiParent = this;
+            Forma.Show();
+        }
     }
 }

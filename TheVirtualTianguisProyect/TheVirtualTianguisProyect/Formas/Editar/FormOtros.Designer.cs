@@ -515,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 613);
+            this.ClientSize = new System.Drawing.Size(822, 673);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.conTextBox);
             this.Controls.Add(this.label9);
@@ -536,8 +536,8 @@
             this.Controls.Add(this.nomtTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.MaximumSize = new System.Drawing.Size(840, 660);
-            this.MinimumSize = new System.Drawing.Size(840, 660);
+            this.MaximumSize = new System.Drawing.Size(840, 720);
+            this.MinimumSize = new System.Drawing.Size(840, 720);
             this.Name = "FormOtros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Otros";
