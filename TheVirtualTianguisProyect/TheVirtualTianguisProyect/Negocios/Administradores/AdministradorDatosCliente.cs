@@ -94,7 +94,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosCliente(TheVirtualTianguisProyect.Negocios.Datos.DatosCliente DatosUsuario)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Clientes set RFC = " + "'" + DatosUsuario.RFC + "', Nombre = " + "'" + DatosUsuario.Nombre + "', APaterno = " + "'" + DatosUsuario.APaterno + "', AMaterno = " + "'" + DatosUsuario.AMaterno + "', Estado = " + "'" + DatosUsuario.Estado + "', Ciudad = " + "'" + DatosUsuario.Ciudad + "', Calle = " + "'" + DatosUsuario.Calle + "', NoExt = " + DatosUsuario.NoExt + ", " + ", NoInt = " + DatosUsuario.NoInt + ", Colonia = " + "'" + DatosUsuario.Colonia + "', CodigoPostal = " + DatosUsuario.CodigoPostal + ", ClienteActivo = " + DatosUsuario.ClienteActivo + "' where ID = " + DatosUsuario.ID;
+            String query = "update Clientes set RFC = " + "'" + DatosUsuario.RFC + "', Nombre = " + "'" + DatosUsuario.Nombre + "', APaterno = " + "'" + DatosUsuario.APaterno + "', AMaterno = " + "'" + DatosUsuario.AMaterno + "', Estado = " + "'" + DatosUsuario.Estado + "', Ciudad = " + "'" + DatosUsuario.Ciudad + "', Calle = " + "'" + DatosUsuario.Calle + "', NoExt = " + DatosUsuario.NoExt + ", NoInt = " + DatosUsuario.NoInt + ", Colonia = " + "'" + DatosUsuario.Colonia + "', CodigoPostal = " + DatosUsuario.CodigoPostal + ", ClienteActivo = " + DatosUsuario.ClienteActivo + "' where ID = " + DatosUsuario.ID;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
