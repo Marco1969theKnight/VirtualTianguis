@@ -78,7 +78,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void BajaEmpleado(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Empleado set Activo = '" + false + "' where id_empleado = " + DatosEmpleado.id_empleado;
+            String query = "update Empleado set EmpleadoActivo = '" + false + "' where id_empleado = " + DatosEmpleado.id_empleado;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
@@ -86,7 +86,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaEmpleado(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Empleado( id_empleado, Nombre, APaterno, AMaterno, Nombre_usuario, Edad, Oficio, Editar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo ) values ( " + DatosEmpleado.id_empleado + ", " + "'" + DatosEmpleado.Nombre + "',  " + "'" + DatosEmpleado.APaterno + "', " + "'" + DatosEmpleado.AMaterno + "', " + "'" + DatosEmpleado.Nombre_usuario + "'," + DatosEmpleado.Edad + ", " + "'" + DatosEmpleado.Oficio + "', " + DatosEmpleado.Editar + ", " + DatosEmpleado.Almacen + ", " + DatosEmpleado.Vender + ", " + "'" + DatosEmpleado.Fecha_alta + "', " + DatosEmpleado.Salario + ", " + "'" + DatosEmpleado.Contraseña + "', " + "'" + DatosEmpleado.EmpleadoActivo + "') ";
+            String query = "insert into Empleado( Nombre, APaterno, AMaterno, Nombre_usuario, Edad, Oficio, Editar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo ) values ( " + "'" + DatosEmpleado.Nombre + "',  " + "'" + DatosEmpleado.APaterno + "', " + "'" + DatosEmpleado.AMaterno + "', " + "'" + DatosEmpleado.Nombre_usuario + "'," + DatosEmpleado.Edad + ", " + "'" + DatosEmpleado.Oficio + "', '" + DatosEmpleado.Editar + "', '" + DatosEmpleado.Almacen + "', '" + DatosEmpleado.Vender + "', " + "'" + DatosEmpleado.Fecha_alta + "', " + DatosEmpleado.Salario + ", " + "'" + DatosEmpleado.Contraseña + "', " + "'" + DatosEmpleado.EmpleadoActivo + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
@@ -127,12 +127,12 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return Bandera;
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatos(System.String Nombre, System.String APaterno, System.String AMaterno, String TablaEmpleado)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatos(System.String Nombre, System.String APaterno, System.String AMaterno)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
             String query = "SELECT * FROM Empleado WHERE Nombre= '" + Nombre + "' And APaterno= '" + APaterno + "' And AMaterno= '" + AMaterno + "'";
 
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
+            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
             if (Dt.Rows.Count == 0)
             {
                 return null;
@@ -141,20 +141,20 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
-        public static void ActualizaDatosUsuario(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
+        public static void ActualizaDatosEmpleado(TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado DatosEmpleado)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Empleado set id_empleado = " + DatosEmpleado.id_empleado + ", Oficio = '" + DatosEmpleado.Oficio + "', APaterno = '" + DatosEmpleado.APaterno + "', AMaterno = '" + DatosEmpleado.AMaterno + "', Nombre_usuario = '" + DatosEmpleado.Nombre_usuario + "', Edad = " + DatosEmpleado.Edad + ", Oficio = '" + DatosEmpleado.Oficio + "', Fecha_alta = '" + DatosEmpleado.Fecha_alta + "', Salario = " + DatosEmpleado.Salario + ", Contraseña = '" + DatosEmpleado.Contraseña + "', EmpleadoActivo = '" + DatosEmpleado.EmpleadoActivo + "' where id_empleado = " + DatosEmpleado.id_empleado;
+            String query = "update Empleado set Nombre = '" + DatosEmpleado.Nombre + "', APaterno = '" + DatosEmpleado.APaterno + "', AMaterno = '" + DatosEmpleado.AMaterno + "', Nombre_usuario = '" + DatosEmpleado.Nombre_usuario + "', Edad = " + DatosEmpleado.Edad + ", Oficio = '" + DatosEmpleado.Oficio + "', Fecha_alta = '" + DatosEmpleado.Fecha_alta + "', Salario = " + DatosEmpleado.Salario + ", Contraseña = '" + DatosEmpleado.Contraseña + "', EmpleadoActivo = '" + DatosEmpleado.EmpleadoActivo + "' where id_empleado = " + DatosEmpleado.id_empleado;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosCompleto(System.String NombreCompleto, String TablaEmpleado)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosCompleto(System.String NombreCompleto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
             String query = "SELECT * FROM Empleado WHERE Nombre+' '+APaterno+' '+AMaterno = '" + NombreCompleto + "'";
 
-            DataTable dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, TablaEmpleado);
+            DataTable dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
             if (dt.Rows.Count == 0)
             {
                 return null;

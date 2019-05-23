@@ -7258,25 +7258,29 @@ SELECT Id_empleado, Nombre, Apaterno, Amaterno, Nombre_usuario, Edad, Oficio, Ed
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT Id_empleado, Nombre, Apaterno, Amaterno, Nombre_usuario, Edad, Oficio, Edi" +
                 "tar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo\r\nFROM     " +
-                "Empleado\r\nWHERE  (Editar = 0) AND (Almacen = 0) AND (Vender = 1)";
+                "Empleado\r\nWHERE  (Editar = 0) AND (Almacen = 0) AND (Vender = 1) AND (EmpleadoAc" +
+                "tivo = 1)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT Id_empleado, Nombre, Apaterno, Amaterno, Nombre_usuario, Edad, Oficio, Edi" +
                 "tar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo\r\nFROM     " +
-                "Empleado\r\nWHERE  (Editar = 1) AND (Almacen = 1) AND (Vender = 1)";
+                "Empleado\r\nWHERE  (Editar = 1) AND (Almacen = 1) AND (Vender = 1) AND (EmpleadoAc" +
+                "tivo = 1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT Id_empleado, Nombre, Apaterno, Amaterno, Nombre_usuario, Edad, Oficio, Edi" +
                 "tar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo\r\nFROM     " +
-                "Empleado\r\nWHERE  (Editar = 0) AND (Vender = 0) AND (Almacen = 0)";
+                "Empleado\r\nWHERE  (Editar = 0) AND (Vender = 0) AND (Almacen = 0) AND (EmpleadoAc" +
+                "tivo = 1)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT Id_empleado, Nombre, Apaterno, Amaterno, Nombre_usuario, Edad, Oficio, Edi" +
                 "tar, Almacen, Vender, Fecha_alta, Salario, Contraseña, EmpleadoActivo\r\nFROM     " +
-                "Empleado\r\nWHERE  (Editar = 0) AND (Almacen = 1) AND (Vender = 1)";
+                "Empleado\r\nWHERE  (Editar = 0) AND (Almacen = 1) AND (Vender = 1) AND (EmpleadoAc" +
+                "tivo = 1)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         

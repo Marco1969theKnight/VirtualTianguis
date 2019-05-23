@@ -41,6 +41,7 @@
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.almacénToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,8 @@
             this.gerenteToolStripMenuItem,
             this.supervisorToolStripMenuItem,
             this.empleadoToolStripMenuItem,
-            this.otrosToolStripMenuItem});
+            this.otrosToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.editarToolStripMenuItem.Text = "Editar";
@@ -151,15 +153,22 @@
             this.almacénToolStripMenuItem.Text = "Almacén";
             this.almacénToolStripMenuItem.Click += new System.EventHandler(this.almacénToolStripMenuItem_Click);
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 613);
+            this.ClientSize = new System.Drawing.Size(822, 673);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
@@ -185,5 +194,6 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem almacénToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }

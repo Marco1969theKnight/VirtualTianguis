@@ -107,6 +107,7 @@
             this.AgregarButton.Name = "AgregarButton";
             this.AgregarButton.Size = new System.Drawing.Size(87, 24);
             this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // ModifButton
             // 
@@ -115,6 +116,7 @@
             this.ModifButton.Name = "ModifButton";
             this.ModifButton.Size = new System.Drawing.Size(97, 24);
             this.ModifButton.Text = "Modificar";
+            this.ModifButton.Click += new System.EventHandler(this.ModifButton_Click);
             // 
             // ElmButton
             // 
@@ -123,6 +125,7 @@
             this.ElmButton.Name = "ElmButton";
             this.ElmButton.Size = new System.Drawing.Size(87, 24);
             this.ElmButton.Text = "Eliminar";
+            this.ElmButton.Click += new System.EventHandler(this.ElmButton_Click);
             // 
             // GuarButton
             // 
@@ -131,6 +134,7 @@
             this.GuarButton.Name = "GuarButton";
             this.GuarButton.Size = new System.Drawing.Size(86, 24);
             this.GuarButton.Text = "Guardar";
+            this.GuarButton.Click += new System.EventHandler(this.GuarButton_Click);
             // 
             // CanButton
             // 
@@ -139,6 +143,7 @@
             this.CanButton.Name = "CanButton";
             this.CanButton.Size = new System.Drawing.Size(90, 24);
             this.CanButton.Text = "Cancelar";
+            this.CanButton.Click += new System.EventHandler(this.CanButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -177,6 +182,11 @@
             // 
             this.salNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salNumeric.Location = new System.Drawing.Point(468, 390);
+            this.salNumeric.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.salNumeric.Name = "salNumeric";
             this.salNumeric.Size = new System.Drawing.Size(120, 30);
             this.salNumeric.TabIndex = 55;
@@ -487,7 +497,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 613);
+            this.ClientSize = new System.Drawing.Size(822, 673);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.conTextBox);
             this.Controls.Add(this.label9);
@@ -508,8 +518,8 @@
             this.Controls.Add(this.nomtTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.MaximumSize = new System.Drawing.Size(840, 660);
-            this.MinimumSize = new System.Drawing.Size(840, 660);
+            this.MaximumSize = new System.Drawing.Size(840, 720);
+            this.MinimumSize = new System.Drawing.Size(840, 720);
             this.Name = "FormSupervisores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Supervisores";

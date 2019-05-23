@@ -39,7 +39,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
             
             if(dr["Nombre"] != DBNull.Value)
             {
-                this.Nombre = dr["id_empleado"].ToString();
+                this.Nombre = dr["Nombre"].ToString();
             }
 
             if (dr["APaterno"] != DBNull.Value)

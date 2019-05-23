@@ -36,7 +36,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaProveedor(TheVirtualTianguisProyect.Negocios.Datos.DatosProveedor DatosProveedor)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Proveedor( Id_proveedor, Nombre, ProveedorActivo ) values ( " + DatosProveedor.Id_proveedor + ",  " + "'" + DatosProveedor.Nombre + "', " + "'" + DatosProveedor.ProveedorActivo + "') ";
+            String query = "insert into Proveedor( Nombre, ProveedorActivo ) values ( '" + DatosProveedor.Nombre + "', " + "'" + DatosProveedor.ProveedorActivo + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
@@ -80,7 +80,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosProveedor(TheVirtualTianguisProyect.Negocios.Datos.DatosProveedor DatosProveedor)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Proveedor set Id_proveedor = " + DatosProveedor.Id_proveedor + ", ProveedorActivo = '" + DatosProveedor.ProveedorActivo + "' where Id_proveedor = " + DatosProveedor.Id_proveedor;
+            String query = "update Proveedor set ProveedorActivo = '" + DatosProveedor.ProveedorActivo + "' where Id_proveedor = " + DatosProveedor.Id_proveedor;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
