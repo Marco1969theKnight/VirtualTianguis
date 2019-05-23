@@ -185,79 +185,9 @@ namespace TheVirtualTianguisProyect.Formas.Editar
 
         }
 
-        private void fillByOtrosToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadoTableAdapter.FillByOtros(this.datosTianguis.Empleado);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByEmpleadosToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByEmpleadosToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByEmpleadosToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadoTableAdapter.FillByEmpleados(this.datosTianguis.Empleado);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadoTableAdapter.Fill(this.datosTianguis.Empleado);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void fillByOtrosToolStripButton_Click_1(object sender, EventArgs e)
-        {
-           
         }
 
         private void SalButton_Click(object sender, EventArgs e)
@@ -279,6 +209,9 @@ namespace TheVirtualTianguisProyect.Formas.Editar
             CargaProveedorActual();
             nomtTextBox.Focus();
             EstablecerEstadoEditable(true);
+            nomtTextBox.ReadOnly = true;
+            aPatTextBox2.ReadOnly = true;
+            aMatTextBox1.ReadOnly = true;
         }
 
         private void ElmButton_Click(object sender, EventArgs e)
@@ -297,12 +230,12 @@ namespace TheVirtualTianguisProyect.Formas.Editar
                 return;
             }
 
-            /*if (Id == 1)
+            if (Id == 1)
             {
-                MessageBox.Show("No se pueden dar de baja al Usuario ya que es el Administrador del Sistema", "DigitalDent 2013", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pueden dar de baja al Usuario ya que es el Administrador del Sistema", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else*/
+            else
             {
                 if (MessageBox.Show("Seguro que deseas eliminar el registro ?", "Virtual Tianguis 2019", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
                 {
@@ -407,7 +340,6 @@ namespace TheVirtualTianguisProyect.Formas.Editar
                 }
                 else
                 {
-                    MessageBox.Show("Se ha editado");
                     TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosEmpleado.ActualizaDatosEmpleado(DatosEmpleado);
                 }
             }

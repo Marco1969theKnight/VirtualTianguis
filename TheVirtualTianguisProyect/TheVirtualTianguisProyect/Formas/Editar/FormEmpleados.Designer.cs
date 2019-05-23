@@ -115,6 +115,7 @@
             this.ModifButton.Name = "ModifButton";
             this.ModifButton.Size = new System.Drawing.Size(97, 24);
             this.ModifButton.Text = "Modificar";
+            this.ModifButton.Click += new System.EventHandler(this.ModifButton_Click);
             // 
             // ElmButton
             // 
@@ -123,6 +124,7 @@
             this.ElmButton.Name = "ElmButton";
             this.ElmButton.Size = new System.Drawing.Size(87, 24);
             this.ElmButton.Text = "Eliminar";
+            this.ElmButton.Click += new System.EventHandler(this.ElmButton_Click);
             // 
             // GuarButton
             // 
@@ -140,6 +142,7 @@
             this.CanButton.Name = "CanButton";
             this.CanButton.Size = new System.Drawing.Size(90, 24);
             this.CanButton.Text = "Cancelar";
+            this.CanButton.Click += new System.EventHandler(this.CanButton_Click);
             // 
             // toolStripSeparator1
             // 
