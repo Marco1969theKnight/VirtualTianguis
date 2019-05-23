@@ -36,7 +36,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Ventas( NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva ) values ( " + DatosVenta.NoVenta + ",  " + "'" + DatosVenta.Fecha + "', " + DatosVenta.Total + ", " + DatosVenta.Empleado + ", " + DatosVenta.Detalle + ", '" + DatosVenta.VentaActiva + "') ";
+            String query = "insert into Ventas( Fecha, Total, Empleado, Detalle, VentaActiva ) values ( '" + DatosVenta.Fecha + "', " + DatosVenta.Total + ", " + DatosVenta.Empleado + ", " + DatosVenta.Detalle + ", '" + DatosVenta.VentaActiva + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }

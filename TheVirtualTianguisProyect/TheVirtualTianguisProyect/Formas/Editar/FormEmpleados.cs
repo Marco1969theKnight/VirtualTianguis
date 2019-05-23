@@ -54,5 +54,15 @@ namespace TheVirtualTianguisProyect.Formas.Editar
         {
             this.Close();
         }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GuarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

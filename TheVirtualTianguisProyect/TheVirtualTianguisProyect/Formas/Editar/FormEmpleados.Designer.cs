@@ -106,6 +106,7 @@
             this.AgregarButton.Name = "AgregarButton";
             this.AgregarButton.Size = new System.Drawing.Size(87, 24);
             this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // ModifButton
             // 
@@ -130,6 +131,7 @@
             this.GuarButton.Name = "GuarButton";
             this.GuarButton.Size = new System.Drawing.Size(86, 24);
             this.GuarButton.Text = "Guardar";
+            this.GuarButton.Click += new System.EventHandler(this.GuarButton_Click);
             // 
             // CanButton
             // 
@@ -176,6 +178,11 @@
             // 
             this.salNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salNumeric.Location = new System.Drawing.Point(468, 390);
+            this.salNumeric.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.salNumeric.Name = "salNumeric";
             this.salNumeric.Size = new System.Drawing.Size(120, 30);
             this.salNumeric.TabIndex = 55;

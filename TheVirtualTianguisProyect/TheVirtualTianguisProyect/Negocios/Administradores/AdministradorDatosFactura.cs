@@ -36,7 +36,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Factura( ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( " + DatosFactura.ID + ",  " + "'" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", " + DatosFactura.Cliente + ", '" + DatosFactura.FacturaActiva + "') ";
+            String query = "insert into Factura( FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( '" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", " + DatosFactura.Cliente + ", '" + DatosFactura.FacturaActiva + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
@@ -80,7 +80,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set ID = " + DatosFactura.ID + ", FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = " + DatosFactura.Cliente + ", FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
+            String query = "update Factura set FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = " + DatosFactura.Cliente + ", FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }

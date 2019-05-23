@@ -187,6 +187,11 @@
             // 
             this.salNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salNumeric.Location = new System.Drawing.Point(468, 390);
+            this.salNumeric.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.salNumeric.Name = "salNumeric";
             this.salNumeric.Size = new System.Drawing.Size(120, 30);
             this.salNumeric.TabIndex = 73;

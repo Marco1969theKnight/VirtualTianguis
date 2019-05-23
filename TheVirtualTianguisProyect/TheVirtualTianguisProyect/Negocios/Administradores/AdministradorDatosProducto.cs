@@ -36,7 +36,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Producto( Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, ProductoActivo ) values ( " + DatosProducto.Id_producto + ",  " + "'" + DatosProducto.Nombre + "', " + "'" + DatosProducto.Marca + "', " + DatosProducto.Precio + ", '" + DatosProducto.Categoria + "' , '" + DatosProducto.Descripcion + "', " + DatosProducto.Proveedor + ", '" + DatosProducto.ProductoActivo + "') ";
+            String query = "insert into Producto( Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, ProductoActivo ) values ( " + "'" + DatosProducto.Nombre + "', " + "'" + DatosProducto.Marca + "', " + DatosProducto.Precio + ", '" + DatosProducto.Categoria + "' , '" + DatosProducto.Descripcion + "', " + DatosProducto.Proveedor + ", '" + DatosProducto.ProductoActivo + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
@@ -80,7 +80,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Producto set Id_producto = " + DatosProducto.Id_producto + ", Marca = '" + DatosProducto.Marca + "', Precio = " + DatosProducto.Precio + ", Categoria = '" + DatosProducto.Categoria + "', Descripcion = '" + DatosProducto.Descripcion + "', Proveedor = " + DatosProducto.Proveedor + ", ProductoActivo = '" + DatosProducto.ProductoActivo + "' where Id_producto = " + DatosProducto.Id_producto;
+            String query = "update Producto set Marca = '" + DatosProducto.Marca + "', Precio = " + DatosProducto.Precio + ", Categoria = '" + DatosProducto.Categoria + "', Descripcion = '" + DatosProducto.Descripcion + "', Proveedor = " + DatosProducto.Proveedor + ", ProductoActivo = '" + DatosProducto.ProductoActivo + "' where Id_producto = " + DatosProducto.Id_producto;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
