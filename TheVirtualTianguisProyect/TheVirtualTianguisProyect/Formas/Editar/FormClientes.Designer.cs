@@ -39,9 +39,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.SalButton = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ClientesTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +52,8 @@
             this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoPostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.RFCTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NomtextBox = new System.Windows.Forms.TextBox();
@@ -77,10 +76,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.CPosnumeric = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
+            this.clientesTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ClientesTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoExtnumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoIntnumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPosnumeric)).BeginInit();
@@ -119,6 +119,7 @@
             this.ModifButton.Name = "ModifButton";
             this.ModifButton.Size = new System.Drawing.Size(97, 24);
             this.ModifButton.Text = "Modificar";
+            this.ModifButton.Click += new System.EventHandler(this.ModifButton_Click);
             // 
             // ElmButton
             // 
@@ -127,6 +128,7 @@
             this.ElmButton.Name = "ElmButton";
             this.ElmButton.Size = new System.Drawing.Size(87, 24);
             this.ElmButton.Text = "Eliminar";
+            this.ElmButton.Click += new System.EventHandler(this.ElmButton_Click);
             // 
             // GuarButton
             // 
@@ -135,6 +137,7 @@
             this.GuarButton.Name = "GuarButton";
             this.GuarButton.Size = new System.Drawing.Size(86, 24);
             this.GuarButton.Text = "Guardar";
+            this.GuarButton.Click += new System.EventHandler(this.GuarButton_Click);
             // 
             // CanButton
             // 
@@ -143,6 +146,7 @@
             this.CanButton.Name = "CanButton";
             this.CanButton.Size = new System.Drawing.Size(90, 24);
             this.CanButton.Text = "Cancelar";
+            this.CanButton.Click += new System.EventHandler(this.CanButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -157,6 +161,7 @@
             this.SalButton.Size = new System.Drawing.Size(62, 24);
             this.SalButton.Text = "Salir";
             this.SalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SalButton.Click += new System.EventHandler(this.SalButton_Click);
             // 
             // dataGridView1
             // 
@@ -182,20 +187,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(750, 180);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.datosTianguis;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -299,6 +290,16 @@
             this.clienteActivoDataGridViewCheckBoxColumn.HeaderText = "ClienteActivo";
             this.clienteActivoDataGridViewCheckBoxColumn.Name = "clienteActivoDataGridViewCheckBoxColumn";
             this.clienteActivoDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.datosTianguis;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // RFCTextBox
             // 
@@ -514,6 +515,10 @@
             this.label11.TabIndex = 44;
             this.label11.Text = "Cod. Postal:";
             // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -553,8 +558,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoExtnumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoIntnumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPosnumeric)).EndInit();
