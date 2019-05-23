@@ -48,11 +48,16 @@ namespace TheVirtualTianguisProyect
                 obje.usuario1 = dt.Rows[0][0].ToString();
                 obje.password1 = dt.Rows[0][1].ToString();
                 obje.editar1 = Convert.ToBoolean(dt.Rows[0][2]);
-                //obje.almacen1 = dt.Rows[0][3].ToString();
-                //obje.vender1 = dt.Rows[0][4].ToString();
+                obje.almacen1 = Convert.ToBoolean(dt.Rows[0][3]);
+                obje.vender1 = Convert.ToBoolean(dt.Rows[0][4]);
                 
-                MessageBox.Show("Bienvenido " + obje.usuario1 + obje.editar1
-                    + obje.almacen1 + obje.vender1);
+                MessageBox.Show("Bienvenido " + obje.usuario1);
+                TheVirtualTianguisProyect.Properties.Settings.Default.permisoEditar = obje.editar1;
+                TheVirtualTianguisProyect.Properties.Settings.Default.permisoAlmacenar = obje.almacen1;
+                TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender = obje.vender1;
+                TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
+                FormaP.ShowDialog();
+
             }
             else
             {

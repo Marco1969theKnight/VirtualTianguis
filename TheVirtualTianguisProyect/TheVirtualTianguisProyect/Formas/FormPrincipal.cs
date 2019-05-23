@@ -15,6 +15,22 @@ namespace TheVirtualTianguisProyect.Formas
         public FormPrincipal()
         {
             InitializeComponent();
+            editarToolStripMenuItem.Enabled = false;
+            venderToolStripMenuItem.Enabled = false;
+            almacénToolStripMenuItem.Enabled = false;
+            if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoEditar == true)
+            {
+                editarToolStripMenuItem.Enabled = true;
+            }
+            if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoAlmacenar == true)
+            {
+                venderToolStripMenuItem.Enabled = true;
+            }
+            if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender == true)
+            {
+                almacénToolStripMenuItem.Enabled = true;
+            }
+
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -34,17 +50,17 @@ namespace TheVirtualTianguisProyect.Formas
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void venderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void almacénToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

@@ -80,5 +80,41 @@ namespace TheVirtualTianguisProyect.Properties {
                 this["ContinueUser"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool permisoEditar {
+            get {
+                return ((bool)(this["permisoEditar"]));
+            }
+            set {
+                this["permisoEditar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool permisoAlmacenar {
+            get {
+                return ((bool)(this["permisoAlmacenar"]));
+            }
+            set {
+                this["permisoAlmacenar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool permisoVender {
+            get {
+                return ((bool)(this["permisoVender"]));
+            }
+            set {
+                this["permisoVender"] = value;
+            }
+        }
     }
 }
