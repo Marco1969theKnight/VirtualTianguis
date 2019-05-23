@@ -61,7 +61,8 @@ create table Empleado(
 	Contraseña nvarchar(50),
 	EmpleadoActivo BIT
 )
-
+Use VirTian
+Go
 create proc sp_login
 @usu nvarchar(50),
 @pass nvarchar(50),
