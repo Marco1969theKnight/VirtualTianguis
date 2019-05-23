@@ -180,7 +180,7 @@ namespace TheVirtualTianguisProyect.Formas.Editar
             {
                 if (DatosEmpleado.id_empleado == 1)
                 {
-                    MessageBox.Show("No se puede Modificar al Empleado ya que es el Administrador del Sistema", "DigitalDent 2013", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede Modificar al Empleado ya que es el Administrador del Sistema", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     EstablecerEstadoEditable(false);
                     return;
                 }
