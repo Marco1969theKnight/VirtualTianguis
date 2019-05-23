@@ -93,7 +93,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
 
             if (dr["ClienteActivo"] != DBNull.Value)
             {
-                this.ClienteActivo = Boolean.Parse(dr["CodigoPostal"].ToString());
+                this.ClienteActivo = Boolean.Parse(dr["ClienteActivo"].ToString());
             }
         }
     }
