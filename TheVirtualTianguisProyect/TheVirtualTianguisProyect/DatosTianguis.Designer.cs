@@ -6675,10 +6675,10 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva\r\nFROM     Ventas\r\nWH" +
-                "ERE (VentaActiva = 1) AND (Fecha LIKE @Fecha)\r\nORDER BY Fecha";
+            this._commandCollection[1].CommandText = "SELECT V.NoVenta, DV.Producto, DV.Cantidad, P.Precio\r\nFROM     Ventas AS V INNER " +
+                "JOIN\r\n                  DetalleVentas AS DV ON DV.NoVenta = V.NoVenta INNER JOIN" +
+                "\r\n                  Producto AS P ON P.Id_producto = DV.Producto";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6709,14 +6709,8 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByFecha(DatosTianguis.VentasDataTable dataTable, string Fecha) {
+        public virtual int FillByProductosVenta(DatosTianguis.VentasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Fecha == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Fecha));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6728,14 +6722,8 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DatosTianguis.VentasDataTable GetDataByFecha(string Fecha) {
+        public virtual DatosTianguis.VentasDataTable GetDataByProductosVenta() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Fecha == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Fecha));
-            }
             DatosTianguis.VentasDataTable dataTable = new DatosTianguis.VentasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9975,9 +9963,9 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, DV.Cantidad, DV.NoVenta\r\nFROM     DetalleV" +
-                "entas AS DV INNER JOIN\r\n                  Ventas AS V ON DV.NoVenta = V.NoVenta " +
-                "INNER JOIN\r\n                  Producto AS P ON DV.Producto = P.Id_producto";
+            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, P.Nombre, DV.Cantidad, P.Precio\r\nFROM     DetalleVentas" +
+                " AS DV INNER JOIN\r\n                  Ventas AS V ON DV.NoVenta = V.NoVenta INNER" +
+                " JOIN\r\n                  Producto AS P ON DV.Producto = P.Id_producto";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

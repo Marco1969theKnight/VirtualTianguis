@@ -38,7 +38,7 @@ namespace TheVirtualTianguisProyect
              ConTB.Text = String.Empty;
              NomUsuTB.Focus();*/
 
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable(); 
             obje.usuario1 = NomUsuTB .Text;
             obje.password1 = ConTB.Text;
             dt = objn.N_Login(obje);
@@ -52,9 +52,11 @@ namespace TheVirtualTianguisProyect
                 obje.vender1 = Convert.ToBoolean(dt.Rows[0][4]);
                 
                 MessageBox.Show("Bienvenido " + obje.usuario1);
+                TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado dtEmpleado = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosEmpleado.ObtenerDatosEmpleado_Usuario(obje.usuario1.ToString());
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoEditar = obje.editar1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoAlmacenar = obje.almacen1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender = obje.vender1;
+                TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = dtEmpleado.id_empleado;
                 TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
                 FormaP.ShowDialog();
 
