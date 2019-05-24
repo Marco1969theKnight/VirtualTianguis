@@ -13,6 +13,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
     public partial class FormNuevaVenta : Form
     {
         TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosVenta();
+        TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta DatosDetalleVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta();
 
         public FormNuevaVenta()
         {
@@ -25,11 +26,12 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis1.Ventas);
             DateTime now = DateTime.Now;
             Int32 id = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("Ventas", "NoVenta");
+            Int32 idDetalle = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("DetalleVentas", "IdDetalleVenta");
             DatosVenta.NoVenta = id;
             DatosVenta.Fecha = now.ToShortTimeString();
             DatosVenta.Total = 0;
             DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;
-            DatosVenta.Detalle
+            DatosVenta.Detalle = idDetalle;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
