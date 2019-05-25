@@ -15,20 +15,17 @@ namespace TheVirtualTianguisProyect.Formas
         public FormPrincipal()
         {
             InitializeComponent();
-            editarToolStripMenuItem.Enabled = false;
-            venderToolStripMenuItem.Enabled = false;
-            almacénToolStripMenuItem.Enabled = false;
             if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoEditar == true)
             {
                 editarToolStripMenuItem.Enabled = true;
             }
             if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoAlmacenar == true)
             {
-                venderToolStripMenuItem.Enabled = true;
+                almacénToolStripMenuItem.Enabled = true;
             }
             if (TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender == true)
             {
-                almacénToolStripMenuItem.Enabled = true;
+                venderToolStripMenuItem.Enabled = true;
             }
 
         }
