@@ -189,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DatosTianguis.xsc">
       <DependentUpon>DatosTianguis.xsd</DependentUpon>
@@ -218,6 +219,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="imagenes\VirtualTinguis_fondo.png" />
+    <None Include="imagenes\fondo.png" />
     <Content Include="imagenes\VirtualTinguis_apka.png" />
   </ItemGroup>
   <ItemGroup>

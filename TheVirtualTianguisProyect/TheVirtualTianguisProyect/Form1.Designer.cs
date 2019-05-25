@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VirtualTianguis));
             this.NomUsuLabel = new System.Windows.Forms.Label();
             this.ConLabel = new System.Windows.Forms.Label();
-            this.LogoEmpresa = new System.Windows.Forms.PictureBox();
             this.NomUsuTB = new System.Windows.Forms.TextBox();
             this.ConTB = new System.Windows.Forms.TextBox();
             this.RegButon = new System.Windows.Forms.Button();
             this.InButton = new System.Windows.Forms.Button();
+            this.LogoEmpresa = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,17 +62,6 @@
             this.ConLabel.Size = new System.Drawing.Size(155, 31);
             this.ConLabel.TabIndex = 1;
             this.ConLabel.Text = "Contraseña";
-            // 
-            // LogoEmpresa
-            // 
-            this.LogoEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("LogoEmpresa.Image")));
-            this.LogoEmpresa.Location = new System.Drawing.Point(27, 29);
-            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(2);
-            this.LogoEmpresa.Name = "LogoEmpresa";
-            this.LogoEmpresa.Size = new System.Drawing.Size(195, 171);
-            this.LogoEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoEmpresa.TabIndex = 2;
-            this.LogoEmpresa.TabStop = false;
             // 
             // NomUsuTB
             // 
@@ -123,10 +112,22 @@
             this.InButton.UseVisualStyleBackColor = false;
             this.InButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // LogoEmpresa
+            // 
+            this.LogoEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("LogoEmpresa.Image")));
+            this.LogoEmpresa.Location = new System.Drawing.Point(27, 29);
+            this.LogoEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.LogoEmpresa.Name = "LogoEmpresa";
+            this.LogoEmpresa.Size = new System.Drawing.Size(195, 171);
+            this.LogoEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoEmpresa.TabIndex = 2;
+            this.LogoEmpresa.TabStop = false;
+            // 
             // VirtualTianguis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(572, 327);
             this.Controls.Add(this.InButton);
             this.Controls.Add(this.RegButon);
@@ -135,6 +136,7 @@
             this.Controls.Add(this.LogoEmpresa);
             this.Controls.Add(this.ConLabel);
             this.Controls.Add(this.NomUsuLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VirtualTianguis";
             this.Text = "Virtual Tianguis";
