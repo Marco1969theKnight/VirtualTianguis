@@ -13,7 +13,7 @@
     <Setting Name="IDEmpleados" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="IDCliente" Type="System.Int32" Scope="User">
+    <Setting Name="RFCCliente" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="CloseApplication" Type="System.Boolean" Scope="User">
@@ -30,6 +30,9 @@
     </Setting>
     <Setting Name="permisoVender" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NoVentaAct" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

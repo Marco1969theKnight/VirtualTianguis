@@ -60,7 +60,9 @@ namespace TheVirtualTianguisProyect.Formas
 
         private void almacénToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            TheVirtualTianguisProyect.Formas.Almacen.Productos Forma = new TheVirtualTianguisProyect.Formas.Almacen.Productos();
+            Forma.MdiParent = this;
+            Forma.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +102,13 @@ namespace TheVirtualTianguisProyect.Formas
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Formas.Editar.FormClientes Forma = new TheVirtualTianguisProyect.Formas.Editar.FormClientes();
+            Forma.MdiParent = this;
+            Forma.Show();
+        }
+
+        private void nuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Vender.FormNuevaVenta Forma = new TheVirtualTianguisProyect.Formas.Vender.FormNuevaVenta();
             Forma.MdiParent = this;
             Forma.Show();
         }

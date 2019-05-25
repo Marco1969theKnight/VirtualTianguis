@@ -29,160 +29,255 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.Agrbutton = new System.Windows.Forms.Button();
+            this.Salbutton = new System.Windows.Forms.Button();
+            this.Canbutton = new System.Windows.Forms.Button();
+            this.Busbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.detalleVentasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
-            this.idDetalleVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Facbutton = new System.Windows.Forms.Button();
             this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis1 = new TheVirtualTianguisProyect.DatosTianguis();
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Agrbutton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(540, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 75);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Agregar Nuevo Producto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Agrbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agrbutton.Location = new System.Drawing.Point(600, 60);
+            this.Agrbutton.Name = "Agrbutton";
+            this.Agrbutton.Size = new System.Drawing.Size(180, 75);
+            this.Agrbutton.TabIndex = 0;
+            this.Agrbutton.Text = "Agregar Nuevo Producto";
+            this.Agrbutton.UseVisualStyleBackColor = true;
+            this.Agrbutton.Click += new System.EventHandler(this.Agrbutton_Click);
             // 
-            // button2
+            // Salbutton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(540, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Salbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salbutton.Location = new System.Drawing.Point(600, 150);
+            this.Salbutton.Name = "Salbutton";
+            this.Salbutton.Size = new System.Drawing.Size(180, 40);
+            this.Salbutton.TabIndex = 1;
+            this.Salbutton.Text = "Salir";
+            this.Salbutton.UseVisualStyleBackColor = true;
+            this.Salbutton.Click += new System.EventHandler(this.Salbutton_Click);
             // 
-            // button3
+            // Canbutton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(540, 210);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Canbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Canbutton.Location = new System.Drawing.Point(600, 210);
+            this.Canbutton.Name = "Canbutton";
+            this.Canbutton.Size = new System.Drawing.Size(180, 40);
+            this.Canbutton.TabIndex = 2;
+            this.Canbutton.Text = "Cancelar";
+            this.Canbutton.UseVisualStyleBackColor = true;
+            this.Canbutton.Click += new System.EventHandler(this.Canbutton_Click);
             // 
-            // button4
+            // Busbutton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(540, 270);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Buscar Cliente";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // detalleVentasBindingSource
-            // 
-            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
-            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
-            // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Busbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Busbutton.Location = new System.Drawing.Point(600, 270);
+            this.Busbutton.Name = "Busbutton";
+            this.Busbutton.Size = new System.Drawing.Size(180, 40);
+            this.Busbutton.TabIndex = 3;
+            this.Busbutton.Text = "Buscar Cliente";
+            this.Busbutton.UseVisualStyleBackColor = true;
+            this.Busbutton.Click += new System.EventHandler(this.Busbutton_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDetalleVentaDataGridViewTextBoxColumn,
-            this.productoDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.noVentaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.detalleVentasBindingSource1;
+            this.noVentaDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.empleadoDataGridViewTextBoxColumn,
+            this.detalleDataGridViewTextBoxColumn,
+            this.ventaActivaDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.ventasBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(60, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(520, 390);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // detalleVentasBindingSource1
+            // label1
             // 
-            this.detalleVentasBindingSource1.DataMember = "DetalleVentas";
-            this.detalleVentasBindingSource1.DataSource = this.datosTianguis;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(310, 480);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Total:";
             // 
-            // detalleVentasTableAdapter
+            // numericUpDown1
             // 
-            this.detalleVentasTableAdapter.ClearBeforeFill = true;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(390, 480);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(180, 30);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // idDetalleVentaDataGridViewTextBoxColumn
+            // label2
             // 
-            this.idDetalleVentaDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleVenta";
-            this.idDetalleVentaDataGridViewTextBoxColumn.HeaderText = "IdDetalleVenta";
-            this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
-            this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(210, 580);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "RFC:";
             // 
-            // productoDataGridViewTextBoxColumn
+            // textBox1
             // 
-            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
-            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
-            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(300, 580);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(300, 30);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // cantidadDataGridViewTextBoxColumn
+            // Facbutton
             // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.Facbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Facbutton.Location = new System.Drawing.Point(600, 390);
+            this.Facbutton.Name = "Facbutton";
+            this.Facbutton.Size = new System.Drawing.Size(180, 40);
+            this.Facbutton.TabIndex = 9;
+            this.Facbutton.Text = "Facturar Compra";
+            this.Facbutton.UseVisualStyleBackColor = true;
             // 
             // noVentaDataGridViewTextBoxColumn
             // 
             this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
+            this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            // 
+            // empleadoDataGridViewTextBoxColumn
+            // 
+            this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
+            // 
+            // detalleDataGridViewTextBoxColumn
+            // 
+            this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
+            // 
+            // ventaActivaDataGridViewCheckBoxColumn
+            // 
+            this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
+            // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.datosTianguis1;
+            // 
+            // datosTianguis1
+            // 
+            this.datosTianguis1.DataSetName = "DatosTianguis";
+            this.datosTianguis1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ventasTableAdapter
+            // 
+            this.ventasTableAdapter.ClearBeforeFill = true;
             // 
             // FormNuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(822, 673);
+            this.Controls.Add(this.Facbutton);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Busbutton);
+            this.Controls.Add(this.Canbutton);
+            this.Controls.Add(this.Salbutton);
+            this.Controls.Add(this.Agrbutton);
+            this.MaximumSize = new System.Drawing.Size(840, 720);
+            this.MinimumSize = new System.Drawing.Size(840, 720);
             this.Name = "FormNuevaVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Venta";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNuevaVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Agrbutton;
+        private System.Windows.Forms.Button Salbutton;
+        private System.Windows.Forms.Button Canbutton;
+        private System.Windows.Forms.Button Busbutton;
         private DatosTianguis datosTianguis;
-        private System.Windows.Forms.BindingSource detalleVentasBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource detalleVentasBindingSource1;
-        private DatosTianguisTableAdapters.DetalleVentasTableAdapter detalleVentasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalleVentaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Facbutton;
+        private DatosTianguis datosTianguis1;
+        private System.Windows.Forms.BindingSource ventasBindingSource;
+        private DatosTianguisTableAdapters.VentasTableAdapter ventasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detalleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ventaActivaDataGridViewCheckBoxColumn;
     }
 }

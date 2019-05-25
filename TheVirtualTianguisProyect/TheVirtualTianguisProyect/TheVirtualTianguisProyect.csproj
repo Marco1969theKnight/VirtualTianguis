@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,12 @@
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Almacen\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Almacen\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Cliente.cs">
       <SubType>Form</SubType>
@@ -103,6 +110,18 @@
     <Compile Include="Formas\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Vender\FormAgregarNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Vender\FormAgregarNuevoProducto.Designer.cs">
+      <DependentUpon>FormAgregarNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Vender\FormBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Vender\FormBuscarCliente.Designer.cs">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Vender\FormNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,17 +134,22 @@
     <Compile Include="Negocios\Administradores\AdministradorDatosProducto.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosProveedor.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosVenta.cs" />
+    <Compile Include="Negocios\Administradores\AdministradorDetalleVenta.cs" />
     <Compile Include="Negocios\Datos\DatosCliente.cs" />
     <Compile Include="Negocios\Datos\DatosEmpleado.cs" />
     <Compile Include="Negocios\Datos\DatosFactura.cs" />
     <Compile Include="Negocios\Datos\DatosProducto.cs" />
     <Compile Include="Negocios\Datos\DatosProveedor.cs" />
     <Compile Include="Negocios\Datos\DatosVenta.cs" />
+    <Compile Include="Negocios\Datos\DatosDetalleVenta.cs" />
     <Compile Include="Persistencia\AdministradorDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Almacen\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -147,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Vender\FormAgregarNuevoProducto.resx">
+      <DependentUpon>FormAgregarNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Vender\FormBuscarCliente.resx">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Vender\FormNuevaVenta.resx">
       <DependentUpon>FormNuevaVenta.cs</DependentUpon>
@@ -186,9 +216,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formas\Almacen\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="imagenes\VirtualTinguis_apka.png" />
   </ItemGroup>

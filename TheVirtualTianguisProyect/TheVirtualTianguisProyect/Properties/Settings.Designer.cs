@@ -48,12 +48,12 @@ namespace TheVirtualTianguisProyect.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int IDCliente {
+        public string RFCCliente {
             get {
-                return ((int)(this["IDCliente"]));
+                return ((string)(this["RFCCliente"]));
             }
             set {
-                this["IDCliente"] = value;
+                this["RFCCliente"] = value;
             }
         }
         
@@ -114,6 +114,18 @@ namespace TheVirtualTianguisProyect.Properties {
             }
             set {
                 this["permisoVender"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int NoVentaAct {
+            get {
+                return ((int)(this["NoVentaAct"]));
+            }
+            set {
+                this["NoVentaAct"] = value;
             }
         }
     }

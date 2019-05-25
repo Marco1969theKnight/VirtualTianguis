@@ -63,10 +63,10 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario, System.String Contraseña)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "select * from Empleado where Nombre_usuario = " + Usuario;
+            String query = "select * from Empleado where ( ( Nombre_usuario = '" + Usuario + "' ) AND ( Contraseña = '" + Contraseña + "' ) )";
             DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
             if (Dt.Rows.Count == 0)
             {

@@ -85,7 +85,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosProducto ObtenerVenta(System.Int32 NoVenta)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosVenta ObtenerVenta(System.Int32 NoVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
             String query = "SELECT * FROM Ventas WHERE NoVenta= " + NoVenta;
@@ -96,7 +96,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
                 return null;
             }
 
-            return new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto(Dt.Rows[0]);
+            return new TheVirtualTianguisProyect.Negocios.Datos.DatosVenta(Dt.Rows[0]);
         }
     }
 }
