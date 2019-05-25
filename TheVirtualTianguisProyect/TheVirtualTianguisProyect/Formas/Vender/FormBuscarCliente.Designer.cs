@@ -29,8 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aMaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noExtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noIntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoPostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.clientesTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ClientesTableAdapter();
@@ -78,19 +92,6 @@
             this.noIntToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.noIntToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByNoIntToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aMaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noExtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noIntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoPostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -101,9 +102,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(42, 477);
+            this.button1.Location = new System.Drawing.Point(32, 388);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 66);
+            this.button1.Size = new System.Drawing.Size(135, 54);
             this.button1.TabIndex = 10;
             this.button1.Text = "Seleccionar Cliente";
             this.button1.UseVisualStyleBackColor = true;
@@ -128,11 +130,115 @@
             this.codigoPostalDataGridViewTextBoxColumn,
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(270, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(202, 73);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(900, 366);
             this.dataGridView1.TabIndex = 23;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rFCDataGridViewTextBoxColumn
+            // 
+            this.rFCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rFCDataGridViewTextBoxColumn.DataPropertyName = "RFC";
+            this.rFCDataGridViewTextBoxColumn.HeaderText = "RFC";
+            this.rFCDataGridViewTextBoxColumn.Name = "rFCDataGridViewTextBoxColumn";
+            this.rFCDataGridViewTextBoxColumn.Width = 53;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // aPaternoDataGridViewTextBoxColumn
+            // 
+            this.aPaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aPaternoDataGridViewTextBoxColumn.DataPropertyName = "APaterno";
+            this.aPaternoDataGridViewTextBoxColumn.HeaderText = "APaterno";
+            this.aPaternoDataGridViewTextBoxColumn.Name = "aPaternoDataGridViewTextBoxColumn";
+            this.aPaternoDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // aMaternoDataGridViewTextBoxColumn
+            // 
+            this.aMaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aMaternoDataGridViewTextBoxColumn.DataPropertyName = "AMaterno";
+            this.aMaternoDataGridViewTextBoxColumn.HeaderText = "AMaterno";
+            this.aMaternoDataGridViewTextBoxColumn.Name = "aMaternoDataGridViewTextBoxColumn";
+            this.aMaternoDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // ciudadDataGridViewTextBoxColumn
+            // 
+            this.ciudadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "Ciudad";
+            this.ciudadDataGridViewTextBoxColumn.HeaderText = "Ciudad";
+            this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
+            this.ciudadDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // calleDataGridViewTextBoxColumn
+            // 
+            this.calleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
+            this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
+            this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
+            this.calleDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // noExtDataGridViewTextBoxColumn
+            // 
+            this.noExtDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.noExtDataGridViewTextBoxColumn.DataPropertyName = "NoExt";
+            this.noExtDataGridViewTextBoxColumn.HeaderText = "NoExt";
+            this.noExtDataGridViewTextBoxColumn.Name = "noExtDataGridViewTextBoxColumn";
+            this.noExtDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // noIntDataGridViewTextBoxColumn
+            // 
+            this.noIntDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.noIntDataGridViewTextBoxColumn.DataPropertyName = "NoInt";
+            this.noIntDataGridViewTextBoxColumn.HeaderText = "NoInt";
+            this.noIntDataGridViewTextBoxColumn.Name = "noIntDataGridViewTextBoxColumn";
+            this.noIntDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // coloniaDataGridViewTextBoxColumn
+            // 
+            this.coloniaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.coloniaDataGridViewTextBoxColumn.DataPropertyName = "Colonia";
+            this.coloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
+            this.coloniaDataGridViewTextBoxColumn.Name = "coloniaDataGridViewTextBoxColumn";
+            this.coloniaDataGridViewTextBoxColumn.Width = 67;
+            // 
+            // codigoPostalDataGridViewTextBoxColumn
+            // 
+            this.codigoPostalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.codigoPostalDataGridViewTextBoxColumn.DataPropertyName = "CodigoPostal";
+            this.codigoPostalDataGridViewTextBoxColumn.HeaderText = "CodigoPostal";
+            this.codigoPostalDataGridViewTextBoxColumn.Name = "codigoPostalDataGridViewTextBoxColumn";
+            this.codigoPostalDataGridViewTextBoxColumn.Width = 94;
+            // 
+            // clienteActivoDataGridViewCheckBoxColumn
+            // 
+            this.clienteActivoDataGridViewCheckBoxColumn.DataPropertyName = "ClienteActivo";
+            this.clienteActivoDataGridViewCheckBoxColumn.HeaderText = "ClienteActivo";
+            this.clienteActivoDataGridViewCheckBoxColumn.Name = "clienteActivoDataGridViewCheckBoxColumn";
+            this.clienteActivoDataGridViewCheckBoxColumn.Visible = false;
             // 
             // clientesBindingSource
             // 
@@ -173,119 +279,119 @@
             this.fillByCodigoPostalToolStripButton});
             this.fillByRFCToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByRFCToolStrip.Name = "fillByRFCToolStrip";
-            this.fillByRFCToolStrip.Size = new System.Drawing.Size(1572, 27);
+            this.fillByRFCToolStrip.Size = new System.Drawing.Size(1028, 25);
             this.fillByRFCToolStrip.TabIndex = 24;
             this.fillByRFCToolStrip.Text = "fillByRFCToolStrip";
             // 
             // rFCToolStripLabel
             // 
             this.rFCToolStripLabel.Name = "rFCToolStripLabel";
-            this.rFCToolStripLabel.Size = new System.Drawing.Size(37, 24);
+            this.rFCToolStripLabel.Size = new System.Drawing.Size(31, 22);
             this.rFCToolStripLabel.Text = "RFC:";
             // 
             // rFCToolStripTextBox
             // 
             this.rFCToolStripTextBox.Name = "rFCToolStripTextBox";
-            this.rFCToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.rFCToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByRFCToolStripButton
             // 
             this.fillByRFCToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByRFCToolStripButton.Name = "fillByRFCToolStripButton";
-            this.fillByRFCToolStripButton.Size = new System.Drawing.Size(73, 24);
+            this.fillByRFCToolStripButton.Size = new System.Drawing.Size(60, 22);
             this.fillByRFCToolStripButton.Text = "FillByRFC";
             this.fillByRFCToolStripButton.Click += new System.EventHandler(this.fillByRFCToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // nombreToolStripLabel
             // 
             this.nombreToolStripLabel.Name = "nombreToolStripLabel";
-            this.nombreToolStripLabel.Size = new System.Drawing.Size(67, 24);
+            this.nombreToolStripLabel.Size = new System.Drawing.Size(54, 22);
             this.nombreToolStripLabel.Text = "Nombre:";
             // 
             // nombreToolStripTextBox
             // 
             this.nombreToolStripTextBox.Name = "nombreToolStripTextBox";
-            this.nombreToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.nombreToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByNombre1ToolStripButton
             // 
             this.fillByNombre1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNombre1ToolStripButton.Name = "fillByNombre1ToolStripButton";
-            this.fillByNombre1ToolStripButton.Size = new System.Drawing.Size(111, 24);
+            this.fillByNombre1ToolStripButton.Size = new System.Drawing.Size(89, 22);
             this.fillByNombre1ToolStripButton.Text = "FillByNombre1";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // aPaternoToolStripLabel
             // 
             this.aPaternoToolStripLabel.Name = "aPaternoToolStripLabel";
-            this.aPaternoToolStripLabel.Size = new System.Drawing.Size(72, 24);
+            this.aPaternoToolStripLabel.Size = new System.Drawing.Size(59, 22);
             this.aPaternoToolStripLabel.Text = "APaterno:";
             // 
             // aPaternoToolStripTextBox
             // 
             this.aPaternoToolStripTextBox.Name = "aPaternoToolStripTextBox";
-            this.aPaternoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.aPaternoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByAPaterno1ToolStripButton
             // 
             this.fillByAPaterno1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByAPaterno1ToolStripButton.Name = "fillByAPaterno1ToolStripButton";
-            this.fillByAPaterno1ToolStripButton.Size = new System.Drawing.Size(116, 24);
+            this.fillByAPaterno1ToolStripButton.Size = new System.Drawing.Size(94, 22);
             this.fillByAPaterno1ToolStripButton.Text = "FillByAPaterno1";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // aMaternoToolStripLabel
             // 
             this.aMaternoToolStripLabel.Name = "aMaternoToolStripLabel";
-            this.aMaternoToolStripLabel.Size = new System.Drawing.Size(78, 24);
+            this.aMaternoToolStripLabel.Size = new System.Drawing.Size(63, 22);
             this.aMaternoToolStripLabel.Text = "AMaterno:";
             // 
             // aMaternoToolStripTextBox
             // 
             this.aMaternoToolStripTextBox.Name = "aMaternoToolStripTextBox";
-            this.aMaternoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.aMaternoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByAMaterno1ToolStripButton
             // 
             this.fillByAMaterno1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByAMaterno1ToolStripButton.Name = "fillByAMaterno1ToolStripButton";
-            this.fillByAMaterno1ToolStripButton.Size = new System.Drawing.Size(122, 24);
+            this.fillByAMaterno1ToolStripButton.Size = new System.Drawing.Size(98, 22);
             this.fillByAMaterno1ToolStripButton.Text = "FillByAMaterno1";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // codigoPostalToolStripLabel
             // 
             this.codigoPostalToolStripLabel.Name = "codigoPostalToolStripLabel";
-            this.codigoPostalToolStripLabel.Size = new System.Drawing.Size(100, 24);
+            this.codigoPostalToolStripLabel.Size = new System.Drawing.Size(81, 22);
             this.codigoPostalToolStripLabel.Text = "CodigoPostal:";
             // 
             // codigoPostalToolStripTextBox
             // 
             this.codigoPostalToolStripTextBox.Name = "codigoPostalToolStripTextBox";
-            this.codigoPostalToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.codigoPostalToolStripTextBox.Size = new System.Drawing.Size(76, 23);
             // 
             // fillByCodigoPostalToolStripButton
             // 
             this.fillByCodigoPostalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCodigoPostalToolStripButton.Name = "fillByCodigoPostalToolStripButton";
-            this.fillByCodigoPostalToolStripButton.Size = new System.Drawing.Size(136, 24);
+            this.fillByCodigoPostalToolStripButton.Size = new System.Drawing.Size(110, 19);
             this.fillByCodigoPostalToolStripButton.Text = "FillByCodigoPostal";
             // 
             // fillByEstadoToolStrip
@@ -315,121 +421,121 @@
             this.noIntToolStripLabel,
             this.noIntToolStripTextBox,
             this.fillByNoIntToolStripButton});
-            this.fillByEstadoToolStrip.Location = new System.Drawing.Point(0, 27);
+            this.fillByEstadoToolStrip.Location = new System.Drawing.Point(0, 25);
             this.fillByEstadoToolStrip.Name = "fillByEstadoToolStrip";
-            this.fillByEstadoToolStrip.Size = new System.Drawing.Size(1572, 27);
+            this.fillByEstadoToolStrip.Size = new System.Drawing.Size(1028, 25);
             this.fillByEstadoToolStrip.TabIndex = 25;
             this.fillByEstadoToolStrip.Text = "fillByEstadoToolStrip";
             // 
             // estadoToolStripLabel
             // 
             this.estadoToolStripLabel.Name = "estadoToolStripLabel";
-            this.estadoToolStripLabel.Size = new System.Drawing.Size(57, 24);
+            this.estadoToolStripLabel.Size = new System.Drawing.Size(45, 22);
             this.estadoToolStripLabel.Text = "Estado:";
             // 
             // estadoToolStripTextBox
             // 
             this.estadoToolStripTextBox.Name = "estadoToolStripTextBox";
-            this.estadoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.estadoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByEstadoToolStripButton
             // 
             this.fillByEstadoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByEstadoToolStripButton.Name = "fillByEstadoToolStripButton";
-            this.fillByEstadoToolStripButton.Size = new System.Drawing.Size(93, 24);
+            this.fillByEstadoToolStripButton.Size = new System.Drawing.Size(74, 22);
             this.fillByEstadoToolStripButton.Text = "FillByEstado";
             this.fillByEstadoToolStripButton.Click += new System.EventHandler(this.fillByEstadoToolStripButton_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // coloniaToolStripLabel
             // 
             this.coloniaToolStripLabel.Name = "coloniaToolStripLabel";
-            this.coloniaToolStripLabel.Size = new System.Drawing.Size(63, 24);
+            this.coloniaToolStripLabel.Size = new System.Drawing.Size(51, 22);
             this.coloniaToolStripLabel.Text = "Colonia:";
             // 
             // coloniaToolStripTextBox
             // 
             this.coloniaToolStripTextBox.Name = "coloniaToolStripTextBox";
-            this.coloniaToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.coloniaToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByColoniaToolStripButton
             // 
             this.fillByColoniaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByColoniaToolStripButton.Name = "fillByColoniaToolStripButton";
-            this.fillByColoniaToolStripButton.Size = new System.Drawing.Size(99, 24);
+            this.fillByColoniaToolStripButton.Size = new System.Drawing.Size(80, 22);
             this.fillByColoniaToolStripButton.Text = "FillByColonia";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // ciudadToolStripLabel
             // 
             this.ciudadToolStripLabel.Name = "ciudadToolStripLabel";
-            this.ciudadToolStripLabel.Size = new System.Drawing.Size(59, 24);
+            this.ciudadToolStripLabel.Size = new System.Drawing.Size(48, 22);
             this.ciudadToolStripLabel.Text = "Ciudad:";
             // 
             // ciudadToolStripTextBox
             // 
             this.ciudadToolStripTextBox.Name = "ciudadToolStripTextBox";
-            this.ciudadToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.ciudadToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByCiudadToolStripButton
             // 
             this.fillByCiudadToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCiudadToolStripButton.Name = "fillByCiudadToolStripButton";
-            this.fillByCiudadToolStripButton.Size = new System.Drawing.Size(95, 24);
+            this.fillByCiudadToolStripButton.Size = new System.Drawing.Size(77, 22);
             this.fillByCiudadToolStripButton.Text = "FillByCiudad";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // calleToolStripLabel
             // 
             this.calleToolStripLabel.Name = "calleToolStripLabel";
-            this.calleToolStripLabel.Size = new System.Drawing.Size(45, 24);
+            this.calleToolStripLabel.Size = new System.Drawing.Size(36, 22);
             this.calleToolStripLabel.Text = "Calle:";
             // 
             // calleToolStripTextBox
             // 
             this.calleToolStripTextBox.Name = "calleToolStripTextBox";
-            this.calleToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.calleToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByCalleToolStripButton
             // 
             this.fillByCalleToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCalleToolStripButton.Name = "fillByCalleToolStripButton";
-            this.fillByCalleToolStripButton.Size = new System.Drawing.Size(81, 24);
+            this.fillByCalleToolStripButton.Size = new System.Drawing.Size(65, 22);
             this.fillByCalleToolStripButton.Text = "FillByCalle";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // noExtToolStripLabel
             // 
             this.noExtToolStripLabel.Name = "noExtToolStripLabel";
-            this.noExtToolStripLabel.Size = new System.Drawing.Size(52, 24);
+            this.noExtToolStripLabel.Size = new System.Drawing.Size(41, 22);
             this.noExtToolStripLabel.Text = "NoExt:";
             // 
             // noExtToolStripTextBox
             // 
             this.noExtToolStripTextBox.Name = "noExtToolStripTextBox";
-            this.noExtToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.noExtToolStripTextBox.Size = new System.Drawing.Size(76, 25);
             // 
             // fillByNoExtToolStripButton
             // 
             this.fillByNoExtToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNoExtToolStripButton.Name = "fillByNoExtToolStripButton";
-            this.fillByNoExtToolStripButton.Size = new System.Drawing.Size(88, 24);
+            this.fillByNoExtToolStripButton.Size = new System.Drawing.Size(70, 22);
             this.fillByNoExtToolStripButton.Text = "FillByNoExt";
             // 
             // toolStripSeparator9
@@ -440,133 +546,32 @@
             // noIntToolStripLabel
             // 
             this.noIntToolStripLabel.Name = "noIntToolStripLabel";
-            this.noIntToolStripLabel.Size = new System.Drawing.Size(49, 24);
+            this.noIntToolStripLabel.Size = new System.Drawing.Size(40, 15);
             this.noIntToolStripLabel.Text = "NoInt:";
             // 
             // noIntToolStripTextBox
             // 
             this.noIntToolStripTextBox.Name = "noIntToolStripTextBox";
-            this.noIntToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            this.noIntToolStripTextBox.Size = new System.Drawing.Size(76, 23);
             // 
             // fillByNoIntToolStripButton
             // 
             this.fillByNoIntToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNoIntToolStripButton.Name = "fillByNoIntToolStripButton";
-            this.fillByNoIntToolStripButton.Size = new System.Drawing.Size(85, 24);
+            this.fillByNoIntToolStripButton.Size = new System.Drawing.Size(69, 19);
             this.fillByNoIntToolStripButton.Text = "FillByNoInt";
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rFCDataGridViewTextBoxColumn
-            // 
-            this.rFCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rFCDataGridViewTextBoxColumn.DataPropertyName = "RFC";
-            this.rFCDataGridViewTextBoxColumn.HeaderText = "RFC";
-            this.rFCDataGridViewTextBoxColumn.Name = "rFCDataGridViewTextBoxColumn";
-            this.rFCDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 87;
-            // 
-            // aPaternoDataGridViewTextBoxColumn
-            // 
-            this.aPaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.aPaternoDataGridViewTextBoxColumn.DataPropertyName = "APaterno";
-            this.aPaternoDataGridViewTextBoxColumn.HeaderText = "APaterno";
-            this.aPaternoDataGridViewTextBoxColumn.Name = "aPaternoDataGridViewTextBoxColumn";
-            this.aPaternoDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // aMaternoDataGridViewTextBoxColumn
-            // 
-            this.aMaternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.aMaternoDataGridViewTextBoxColumn.DataPropertyName = "AMaterno";
-            this.aMaternoDataGridViewTextBoxColumn.HeaderText = "AMaterno";
-            this.aMaternoDataGridViewTextBoxColumn.Name = "aMaternoDataGridViewTextBoxColumn";
-            this.aMaternoDataGridViewTextBoxColumn.Width = 98;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // ciudadDataGridViewTextBoxColumn
-            // 
-            this.ciudadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "Ciudad";
-            this.ciudadDataGridViewTextBoxColumn.HeaderText = "Ciudad";
-            this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
-            this.ciudadDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // calleDataGridViewTextBoxColumn
-            // 
-            this.calleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
-            this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
-            this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
-            this.calleDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // noExtDataGridViewTextBoxColumn
-            // 
-            this.noExtDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.noExtDataGridViewTextBoxColumn.DataPropertyName = "NoExt";
-            this.noExtDataGridViewTextBoxColumn.HeaderText = "NoExt";
-            this.noExtDataGridViewTextBoxColumn.Name = "noExtDataGridViewTextBoxColumn";
-            this.noExtDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // noIntDataGridViewTextBoxColumn
-            // 
-            this.noIntDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.noIntDataGridViewTextBoxColumn.DataPropertyName = "NoInt";
-            this.noIntDataGridViewTextBoxColumn.HeaderText = "NoInt";
-            this.noIntDataGridViewTextBoxColumn.Name = "noIntDataGridViewTextBoxColumn";
-            this.noIntDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // coloniaDataGridViewTextBoxColumn
-            // 
-            this.coloniaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.coloniaDataGridViewTextBoxColumn.DataPropertyName = "Colonia";
-            this.coloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
-            this.coloniaDataGridViewTextBoxColumn.Name = "coloniaDataGridViewTextBoxColumn";
-            this.coloniaDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // codigoPostalDataGridViewTextBoxColumn
-            // 
-            this.codigoPostalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.codigoPostalDataGridViewTextBoxColumn.DataPropertyName = "CodigoPostal";
-            this.codigoPostalDataGridViewTextBoxColumn.HeaderText = "CodigoPostal";
-            this.codigoPostalDataGridViewTextBoxColumn.Name = "codigoPostalDataGridViewTextBoxColumn";
-            this.codigoPostalDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // clienteActivoDataGridViewCheckBoxColumn
-            // 
-            this.clienteActivoDataGridViewCheckBoxColumn.DataPropertyName = "ClienteActivo";
-            this.clienteActivoDataGridViewCheckBoxColumn.HeaderText = "ClienteActivo";
-            this.clienteActivoDataGridViewCheckBoxColumn.Name = "clienteActivoDataGridViewCheckBoxColumn";
-            this.clienteActivoDataGridViewCheckBoxColumn.Visible = false;
             // 
             // FormBuscarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1572, 583);
+            this.ClientSize = new System.Drawing.Size(1028, 474);
             this.Controls.Add(this.fillByEstadoToolStrip);
             this.Controls.Add(this.fillByRFCToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormBuscarCliente";
             this.Text = "FormBuscarCliente";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
