@@ -65,6 +65,7 @@
             this.Agrbutton.TabIndex = 0;
             this.Agrbutton.Text = "Agregar Nuevo Producto";
             this.Agrbutton.UseVisualStyleBackColor = true;
+            this.Agrbutton.Click += new System.EventHandler(this.Agrbutton_Click);
             // 
             // Salbutton
             // 
@@ -86,6 +87,7 @@
             this.Canbutton.TabIndex = 2;
             this.Canbutton.Text = "Cancelar";
             this.Canbutton.UseVisualStyleBackColor = true;
+            this.Canbutton.Click += new System.EventHandler(this.Canbutton_Click);
             // 
             // Busbutton
             // 
@@ -96,6 +98,7 @@
             this.Busbutton.TabIndex = 3;
             this.Busbutton.Text = "Buscar Cliente";
             this.Busbutton.UseVisualStyleBackColor = true;
+            this.Busbutton.Click += new System.EventHandler(this.Busbutton_Click);
             // 
             // dataGridView1
             // 
@@ -154,6 +157,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(300, 30);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Facbutton
             // 
@@ -239,7 +243,9 @@
             this.MaximumSize = new System.Drawing.Size(840, 720);
             this.MinimumSize = new System.Drawing.Size(840, 720);
             this.Name = "FormNuevaVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Venta";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -109,6 +110,18 @@
     <Compile Include="Formas\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Vender\FormAgregarNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Vender\FormAgregarNuevoProducto.Designer.cs">
+      <DependentUpon>FormAgregarNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Vender\FormBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Vender\FormBuscarCliente.Designer.cs">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Vender\FormNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Vender\FormAgregarNuevoProducto.resx">
+      <DependentUpon>FormAgregarNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Vender\FormBuscarCliente.resx">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Vender\FormNuevaVenta.resx">
       <DependentUpon>FormNuevaVenta.cs</DependentUpon>

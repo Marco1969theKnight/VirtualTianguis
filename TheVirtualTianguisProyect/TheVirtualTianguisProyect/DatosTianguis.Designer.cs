@@ -5830,7 +5830,7 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[15];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
@@ -5846,18 +5846,95 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AMaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AMaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
-                "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
-                " (APaterno LIKE @APaterno) ORDER BY APaterno, AMaterno, Nombre";
+            this._commandCollection[2].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (AMaterno = @AMaterno)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@APaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "APaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AMaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AMaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
                 "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
-                " (Nombre LIKE @Nombre) ORDER BY APaterno, AMaterno, Nombre";
+                " (APaterno LIKE @APaterno) ORDER BY APaterno, AMaterno, Nombre";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@APaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "APaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (APaterno = @APaterno)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@APaterno", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "APaterno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (Calle = @Calle)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Calle", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Calle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (Ciudad = @Ciudad)";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciudad", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Ciudad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (CodigoPostal = @CodigoPostal)";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodigoPostal", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodigoPostal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (Colonia = @Colonia)";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Colonia", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Colonia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (Estado = @Estado)";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (NoExt = @NoExt)";
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoExt", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoExt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[11].Connection = this.Connection;
+            this._commandCollection[11].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (NoInt = @NoInt)";
+            this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoInt", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoInt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[12].Connection = this.Connection;
+            this._commandCollection[12].CommandText = "SELECT AMaterno, APaterno, Calle, Ciudad, ClienteActivo, CodigoPostal, Colonia, E" +
+                "stado, ID, NoExt, NoInt, Nombre, RFC FROM Clientes WHERE (ClienteActivo = 1) AND" +
+                " (Nombre LIKE @Nombre) ORDER BY APaterno, AMaterno, Nombre";
+            this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[13].Connection = this.Connection;
+            this._commandCollection[13].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (Nombre = @Nombre)";
+            this._commandCollection[13].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[14] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[14].Connection = this.Connection;
+            this._commandCollection[14].CommandText = "SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt, " +
+                "Colonia, CodigoPostal, ClienteActivo\r\nFROM     Clientes\r\nWHERE  (ClienteActivo =" +
+                " 1) AND (RFC = @RFC)";
+            this._commandCollection[14].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[14].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RFC", global::System.Data.SqlDbType.NVarChar, 18, global::System.Data.ParameterDirection.Input, 0, 0, "RFC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5924,8 +6001,27 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByAPaterno(DatosTianguis.ClientesDataTable dataTable, string APaterno) {
+        public virtual int FillByAMaterno1(DatosTianguis.ClientesDataTable dataTable, string AMaterno) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((AMaterno == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(AMaterno));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByAPaterno(DatosTianguis.ClientesDataTable dataTable, string APaterno) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((APaterno == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5944,7 +6040,7 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatosTianguis.ClientesDataTable GetDataByAPaterno(string APaterno) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((APaterno == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5960,8 +6056,160 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByAPaterno1(DatosTianguis.ClientesDataTable dataTable, string APaterno) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((APaterno == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(APaterno));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCalle(DatosTianguis.ClientesDataTable dataTable, string Calle) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((Calle == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Calle));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCiudad(DatosTianguis.ClientesDataTable dataTable, string Ciudad) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            if ((Ciudad == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Ciudad));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCodigoPostal(DatosTianguis.ClientesDataTable dataTable, global::System.Nullable<int> CodigoPostal) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((CodigoPostal.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CodigoPostal.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByColonia(DatosTianguis.ClientesDataTable dataTable, string Colonia) {
+            this.Adapter.SelectCommand = this.CommandCollection[8];
+            if ((Colonia == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Colonia));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByEstado(DatosTianguis.ClientesDataTable dataTable, string Estado) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((Estado == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Estado));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNoExt(DatosTianguis.ClientesDataTable dataTable, global::System.Nullable<int> NoExt) {
+            this.Adapter.SelectCommand = this.CommandCollection[10];
+            if ((NoExt.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoExt.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNoInt(DatosTianguis.ClientesDataTable dataTable, global::System.Nullable<int> NoInt) {
+            this.Adapter.SelectCommand = this.CommandCollection[11];
+            if ((NoInt.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoInt.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByNombre(DatosTianguis.ClientesDataTable dataTable, string Nombre) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[12];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5980,7 +6228,7 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatosTianguis.ClientesDataTable GetDataByNombre(string Nombre) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[12];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5990,6 +6238,44 @@ SELECT ID, RFC, Nombre, APaterno, AMaterno, Estado, Ciudad, Calle, NoExt, NoInt,
             DatosTianguis.ClientesDataTable dataTable = new DatosTianguis.ClientesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNombre1(DatosTianguis.ClientesDataTable dataTable, string Nombre) {
+            this.Adapter.SelectCommand = this.CommandCollection[13];
+            if ((Nombre == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByRFC(DatosTianguis.ClientesDataTable dataTable, string RFC) {
+            this.Adapter.SelectCommand = this.CommandCollection[14];
+            if ((RFC == null)) {
+                throw new global::System.ArgumentNullException("RFC");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(RFC));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6675,9 +6961,11 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT V.NoVenta, DV.Producto, DV.Cantidad, P.Precio\r\nFROM     Ventas AS V INNER " +
-                "JOIN\r\n                  DetalleVentas AS DV ON DV.NoVenta = V.NoVenta INNER JOIN" +
-                "\r\n                  Producto AS P ON P.Id_producto = DV.Producto";
+            this._commandCollection[1].CommandText = @"SELECT V.NoVenta, DV.Producto, P.Nombre, DV.Cantidad, P.Precio, V.VentaActiva, V.Fecha
+FROM     Ventas AS V INNER JOIN
+                  DetalleVentas AS DV ON DV.NoVenta = V.NoVenta INNER JOIN
+                  Producto AS P ON P.Id_producto = DV.Producto
+WHERE  (V.VentaActiva = 1) AND (V.Fecha = GETDATE())";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8899,12 +9187,42 @@ SELECT Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, Pr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, Pro" +
                 "ductoActivo FROM dbo.Producto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistenci" +
+                "as,  P.Descripcion, P.Proveedor, P.ProductoActivo\r\nFROM     Producto AS P INNER " +
+                "JOIN\r\n                  Inventario AS I ON P.Id_producto = I.Productos";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias,  P.Descripcion, P.Proveedor, P.ProductoActivo
+FROM     Producto AS P INNER JOIN
+                  Inventario AS I ON P.Id_producto = I.Productos
+WHERE  (P.Categoria = @Categoria) AND (P.ProductoActivo = 1)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Categoria", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Categoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias, P.Descripcion, P.Proveedor, P.ProductoActivo
+FROM     Producto AS P INNER JOIN
+                  Inventario AS I ON P.Id_producto = I.Productos
+WHERE  (P.Marca = @Marca) AND (P.ProductoActivo = 1)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias, P.Descripcion, P.Proveedor, P.ProductoActivo
+FROM     Producto AS P INNER JOIN
+                  Inventario AS I ON P.Id_producto = I.Productos
+WHERE  (P.Nombre = @Nombre) AND (P.ProductoActivo = 1)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8929,6 +9247,87 @@ SELECT Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, Pr
             DatosTianguis.ProductoDataTable dataTable = new DatosTianguis.ProductoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByAgregarProducto(DatosTianguis.ProductoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatosTianguis.ProductoDataTable GetDataByAgregarProducto() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            DatosTianguis.ProductoDataTable dataTable = new DatosTianguis.ProductoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCategoria(DatosTianguis.ProductoDataTable dataTable, string Categoria) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((Categoria == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Categoria));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMarca(DatosTianguis.ProductoDataTable dataTable, string Marca) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Marca == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Marca));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNombre2(DatosTianguis.ProductoDataTable dataTable, string Nombre) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((Nombre == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

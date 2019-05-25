@@ -52,14 +52,15 @@ namespace TheVirtualTianguisProyect
                 obje.vender1 = Convert.ToBoolean(dt.Rows[0][4]);
                 
                 MessageBox.Show("Bienvenido " + obje.usuario1);
-                TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado dtEmpleado = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosEmpleado.ObtenerDatosEmpleado_Usuario(obje.usuario1.ToString());
+                TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado dtEmpleado = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosEmpleado.ObtenerDatosEmpleado_Usuario(obje.usuario1.ToString(), obje.password1.ToString());
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoEditar = obje.editar1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoAlmacenar = obje.almacen1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender = obje.vender1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = dtEmpleado.id_empleado;
                 TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
                 FormaP.ShowDialog();
-
+                NomUsuTB.Text = String.Empty;
+                ConTB.Text = String.Empty;
             }
             else
             {
