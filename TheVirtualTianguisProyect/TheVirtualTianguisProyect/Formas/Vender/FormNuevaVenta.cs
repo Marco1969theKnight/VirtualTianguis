@@ -21,7 +21,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
         private void FormNuevaVenta_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis1.Ventas' Puede moverla o quitarla según sea necesario.
-            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -65,7 +65,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             }
 
             this.ventasTableAdapter.GetData();
-            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
         }
 
         private void Busbutton_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             DatosVenta.VentaActiva = true;
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.AltaVenta(DatosVenta);
             TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = id;
-            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
         }
     }
 }

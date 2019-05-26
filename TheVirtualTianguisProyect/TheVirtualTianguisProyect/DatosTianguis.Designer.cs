@@ -6954,19 +6954,24 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM dbo.Ventas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT V.NoVenta, DV.Producto, P.Nombre, DV.Cantidad, P.Precio, V.VentaActiva, V.Fecha
+            this._commandCollection[1].CommandText = "SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva\r\nFROM     Ventas\r\nWH" +
+                "ERE  (VentaActiva = 1)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT V.NoVenta, DV.Producto, P.Nombre, DV.Cantidad, P.Precio, V.VentaActiva, V.Fecha
 FROM     Ventas AS V INNER JOIN
                   DetalleVentas AS DV ON DV.NoVenta = V.NoVenta INNER JOIN
                   Producto AS P ON P.Id_producto = DV.Producto
 WHERE  (V.VentaActiva = 1) AND (V.Fecha = GETDATE())";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6997,7 +7002,7 @@ WHERE  (V.VentaActiva = 1) AND (V.Fecha = GETDATE())";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByProductosVenta(DatosTianguis.VentasDataTable dataTable) {
+        public virtual int FillByAtctivo(DatosTianguis.VentasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7010,8 +7015,32 @@ WHERE  (V.VentaActiva = 1) AND (V.Fecha = GETDATE())";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DatosTianguis.VentasDataTable GetDataByProductosVenta() {
+        public virtual DatosTianguis.VentasDataTable GetDataByAtctivo() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            DatosTianguis.VentasDataTable dataTable = new DatosTianguis.VentasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByProductosVenta(DatosTianguis.VentasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatosTianguis.VentasDataTable GetDataByProductosVenta() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             DatosTianguis.VentasDataTable dataTable = new DatosTianguis.VentasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

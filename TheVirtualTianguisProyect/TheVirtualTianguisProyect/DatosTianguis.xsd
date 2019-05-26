@@ -372,6 +372,16 @@ SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva FROM Ventas WHERE (
               <Mapping SourceColumn="VentaActiva" DataSetColumn="VentaActiva" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectName="VirTian.dbo.Ventas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAtctivo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAtctivo" GeneratorSourceName="FillByAtctivo" GetMethodModifier="Public" GetMethodName="GetDataByAtctivo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAtctivo" UserSourceName="FillByAtctivo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT NoVenta, Fecha, Total, Empleado, Detalle, VentaActiva
+FROM     Ventas
+WHERE  (VentaActiva = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByProductosVenta" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProductosVenta" GeneratorSourceName="FillByProductosVenta" GetMethodModifier="Public" GetMethodName="GetDataByProductosVenta" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProductosVenta" UserSourceName="FillByProductosVenta">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">

@@ -52,6 +52,7 @@
             this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SelVbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -102,7 +103,7 @@
             this.Busbutton.Name = "Busbutton";
             this.Busbutton.Size = new System.Drawing.Size(180, 39);
             this.Busbutton.TabIndex = 3;
-            this.Busbutton.Text = "Buscar Cliente";
+            this.Busbutton.Text = "Asignar Cliente";
             this.Busbutton.UseVisualStyleBackColor = true;
             this.Busbutton.Click += new System.EventHandler(this.Busbutton_Click);
             // 
@@ -122,7 +123,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(520, 189);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -261,12 +262,25 @@
             this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
+            this.ventaActivaDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // SelVbutton
+            // 
+            this.SelVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelVbutton.Location = new System.Drawing.Point(600, 390);
+            this.SelVbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SelVbutton.Name = "SelVbutton";
+            this.SelVbutton.Size = new System.Drawing.Size(180, 39);
+            this.SelVbutton.TabIndex = 13;
+            this.SelVbutton.Text = "Seleccionar Venta";
+            this.SelVbutton.UseVisualStyleBackColor = true;
             // 
             // FormNuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 671);
+            this.Controls.Add(this.SelVbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.NVenbutton);
@@ -322,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn empleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn detalleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ventaActivaDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button SelVbutton;
     }
 }
