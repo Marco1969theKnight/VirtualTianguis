@@ -85,6 +85,14 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
+        public static void ActualizaPrecioVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
+        {
+            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
+            String query = "update Ventas set Fecha = '" + DatosVenta.Fecha + "', " + ", Total = " + DatosVenta.Total + ", Empleado = " + DatosVenta.Empleado + ", Detalle = " + DatosVenta.Detalle + ", VentaActiva = '" + DatosVenta.VentaActiva + "' where NoVenta = " + DatosVenta.NoVenta;
+
+            TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
+        }
+
         public static TheVirtualTianguisProyect.Negocios.Datos.DatosVenta ObtenerVenta(System.Int32 NoVenta)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);

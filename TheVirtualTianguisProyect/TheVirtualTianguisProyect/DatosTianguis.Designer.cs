@@ -10384,16 +10384,16 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdDetalleVenta, Producto, Cantidad, NoVenta FROM dbo.DetalleVentas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, DV.Cantidad, DV.NoVenta\r\nFROM     DetalleV" +
-                "entas AS DV  INNER JOIN Producto AS P ON (DV.Producto = P.id_producto)\r\nWHERE  (" +
-                "DV.NoVenta = @NoVenta)";
+            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, P.Nombre, P.Precio, DV.Cantidad, DV.NoVent" +
+                "a\r\nFROM     DetalleVentas AS DV INNER JOIN\r\n                  Producto AS P ON P" +
+                ".Id_producto = DV.Producto\r\nWHERE  (DV.NoVenta = @NoVenta)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -10402,6 +10402,13 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
                 " AS DV INNER JOIN\r\n                  Ventas AS V ON DV.NoVenta = V.NoVenta INNER" +
                 " JOIN\r\n                  Producto AS P ON DV.Producto = P.Id_producto";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT SUM(P.Precio * DV.Cantidad) AS Total\r\nFROM     DetalleVentas AS DV INNER J" +
+                "OIN\r\n                  Producto AS P ON P.Id_producto = DV.Producto\r\nWHERE  (DV." +
+                "NoVenta = @NoVenta)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10553,6 +10560,40 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<double> TotalVenta(global::System.Nullable<int> NoVenta) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((NoVenta.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(NoVenta.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<double>();
+            }
+            else {
+                return new global::System.Nullable<double>(((double)(returnValue)));
             }
         }
     }

@@ -73,7 +73,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
             TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto = new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto();
 
-            DatosProducto = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ObtenerDatosProducto(id_producto);
+            DatosProducto = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ObtenerDatosProducto(Double.Parse(id_producto.ToString()));
 
             TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta DatosDetalleVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta();
 
@@ -81,6 +81,8 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             DatosDetalleVenta.NoVenta = TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct;
             DatosDetalleVenta.Producto = DatosProducto.Id_producto;
             DatosDetalleVenta.Cantidad = Int32.Parse(numericUpDown1.Value.ToString());
+
+            TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDetalleVenta.AltaDetalleVenta(DatosDetalleVenta);
 
             this.Close();
         }

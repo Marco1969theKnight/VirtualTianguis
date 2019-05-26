@@ -14,7 +14,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static TheVirtualTianguisProyect.Negocios.Datos.DatosProducto ObtenerDatosProducto(System.Double IDProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "select * from Producto where Id_proveedor = " + IDProducto;
+            String query = "select * from Producto where Id_producto = " + IDProducto;
 
             DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Producto");
             if (Dt.Rows.Count == 0)

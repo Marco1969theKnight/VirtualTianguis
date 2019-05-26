@@ -24,6 +24,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             this.detalleVentasTableAdapter.FillByNoVenta(this.datosTianguis.DetalleVentas, 1);
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Ventas' Puede moverla o quitarla según sea necesario.
             this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
+            dataGridView2.AutoGenerateColumns = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -38,7 +39,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Canbutton_Click(object sender, EventArgs e)
@@ -86,6 +87,8 @@ namespace TheVirtualTianguisProyect.Formas.Vender
         {
             TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto Form = new TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto();
             Form.Show();
+
+            numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
         }
 
         private void NVenbutton_Click(object sender, EventArgs e)
@@ -97,8 +100,8 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             DatosVenta.NoVenta = id;
             DatosVenta.Fecha = dateTimePicker1.Value.ToShortDateString();
             DatosVenta.Total = 0;
-            DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;
             DatosVenta.Detalle = idDetalle;
+            DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;
             DatosVenta.VentaActiva = true;
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.AltaVenta(DatosVenta);
             TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = id;
@@ -123,6 +126,8 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+            numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
         }
     }
 }
