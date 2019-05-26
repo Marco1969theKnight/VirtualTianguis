@@ -41,15 +41,15 @@
             this.SalButton = new System.Windows.Forms.ToolStripButton();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.descripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.PrecionumericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.precio = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.categoria = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.MarcatextBox1 = new System.Windows.Forms.TextBox();
+            this.marca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.NombretextBox1 = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.precio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -102,6 +102,7 @@
             this.AgregarButton.Name = "AgregarButton";
             this.AgregarButton.Size = new System.Drawing.Size(73, 24);
             this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // ModifButton
             // 
@@ -169,13 +170,13 @@
             this.button1.Text = "Agregar Nuevo Proveedor";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // descripcion
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(205, 365);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 30;
+            this.descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descripcion.Location = new System.Drawing.Point(205, 365);
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Size = new System.Drawing.Size(100, 26);
+            this.descripcion.TabIndex = 30;
             // 
             // label6
             // 
@@ -187,13 +188,13 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Descripción:";
             // 
-            // PrecionumericUpDown1
+            // precio
             // 
-            this.PrecionumericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecionumericUpDown1.Location = new System.Drawing.Point(41, 365);
-            this.PrecionumericUpDown1.Name = "PrecionumericUpDown1";
-            this.PrecionumericUpDown1.Size = new System.Drawing.Size(100, 26);
-            this.PrecionumericUpDown1.TabIndex = 28;
+            this.precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precio.Location = new System.Drawing.Point(41, 365);
+            this.precio.Name = "precio";
+            this.precio.Size = new System.Drawing.Size(100, 26);
+            this.precio.TabIndex = 28;
             // 
             // label5
             // 
@@ -205,13 +206,13 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Precio:";
             // 
-            // textBox1
+            // categoria
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(349, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 26;
+            this.categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoria.Location = new System.Drawing.Point(349, 271);
+            this.categoria.Name = "categoria";
+            this.categoria.Size = new System.Drawing.Size(100, 26);
+            this.categoria.TabIndex = 26;
             // 
             // label4
             // 
@@ -223,13 +224,13 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Categoria:";
             // 
-            // MarcatextBox1
+            // marca
             // 
-            this.MarcatextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarcatextBox1.Location = new System.Drawing.Point(205, 271);
-            this.MarcatextBox1.Name = "MarcatextBox1";
-            this.MarcatextBox1.Size = new System.Drawing.Size(100, 26);
-            this.MarcatextBox1.TabIndex = 24;
+            this.marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marca.Location = new System.Drawing.Point(205, 271);
+            this.marca.Name = "marca";
+            this.marca.Size = new System.Drawing.Size(100, 26);
+            this.marca.TabIndex = 24;
             // 
             // label3
             // 
@@ -241,13 +242,14 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Marca:";
             // 
-            // NombretextBox1
+            // nombre
             // 
-            this.NombretextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombretextBox1.Location = new System.Drawing.Point(41, 271);
-            this.NombretextBox1.Name = "NombretextBox1";
-            this.NombretextBox1.Size = new System.Drawing.Size(100, 26);
-            this.NombretextBox1.TabIndex = 22;
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(41, 271);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(100, 26);
+            this.nombre.TabIndex = 22;
+            this.nombre.TextChanged += new System.EventHandler(this.NombretextBox1_TextChanged);
             // 
             // label1
             // 
@@ -362,15 +364,15 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.descripcion);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.PrecionumericUpDown1);
+            this.Controls.Add(this.precio);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.categoria);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.MarcatextBox1);
+            this.Controls.Add(this.marca);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.NombretextBox1);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -380,7 +382,7 @@
             this.Load += new System.EventHandler(this.Productos_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.precio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
@@ -402,15 +404,15 @@
         private System.Windows.Forms.ToolStripButton SalButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox descripcion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown PrecionumericUpDown1;
+        private System.Windows.Forms.NumericUpDown precio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox categoria;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox MarcatextBox1;
+        private System.Windows.Forms.TextBox marca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NombretextBox1;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DatosTianguis datosTianguis;
