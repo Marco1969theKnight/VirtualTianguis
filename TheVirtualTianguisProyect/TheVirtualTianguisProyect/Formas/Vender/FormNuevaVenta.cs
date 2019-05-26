@@ -12,29 +12,16 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 {
     public partial class FormNuevaVenta : Form
     {
-        TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosVenta();
-        TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta DatosDetalleVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta();
 
         public FormNuevaVenta()
         {
             InitializeComponent();
-            DateTime now = DateTime.Now;
-            Int32 id = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("Ventas", "NoVenta");
-            Int32 idDetalle = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("DetalleVentas", "IdDetalleVenta");
-            DatosVenta.NoVenta = id;
-            DatosVenta.Fecha = now.ToShortTimeString();
-            DatosVenta.Total = 0;
-            DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;
-            DatosVenta.Detalle = idDetalle;
-            DatosVenta.VentaActiva = true;
-            TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.AltaVenta(DatosVenta);
-            TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = id;
         }
 
         private void FormNuevaVenta_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis1.Ventas' Puede moverla o quitarla según sea necesario.
-            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis1.Ventas);
+            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis.Ventas);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +70,9 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         private void Busbutton_Click(object sender, EventArgs e)
         {
+            Int32 NoVenta = Int32.Parse(dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString());
+            TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = NoVenta;
+
             TheVirtualTianguisProyect.Formas.Vender.FormBuscarCliente Form = new TheVirtualTianguisProyect.Formas.Vender.FormBuscarCliente();
             Form.Show();
             textBox1.Text = TheVirtualTianguisProyect.Properties.Settings.Default.RFCCliente;
@@ -95,8 +85,28 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         private void Agrbutton_Click(object sender, EventArgs e)
         {
+            Int32 NoVenta = Int32.Parse(dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString());
+            TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = NoVenta;
+
             TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto Form = new TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto();
             Form.Show();
+        }
+
+        private void NVenbutton_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosVenta();
+            TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta DatosDetalleVenta = new TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta();
+            Int32 id = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("Ventas", "NoVenta");
+            Int32 idDetalle = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("DetalleVentas", "IdDetalleVenta");
+            DatosVenta.NoVenta = id;
+            DatosVenta.Fecha = dateTimePicker1.Value.ToShortDateString();
+            DatosVenta.Total = 0;
+            DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;
+            DatosVenta.Detalle = idDetalle;
+            DatosVenta.VentaActiva = true;
+            TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.AltaVenta(DatosVenta);
+            TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = id;
+            this.ventasTableAdapter.FillByProductosVenta(this.datosTianguis.Ventas);
         }
     }
 }
