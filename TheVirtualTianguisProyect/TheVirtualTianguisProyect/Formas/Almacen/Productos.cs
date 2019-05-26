@@ -24,6 +24,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             marca.Text = String.Empty;
             categoria.Text = String.Empty;
             descripcion.Text = String.Empty;
+            proveedor.Value = 0;
             precio.Value = 0;
         }
 
@@ -75,7 +76,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             DatosProductos.Precio = float.Parse(precio.Value.ToString());
             DatosProductos.Categoria = categoria.Text;
             DatosProductos.Descripcion = descripcion.Text;
-            DatosProductos.Proveedor = 1;
+            DatosProductos.Proveedor = Int32.Parse(proveedor.Value.ToString());
             DatosProductos.ProductoActivo = true;
 
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);

@@ -63,11 +63,14 @@
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
+            this.label7 = new System.Windows.Forms.Label();
+            this.proveedor = new System.Windows.Forms.NumericUpDown();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.precio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -355,11 +358,31 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(37, 418);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 20);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Proveedor:";
+            // 
+            // proveedor
+            // 
+            this.proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proveedor.Location = new System.Drawing.Point(41, 453);
+            this.proveedor.Name = "proveedor";
+            this.proveedor.Size = new System.Drawing.Size(100, 26);
+            this.proveedor.TabIndex = 36;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 547);
+            this.Controls.Add(this.proveedor);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
@@ -386,6 +409,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +450,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn proveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn productoActivoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown proveedor;
     }
 }
