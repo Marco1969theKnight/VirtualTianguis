@@ -10384,17 +10384,24 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdDetalleVenta, Producto, Cantidad, NoVenta FROM dbo.DetalleVentas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, P.Nombre, DV.Cantidad, P.Precio\r\nFROM     DetalleVentas" +
+            this._commandCollection[1].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, DV.Cantidad, DV.NoVenta\r\nFROM     DetalleV" +
+                "entas AS DV  INNER JOIN Producto AS P ON (DV.Producto = P.id_producto)\r\nWHERE  (" +
+                "DV.NoVenta = @NoVenta)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT DV.IdDetalleVenta, P.Nombre, DV.Cantidad, P.Precio\r\nFROM     DetalleVentas" +
                 " AS DV INNER JOIN\r\n                  Ventas AS V ON DV.NoVenta = V.NoVenta INNER" +
                 " JOIN\r\n                  Producto AS P ON DV.Producto = P.Id_producto";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10425,8 +10432,44 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByProductosVenta(DatosTianguis.DetalleVentasDataTable dataTable) {
+        public virtual int FillByNoVenta(DatosTianguis.DetalleVentasDataTable dataTable, global::System.Nullable<int> NoVenta) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((NoVenta.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoVenta.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatosTianguis.DetalleVentasDataTable GetDataByNoVenta(global::System.Nullable<int> NoVenta) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((NoVenta.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoVenta.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            DatosTianguis.DetalleVentasDataTable dataTable = new DatosTianguis.DetalleVentasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByProductosVenta(DatosTianguis.DetalleVentasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -10439,7 +10482,7 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatosTianguis.DetalleVentasDataTable GetDataByProductosVenta() {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             DatosTianguis.DetalleVentasDataTable dataTable = new DatosTianguis.DetalleVentasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

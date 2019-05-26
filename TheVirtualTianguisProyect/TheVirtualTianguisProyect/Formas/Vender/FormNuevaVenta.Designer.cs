@@ -43,18 +43,27 @@
             this.NVenbutton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.SelVbutton = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDetalleVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
             this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SelVbutton = new System.Windows.Forms.Button();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
+            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +132,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(520, 180);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -212,19 +221,69 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Dia de Hoy:";
             // 
+            // SelVbutton
+            // 
+            this.SelVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelVbutton.Location = new System.Drawing.Point(600, 390);
+            this.SelVbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SelVbutton.Name = "SelVbutton";
+            this.SelVbutton.Size = new System.Drawing.Size(180, 39);
+            this.SelVbutton.TabIndex = 13;
+            this.SelVbutton.Text = "Seleccionar venta";
+            this.SelVbutton.UseVisualStyleBackColor = true;
+            this.SelVbutton.Click += new System.EventHandler(this.SelVbutton_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDetalleVentaDataGridViewTextBoxColumn,
+            this.productoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.noVentaDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.detalleVentasBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(60, 270);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(520, 180);
+            this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // idDetalleVentaDataGridViewTextBoxColumn
+            // 
+            this.idDetalleVentaDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleVenta";
+            this.idDetalleVentaDataGridViewTextBoxColumn.HeaderText = "IdDetalleVenta";
+            this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
+            this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productoDataGridViewTextBoxColumn
+            // 
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // noVentaDataGridViewTextBoxColumn1
+            // 
+            this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+            // 
+            // detalleVentasBindingSource
+            // 
+            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
+            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
+            // 
             // datosTianguis
             // 
             this.datosTianguis.DataSetName = "DatosTianguis";
             this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.datosTianguis;
-            // 
-            // ventasTableAdapter
-            // 
-            this.ventasTableAdapter.ClearBeforeFill = true;
             // 
             // noVentaDataGridViewTextBoxColumn
             // 
@@ -264,22 +323,25 @@
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
             this.ventaActivaDataGridViewCheckBoxColumn.Visible = false;
             // 
-            // SelVbutton
+            // ventasBindingSource
             // 
-            this.SelVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelVbutton.Location = new System.Drawing.Point(600, 390);
-            this.SelVbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SelVbutton.Name = "SelVbutton";
-            this.SelVbutton.Size = new System.Drawing.Size(180, 39);
-            this.SelVbutton.TabIndex = 13;
-            this.SelVbutton.Text = "Seleccionar Venta";
-            this.SelVbutton.UseVisualStyleBackColor = true;
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.datosTianguis;
+            // 
+            // ventasTableAdapter
+            // 
+            this.ventasTableAdapter.ClearBeforeFill = true;
+            // 
+            // detalleVentasTableAdapter
+            // 
+            this.detalleVentasTableAdapter.ClearBeforeFill = true;
             // 
             // FormNuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 671);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.SelVbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
@@ -305,6 +367,8 @@
             this.Load += new System.EventHandler(this.FormNuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -337,5 +401,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn detalleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ventaActivaDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Button SelVbutton;
+        private System.Windows.Forms.BindingSource detalleVentasBindingSource;
+        private DatosTianguisTableAdapters.DetalleVentasTableAdapter detalleVentasTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalleVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn1;
     }
 }
