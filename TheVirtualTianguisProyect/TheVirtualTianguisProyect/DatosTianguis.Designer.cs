@@ -10384,7 +10384,7 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdDetalleVenta, Producto, Cantidad, NoVenta FROM dbo.DetalleVentas";
@@ -10404,11 +10404,24 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT SUM(P.Precio * DV.Cantidad) AS Total\r\nFROM     DetalleVentas AS DV INNER J" +
+            this._commandCollection[3].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, P.Nombre, P.Precio, DV.Cantidad, DV.NoVent" +
+                "a\r\nFROM     DetalleVentas AS DV INNER JOIN\r\n                  Producto AS P ON P" +
+                ".Id_producto = DV.Producto";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT DV.IdDetalleVenta, DV.Producto, P.Nombre, P.Precio, DV.Cantidad, DV.NoVent" +
+                "a\r\nFROM     DetalleVentas AS DV INNER JOIN\r\n                  Producto AS P ON P" +
+                ".Id_producto = DV.Producto\r\nWHERE (NoVenta = @NoVenta)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT SUM(P.Precio * DV.Cantidad) AS Total\r\nFROM     DetalleVentas AS DV INNER J" +
                 "OIN\r\n                  Producto AS P ON P.Id_producto = DV.Producto\r\nWHERE  (DV." +
                 "NoVenta = @NoVenta)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10498,6 +10511,49 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByRNoVenta(DatosTianguis.DetalleVentasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatosTianguis.DetalleVentasDataTable GetDataByRNoVenta() {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            DatosTianguis.DetalleVentasDataTable dataTable = new DatosTianguis.DetalleVentasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBySNoVenta(DatosTianguis.DetalleVentasDataTable dataTable, global::System.Nullable<int> NoVenta) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((NoVenta.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoVenta.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DatosTianguis.DetalleVentasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -10567,7 +10623,7 @@ SELECT Id_proveedor, Nombre, ProveedorActivo FROM Proveedor WHERE (Id_proveedor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<double> TotalVenta(global::System.Nullable<int> NoVenta) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((NoVenta.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(NoVenta.Value));
             }
