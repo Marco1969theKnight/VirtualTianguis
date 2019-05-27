@@ -109,5 +109,12 @@ namespace TheVirtualTianguisProyect.Formas
             Forma.MdiParent = this;
             Forma.Show();
         }
+
+        private void registroDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Vender.FormRegistroVentas Forma = new TheVirtualTianguisProyect.Formas.Vender.FormRegistroVentas();
+            Forma.MdiParent = this;
+            Forma.Show();
+        }
     }
 }

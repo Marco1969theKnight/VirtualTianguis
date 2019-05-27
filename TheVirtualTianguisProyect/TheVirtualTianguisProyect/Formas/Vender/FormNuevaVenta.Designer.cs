@@ -53,13 +53,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SelVbutton = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
-            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
             this.idDetalleVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
+            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -309,19 +309,6 @@
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // detalleVentasBindingSource
-            // 
-            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
-            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
-            // 
-            // ventasTableAdapter
-            // 
-            this.ventasTableAdapter.ClearBeforeFill = true;
-            // 
-            // detalleVentasTableAdapter
-            // 
-            this.detalleVentasTableAdapter.ClearBeforeFill = true;
-            // 
             // idDetalleVentaDataGridViewTextBoxColumn
             // 
             this.idDetalleVentaDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleVenta";
@@ -353,6 +340,19 @@
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
             this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 92;
+            // 
+            // detalleVentasBindingSource
+            // 
+            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
+            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
+            // 
+            // ventasTableAdapter
+            // 
+            this.ventasTableAdapter.ClearBeforeFill = true;
+            // 
+            // detalleVentasTableAdapter
+            // 
+            this.detalleVentasTableAdapter.ClearBeforeFill = true;
             // 
             // FormNuevaVenta
             // 
