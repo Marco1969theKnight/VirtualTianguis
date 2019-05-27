@@ -122,6 +122,12 @@
     <Compile Include="Formas\Vender\FormBuscarCliente.Designer.cs">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Vender\FormFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Vender\FormFacturas.Designer.cs">
+      <DependentUpon>FormFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Vender\FormNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
