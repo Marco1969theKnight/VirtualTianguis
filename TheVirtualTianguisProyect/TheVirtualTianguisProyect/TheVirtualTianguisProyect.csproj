@@ -137,6 +137,7 @@
     <Compile Include="Negocios\Administradores\AdministradorDatosCliente.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosEmpleado.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosFactura.cs" />
+    <Compile Include="Negocios\Administradores\AdministradorDatosInventario.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosProducto.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosProveedor.cs" />
     <Compile Include="Negocios\Administradores\AdministradorDatosVenta.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Negocios\Datos\DatosCliente.cs" />
     <Compile Include="Negocios\Datos\DatosEmpleado.cs" />
     <Compile Include="Negocios\Datos\DatosFactura.cs" />
+    <Compile Include="Negocios\Datos\DatosInventario.cs" />
     <Compile Include="Negocios\Datos\DatosProducto.cs" />
     <Compile Include="Negocios\Datos\DatosProveedor.cs" />
     <Compile Include="Negocios\Datos\DatosVenta.cs" />
