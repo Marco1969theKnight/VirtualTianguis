@@ -27,7 +27,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
 
             if (dr["NumeroExistencias"] != DBNull.Value)
             {
-                this.Productos = Int32.Parse(dr["NumeroExistencias"].ToString());
+                this.NumeroExistencias = Int32.Parse(dr["NumeroExistencias"].ToString());
             }
         }
     }

@@ -70,7 +70,9 @@ namespace TheVirtualTianguisProyect.Formas.Vender
                 return;
             }
             Int32 id_producto = Int32.Parse(dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString());
-            //TheVirtualTianguisProyect.Negocios.Datos.DatosInventario DatosInventario = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosInventario.ObtenerDatosInventario(id_producto);
+
+            TheVirtualTianguisProyect.Negocios.Datos.DatosInventario DatosInventario = new TheVirtualTianguisProyect.Negocios.Datos.DatosInventario();
+            DatosInventario = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosInventario.ObtenerDatosInventario(id_producto);
 
             TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto = new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto();
 
@@ -85,9 +87,9 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDetalleVenta.AltaDetalleVenta(DatosDetalleVenta);
 
-            //Int32 Vendido = DatosInventario.NumeroExistencias - DatosDetalleVenta.Cantidad;
+            Int32 Vendido = DatosInventario.NumeroExistencias - DatosDetalleVenta.Cantidad;
 
-            //TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosInventario.ActualizaExistenciasInventario(id_producto, Vendido);
+            TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosInventario.ActualizaExistenciasInventario(id_producto, Vendido);
 
             this.Close();
         }
