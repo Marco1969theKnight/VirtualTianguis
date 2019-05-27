@@ -35,6 +35,14 @@
             this.Canbutton = new System.Windows.Forms.Button();
             this.Busbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,14 +54,6 @@
             this.SelVbutton = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
             this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
             this.idDetalleVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,11 +61,11 @@
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Agrbutton
@@ -136,6 +136,58 @@
             this.dataGridView1.Size = new System.Drawing.Size(520, 180);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // noVentaDataGridViewTextBoxColumn
+            // 
+            this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
+            this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noVentaDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // empleadoDataGridViewTextBoxColumn
+            // 
+            this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
+            // 
+            // detalleDataGridViewTextBoxColumn
+            // 
+            this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
+            this.detalleDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // ventaActivaDataGridViewCheckBoxColumn
+            // 
+            this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
+            this.ventaActivaDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.datosTianguis;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -262,58 +314,6 @@
             this.detalleVentasBindingSource.DataMember = "DetalleVentas";
             this.detalleVentasBindingSource.DataSource = this.datosTianguis;
             // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // noVentaDataGridViewTextBoxColumn
-            // 
-            this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
-            this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
-            this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
-            this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noVentaDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // empleadoDataGridViewTextBoxColumn
-            // 
-            this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
-            this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
-            this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
-            // 
-            // detalleDataGridViewTextBoxColumn
-            // 
-            this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
-            this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
-            this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
-            this.detalleDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // ventaActivaDataGridViewCheckBoxColumn
-            // 
-            this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
-            this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
-            this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
-            this.ventaActivaDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.datosTianguis;
-            // 
             // ventasTableAdapter
             // 
             this.ventasTableAdapter.ClearBeforeFill = true;
@@ -329,6 +329,7 @@
             this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
             this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDetalleVentaDataGridViewTextBoxColumn.Visible = false;
+            this.idDetalleVentaDataGridViewTextBoxColumn.Width = 129;
             // 
             // productoDataGridViewTextBoxColumn
             // 
@@ -336,6 +337,7 @@
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
             this.productoDataGridViewTextBoxColumn.Visible = false;
+            this.productoDataGridViewTextBoxColumn.Width = 94;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
@@ -349,6 +351,7 @@
             this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+            this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 92;
             // 
             // FormNuevaVenta
@@ -381,11 +384,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

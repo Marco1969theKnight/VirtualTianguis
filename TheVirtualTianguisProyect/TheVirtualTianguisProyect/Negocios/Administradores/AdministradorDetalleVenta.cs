@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace TheVirtualTianguisProyect.Negocios.Administradores
@@ -44,6 +45,42 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             }
 
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosDetalleVenta(Dt.Rows[0]);
+        }
+
+        public static Double VerificaExistVenta(System.Int32 NoVenta)
+        {
+            int Bandera;
+            SqlDataReader Encontrado;
+            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
+            String query = "SELECT * FROM DetalleVentas WHERE NoVenta = " + NoVenta;
+
+            SqlConnection myConnection = new SqlConnection(ConnectionString);
+            try
+            {
+                myConnection.Open();
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                Encontrado = myCommand.ExecuteReader();
+                if (Encontrado.Read() == false)
+                {
+                    Bandera = -1;
+                }
+                else
+                {
+                    Bandera = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                MessageBox.Show(message);
+                throw ex;
+            }
+            finally
+            {
+                if (myConnection.State == ConnectionState.Open)
+                    myConnection.Close();
+            }
+            return Bandera;
         }
     }
 }

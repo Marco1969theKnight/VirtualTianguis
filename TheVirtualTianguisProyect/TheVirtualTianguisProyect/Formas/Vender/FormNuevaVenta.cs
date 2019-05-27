@@ -88,7 +88,13 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto Form = new TheVirtualTianguisProyect.Formas.Vender.FormAgregarNuevoProducto();
             Form.Show();
 
-            numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
+            if (TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDetalleVenta.VerificaExistVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct) > 0)
+            {
+                numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.ActualizaPrecioVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct, Int32.Parse(numericUpDown1.Value.ToString()));
+            }
+
+            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
         }
 
         private void NVenbutton_Click(object sender, EventArgs e)
@@ -127,7 +133,12 @@ namespace TheVirtualTianguisProyect.Formas.Vender
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
-            numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
+            if (TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDetalleVenta.VerificaExistVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct) > 0)
+            {
+                numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.ActualizaPrecioVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct, Int32.Parse(numericUpDown1.Value.ToString()));
+            }
+            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
         }
     }
 }

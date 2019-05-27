@@ -46,7 +46,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             int Bandera;
             SqlDataReader Encontrado;
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Ventas WHERE NoVenta = '" + NoVenta + "'";
+            String query = "SELECT * FROM Ventas WHERE NoVenta = " + NoVenta;
 
             SqlConnection myConnection = new SqlConnection(ConnectionString);
             try
@@ -85,10 +85,10 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static void ActualizaPrecioVenta(TheVirtualTianguisProyect.Negocios.Datos.DatosVenta DatosVenta)
+        public static void ActualizaPrecioVenta(Int32 NoVenta, Int32 Total)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Ventas set Fecha = '" + DatosVenta.Fecha + "', " + ", Total = " + DatosVenta.Total + ", Empleado = " + DatosVenta.Empleado + ", Detalle = " + DatosVenta.Detalle + ", VentaActiva = '" + DatosVenta.VentaActiva + "' where NoVenta = " + DatosVenta.NoVenta;
+            String query = "update Ventas set Total = " + Total + " where NoVenta = " + NoVenta;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
