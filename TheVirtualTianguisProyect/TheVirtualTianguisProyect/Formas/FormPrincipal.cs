@@ -38,6 +38,7 @@ namespace TheVirtualTianguisProyect.Formas
         private void cerrarEsiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            TheVirtualTianguisProyect.VirtualTianguis Iniciar = new TheVirtualTianguisProyect.VirtualTianguis();
         }
 
         private void label1_Click(object sender, EventArgs e)

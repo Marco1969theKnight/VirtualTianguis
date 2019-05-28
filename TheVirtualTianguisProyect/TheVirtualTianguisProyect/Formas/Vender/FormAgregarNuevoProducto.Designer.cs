@@ -150,7 +150,7 @@
             // 
             // fillByNombre2ToolStrip
             // 
-            this.fillByNombre2ToolStrip.BackColor = System.Drawing.Color.Gold;
+            this.fillByNombre2ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByNombre2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByNombre2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nombreToolStripLabel,
@@ -210,7 +210,7 @@
             // 
             // fillByCategoriaToolStrip
             // 
-            this.fillByCategoriaToolStrip.BackColor = System.Drawing.Color.Gold;
+            this.fillByCategoriaToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByCategoriaToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByCategoriaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.categoriaToolStripLabel,
@@ -247,7 +247,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(22, 280);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -260,21 +260,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(225, 305);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 20);
+            this.label1.Size = new System.Drawing.Size(145, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cantidad a agregar:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(382, 301);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(90, 29);
             this.numericUpDown1.TabIndex = 5;
             // 
             // FormAgregarNuevoProducto

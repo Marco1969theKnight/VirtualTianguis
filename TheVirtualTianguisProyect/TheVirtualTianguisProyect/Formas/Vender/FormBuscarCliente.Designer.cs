@@ -101,7 +101,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(32, 388);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -256,6 +256,7 @@
             // 
             // fillByRFCToolStrip
             // 
+            this.fillByRFCToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByRFCToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByRFCToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rFCToolStripLabel,
@@ -396,6 +397,7 @@
             // 
             // fillByEstadoToolStrip
             // 
+            this.fillByEstadoToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByEstadoToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByEstadoToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadoToolStripLabel,

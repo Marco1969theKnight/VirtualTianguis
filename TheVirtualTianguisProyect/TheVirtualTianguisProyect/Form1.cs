@@ -58,14 +58,22 @@ namespace TheVirtualTianguisProyect
                 TheVirtualTianguisProyect.Properties.Settings.Default.permisoVender = obje.vender1;
                 TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados = dtEmpleado.id_empleado;
                 TheVirtualTianguisProyect.Formas.FormPrincipal FormaP = new TheVirtualTianguisProyect.Formas.FormPrincipal();
-                FormaP.ShowDialog();
+
                 NomUsuTB.Text = String.Empty;
                 ConTB.Text = String.Empty;
+                this.Visible = false;
+                FormaP.ShowDialog();
+                this.Visible = true;
+
+
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error Datos Incorrectos");
             }
+            
+
+            
         }
 
         private void VirtualTianguis_Load(object sender, EventArgs e)
