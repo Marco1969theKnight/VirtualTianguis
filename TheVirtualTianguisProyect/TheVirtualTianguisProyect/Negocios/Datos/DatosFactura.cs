@@ -16,7 +16,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
         public float Pago;
         public Int32 Productos;
         public Int32 NoVenta;
-        public Int32 Cliente;
+        public String Cliente;
         public Boolean FacturaActiva;
 
         public DatosFactura()
@@ -58,7 +58,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
 
             if (dr["Cliente"] != DBNull.Value)
             {
-                this.Cliente = Int32.Parse(dr["Cliente"].ToString());
+                this.Cliente = dr["Cliente"].ToString();
             }
 
             if (dr["FacturaActiva"] != DBNull.Value)
