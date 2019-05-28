@@ -103,9 +103,15 @@
             // 
             // button1
             // 
+<<<<<<< HEAD
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(43, 478);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(32, 388);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 66);
             this.button1.TabIndex = 10;
@@ -132,8 +138,13 @@
             this.codigoPostalDataGridViewTextBoxColumn,
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
+<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(269, 90);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(202, 73);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1200, 450);
@@ -258,6 +269,7 @@
             // 
             // fillByRFCToolStrip
             // 
+            this.fillByRFCToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByRFCToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByRFCToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rFCToolStripLabel,
@@ -404,6 +416,7 @@
             // 
             // fillByEstadoToolStrip
             // 
+            this.fillByEstadoToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByEstadoToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByEstadoToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadoToolStripLabel,
@@ -593,13 +606,22 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1371, 583);
+=======
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(1028, 474);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Controls.Add(this.fillByEstadoToolStrip);
             this.Controls.Add(this.fillByRFCToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Name = "FormBuscarCliente";
             this.Text = "FormBuscarCliente";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);

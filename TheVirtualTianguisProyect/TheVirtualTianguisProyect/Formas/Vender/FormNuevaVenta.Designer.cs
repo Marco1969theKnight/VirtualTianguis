@@ -70,11 +70,11 @@
             // 
             // Agrbutton
             // 
-            this.Agrbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agrbutton.Location = new System.Drawing.Point(600, 60);
-            this.Agrbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Agrbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agrbutton.Location = new System.Drawing.Point(450, 49);
+            this.Agrbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Agrbutton.Name = "Agrbutton";
-            this.Agrbutton.Size = new System.Drawing.Size(180, 75);
+            this.Agrbutton.Size = new System.Drawing.Size(135, 61);
             this.Agrbutton.TabIndex = 0;
             this.Agrbutton.Text = "Agregar Nuevo Producto";
             this.Agrbutton.UseVisualStyleBackColor = true;
@@ -82,11 +82,11 @@
             // 
             // Salbutton
             // 
-            this.Salbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salbutton.Location = new System.Drawing.Point(600, 150);
-            this.Salbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Salbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salbutton.Location = new System.Drawing.Point(450, 122);
+            this.Salbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Salbutton.Name = "Salbutton";
-            this.Salbutton.Size = new System.Drawing.Size(180, 39);
+            this.Salbutton.Size = new System.Drawing.Size(135, 32);
             this.Salbutton.TabIndex = 1;
             this.Salbutton.Text = "Salir";
             this.Salbutton.UseVisualStyleBackColor = true;
@@ -94,11 +94,11 @@
             // 
             // Canbutton
             // 
-            this.Canbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Canbutton.Location = new System.Drawing.Point(600, 210);
-            this.Canbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Canbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Canbutton.Location = new System.Drawing.Point(450, 171);
+            this.Canbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Canbutton.Name = "Canbutton";
-            this.Canbutton.Size = new System.Drawing.Size(180, 39);
+            this.Canbutton.Size = new System.Drawing.Size(135, 32);
             this.Canbutton.TabIndex = 2;
             this.Canbutton.Text = "Cancelar";
             this.Canbutton.UseVisualStyleBackColor = true;
@@ -106,11 +106,11 @@
             // 
             // Busbutton
             // 
-            this.Busbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Busbutton.Location = new System.Drawing.Point(600, 270);
-            this.Busbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Busbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Busbutton.Location = new System.Drawing.Point(450, 219);
+            this.Busbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Busbutton.Name = "Busbutton";
-            this.Busbutton.Size = new System.Drawing.Size(180, 39);
+            this.Busbutton.Size = new System.Drawing.Size(135, 32);
             this.Busbutton.TabIndex = 3;
             this.Busbutton.Text = "Asignar Cliente";
             this.Busbutton.UseVisualStyleBackColor = true;
@@ -129,11 +129,11 @@
             this.detalleDataGridViewTextBoxColumn,
             this.ventaActivaDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.ventasBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 60);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 49);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(390, 146);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -143,34 +143,35 @@
             this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
             this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noVentaDataGridViewTextBoxColumn.Width = 92;
+            this.noVentaDataGridViewTextBoxColumn.Width = 74;
             // 
             // fechaDataGridViewTextBoxColumn
             // 
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
             this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.Width = 76;
+            this.fechaDataGridViewTextBoxColumn.Width = 62;
             // 
             // totalDataGridViewTextBoxColumn
             // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.Width = 69;
+            this.totalDataGridViewTextBoxColumn.Width = 56;
             // 
             // empleadoDataGridViewTextBoxColumn
             // 
             this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
+            this.empleadoDataGridViewTextBoxColumn.Width = 79;
             // 
             // detalleDataGridViewTextBoxColumn
             // 
             this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
             this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
             this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
-            this.detalleDataGridViewTextBoxColumn.Width = 81;
+            this.detalleDataGridViewTextBoxColumn.Width = 65;
             // 
             // ventaActivaDataGridViewCheckBoxColumn
             // 
@@ -192,18 +193,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 480);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(232, 390);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.Size = new System.Drawing.Size(45, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Total:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(389, 480);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(292, 390);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1215752192,
             23,
@@ -211,49 +213,50 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(180, 30);
+            this.numericUpDown1.Size = new System.Drawing.Size(135, 29);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 580);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(158, 471);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.Size = new System.Drawing.Size(41, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "RFC:";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(300, 580);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(225, 471);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(300, 30);
+            this.textBox1.Size = new System.Drawing.Size(226, 29);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Facbutton
             // 
-            this.Facbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Facbutton.Location = new System.Drawing.Point(600, 450);
-            this.Facbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Facbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Facbutton.Location = new System.Drawing.Point(450, 366);
+            this.Facbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Facbutton.Name = "Facbutton";
-            this.Facbutton.Size = new System.Drawing.Size(180, 39);
+            this.Facbutton.Size = new System.Drawing.Size(135, 32);
             this.Facbutton.TabIndex = 9;
             this.Facbutton.Text = "Facturar Compra";
             this.Facbutton.UseVisualStyleBackColor = true;
             // 
             // NVenbutton
             // 
-            this.NVenbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NVenbutton.Location = new System.Drawing.Point(600, 330);
-            this.NVenbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NVenbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NVenbutton.Location = new System.Drawing.Point(450, 268);
+            this.NVenbutton.Margin = new System.Windows.Forms.Padding(2);
             this.NVenbutton.Name = "NVenbutton";
-            this.NVenbutton.Size = new System.Drawing.Size(180, 39);
+            this.NVenbutton.Size = new System.Drawing.Size(135, 32);
             this.NVenbutton.TabIndex = 10;
             this.NVenbutton.Text = "Nueva Venta";
             this.NVenbutton.UseVisualStyleBackColor = true;
@@ -263,29 +266,31 @@
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(210, 530);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(158, 431);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(360, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(271, 29);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 530);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 431);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.Size = new System.Drawing.Size(89, 21);
             this.label3.TabIndex = 12;
             this.label3.Text = "Dia de Hoy:";
             // 
             // SelVbutton
             // 
-            this.SelVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelVbutton.Location = new System.Drawing.Point(600, 390);
-            this.SelVbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SelVbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelVbutton.Location = new System.Drawing.Point(450, 317);
+            this.SelVbutton.Margin = new System.Windows.Forms.Padding(2);
             this.SelVbutton.Name = "SelVbutton";
-            this.SelVbutton.Size = new System.Drawing.Size(180, 39);
+            this.SelVbutton.Size = new System.Drawing.Size(135, 32);
             this.SelVbutton.TabIndex = 13;
             this.SelVbutton.Text = "Seleccionar venta";
             this.SelVbutton.UseVisualStyleBackColor = true;
@@ -302,10 +307,11 @@
             this.cantidadDataGridViewTextBoxColumn,
             this.noVentaDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.detalleVentasBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(60, 270);
+            this.dataGridView2.Location = new System.Drawing.Point(45, 219);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(520, 180);
+            this.dataGridView2.Size = new System.Drawing.Size(390, 146);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -331,7 +337,7 @@
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.Width = 93;
+            this.cantidadDataGridViewTextBoxColumn.Width = 74;
             // 
             // noVentaDataGridViewTextBoxColumn1
             // 
@@ -356,9 +362,10 @@
             // 
             // FormNuevaVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 671);
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(617, 552);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.SelVbutton);
             this.Controls.Add(this.label3);
@@ -375,9 +382,9 @@
             this.Controls.Add(this.Salbutton);
             this.Controls.Add(this.Agrbutton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(839, 718);
-            this.MinimumSize = new System.Drawing.Size(839, 718);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(633, 591);
+            this.MinimumSize = new System.Drawing.Size(633, 591);
             this.Name = "FormNuevaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Venta";

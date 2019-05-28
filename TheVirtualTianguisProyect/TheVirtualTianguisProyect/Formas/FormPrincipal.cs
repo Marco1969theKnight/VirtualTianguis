@@ -38,6 +38,7 @@ namespace TheVirtualTianguisProyect.Formas
         private void cerrarEsiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            TheVirtualTianguisProyect.VirtualTianguis Iniciar = new TheVirtualTianguisProyect.VirtualTianguis();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -115,6 +116,11 @@ namespace TheVirtualTianguisProyect.Formas
             TheVirtualTianguisProyect.Formas.Vender.FormRegistroVentas Forma = new TheVirtualTianguisProyect.Formas.Vender.FormRegistroVentas();
             Forma.MdiParent = this;
             Forma.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

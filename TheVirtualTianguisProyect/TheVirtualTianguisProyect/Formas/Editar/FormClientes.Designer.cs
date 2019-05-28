@@ -88,6 +88,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgregarButton,
@@ -183,7 +184,7 @@
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(14, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(562, 146);
@@ -304,237 +305,237 @@
             // 
             // RFCTextBox
             // 
-            this.RFCTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RFCTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFCTextBox.Location = new System.Drawing.Point(9, 244);
-            this.RFCTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RFCTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.RFCTextBox.Name = "RFCTextBox";
-            this.RFCTextBox.Size = new System.Drawing.Size(158, 26);
+            this.RFCTextBox.Size = new System.Drawing.Size(158, 29);
             this.RFCTextBox.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.Size = new System.Drawing.Size(41, 21);
             this.label1.TabIndex = 24;
             this.label1.Text = "RFC:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // NomtextBox
             // 
-            this.NomtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomtextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomtextBox.Location = new System.Drawing.Point(9, 317);
-            this.NomtextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NomtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NomtextBox.Name = "NomtextBox";
-            this.NomtextBox.Size = new System.Drawing.Size(158, 26);
+            this.NomtextBox.Size = new System.Drawing.Size(158, 29);
             this.NomtextBox.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 292);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 366);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 28;
             this.label3.Text = "A. Paterno:";
             // 
             // APattextBox
             // 
-            this.APattextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.APattextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.APattextBox.Location = new System.Drawing.Point(9, 390);
-            this.APattextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.APattextBox.Margin = new System.Windows.Forms.Padding(2);
             this.APattextBox.Name = "APattextBox";
-            this.APattextBox.Size = new System.Drawing.Size(158, 26);
+            this.APattextBox.Size = new System.Drawing.Size(158, 29);
             this.APattextBox.TabIndex = 29;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 439);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.Size = new System.Drawing.Size(89, 21);
             this.label4.TabIndex = 30;
             this.label4.Text = "A. Materno:";
             // 
             // AMattextBox
             // 
-            this.AMattextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AMattextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AMattextBox.Location = new System.Drawing.Point(9, 463);
-            this.AMattextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AMattextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AMattextBox.Name = "AMattextBox";
-            this.AMattextBox.Size = new System.Drawing.Size(158, 26);
+            this.AMattextBox.Size = new System.Drawing.Size(158, 29);
             this.AMattextBox.TabIndex = 31;
             // 
             // EsttextBox
             // 
-            this.EsttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EsttextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EsttextBox.Location = new System.Drawing.Point(180, 244);
-            this.EsttextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EsttextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EsttextBox.Name = "EsttextBox";
-            this.EsttextBox.Size = new System.Drawing.Size(158, 26);
+            this.EsttextBox.Size = new System.Drawing.Size(158, 29);
             this.EsttextBox.TabIndex = 33;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(180, 219);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(59, 21);
             this.label5.TabIndex = 32;
             this.label5.Text = "Estado:";
             // 
             // CiutextBox
             // 
-            this.CiutextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CiutextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CiutextBox.Location = new System.Drawing.Point(180, 317);
-            this.CiutextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CiutextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CiutextBox.Name = "CiutextBox";
-            this.CiutextBox.Size = new System.Drawing.Size(158, 26);
+            this.CiutextBox.Size = new System.Drawing.Size(158, 29);
             this.CiutextBox.TabIndex = 35;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(180, 292);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.Size = new System.Drawing.Size(62, 21);
             this.label6.TabIndex = 34;
             this.label6.Text = "Ciudad:";
             // 
             // ColtextBox
             // 
-            this.ColtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColtextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColtextBox.Location = new System.Drawing.Point(180, 390);
-            this.ColtextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ColtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ColtextBox.Name = "ColtextBox";
-            this.ColtextBox.Size = new System.Drawing.Size(158, 26);
+            this.ColtextBox.Size = new System.Drawing.Size(158, 29);
             this.ColtextBox.TabIndex = 37;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(180, 366);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 20);
+            this.label7.Size = new System.Drawing.Size(66, 21);
             this.label7.TabIndex = 36;
             this.label7.Text = "Colonia:";
             // 
             // CaltextBox
             // 
-            this.CaltextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaltextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaltextBox.Location = new System.Drawing.Point(180, 463);
-            this.CaltextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CaltextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CaltextBox.Name = "CaltextBox";
-            this.CaltextBox.Size = new System.Drawing.Size(158, 26);
+            this.CaltextBox.Size = new System.Drawing.Size(158, 29);
             this.CaltextBox.TabIndex = 39;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(180, 439);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.Size = new System.Drawing.Size(47, 21);
             this.label8.TabIndex = 38;
             this.label8.Text = "Calle:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(351, 219);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.Size = new System.Drawing.Size(61, 21);
             this.label9.TabIndex = 40;
             this.label9.Text = "No. Ext:";
             // 
             // NoExtnumeric
             // 
-            this.NoExtnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoExtnumeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoExtnumeric.Location = new System.Drawing.Point(355, 244);
-            this.NoExtnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NoExtnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.NoExtnumeric.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.NoExtnumeric.Name = "NoExtnumeric";
-            this.NoExtnumeric.Size = new System.Drawing.Size(90, 26);
+            this.NoExtnumeric.Size = new System.Drawing.Size(90, 29);
             this.NoExtnumeric.TabIndex = 41;
             // 
             // NoIntnumeric
             // 
-            this.NoIntnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoIntnumeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoIntnumeric.Location = new System.Drawing.Point(355, 318);
-            this.NoIntnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NoIntnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.NoIntnumeric.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.NoIntnumeric.Name = "NoIntnumeric";
-            this.NoIntnumeric.Size = new System.Drawing.Size(90, 26);
+            this.NoIntnumeric.Size = new System.Drawing.Size(90, 29);
             this.NoIntnumeric.TabIndex = 43;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(351, 293);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 20);
+            this.label10.Size = new System.Drawing.Size(59, 21);
             this.label10.TabIndex = 42;
             this.label10.Text = "No. Int:";
             // 
             // CPosnumeric
             // 
-            this.CPosnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPosnumeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPosnumeric.Location = new System.Drawing.Point(355, 391);
-            this.CPosnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CPosnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.CPosnumeric.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.CPosnumeric.Name = "CPosnumeric";
-            this.CPosnumeric.Size = new System.Drawing.Size(90, 26);
+            this.CPosnumeric.Size = new System.Drawing.Size(90, 29);
             this.CPosnumeric.TabIndex = 45;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(351, 366);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 20);
+            this.label11.Size = new System.Drawing.Size(89, 21);
             this.label11.TabIndex = 44;
             this.label11.Text = "Cod. Postal:";
             // 
@@ -546,6 +547,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(618, 553);
             this.Controls.Add(this.CPosnumeric);
             this.Controls.Add(this.label11);
@@ -572,7 +574,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(634, 592);
             this.MinimumSize = new System.Drawing.Size(634, 592);
             this.Name = "FormClientes";

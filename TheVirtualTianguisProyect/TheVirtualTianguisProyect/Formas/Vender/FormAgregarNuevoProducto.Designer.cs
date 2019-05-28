@@ -80,8 +80,13 @@
             this.proveedorDataGridViewTextBoxColumn,
             this.productoActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.productoBindingSource;
+<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(29, 60);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(22, 49);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(720, 270);
@@ -151,6 +156,7 @@
             // 
             // fillByNombre2ToolStrip
             // 
+            this.fillByNombre2ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.fillByNombre2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByNombre2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nombreToolStripLabel,
@@ -211,6 +217,7 @@
             // 
             this.fillByMarcaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByMarcaToolStripButton.Name = "fillByMarcaToolStripButton";
+<<<<<<< HEAD
             this.fillByMarcaToolStripButton.Size = new System.Drawing.Size(56, 24);
             this.fillByMarcaToolStripButton.Text = "Buscar";
             this.fillByMarcaToolStripButton.Click += new System.EventHandler(this.fillByMarcaToolStripButton_Click_1);
@@ -220,6 +227,53 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(29, 345);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.fillByMarcaToolStripButton.Size = new System.Drawing.Size(72, 22);
+            this.fillByMarcaToolStripButton.Text = "FillByMarca";
+            // 
+            // fillByCategoriaToolStrip
+            // 
+            this.fillByCategoriaToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
+            this.fillByCategoriaToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.fillByCategoriaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriaToolStripLabel,
+            this.categoriaToolStripTextBox,
+            this.fillByCategoriaToolStripButton});
+            this.fillByCategoriaToolStrip.Location = new System.Drawing.Point(0, 25);
+            this.fillByCategoriaToolStrip.Name = "fillByCategoriaToolStrip";
+            this.fillByCategoriaToolStrip.Size = new System.Drawing.Size(600, 25);
+            this.fillByCategoriaToolStrip.TabIndex = 2;
+            this.fillByCategoriaToolStrip.Text = "fillByCategoriaToolStrip";
+            // 
+            // categoriaToolStripLabel
+            // 
+            this.categoriaToolStripLabel.Name = "categoriaToolStripLabel";
+            this.categoriaToolStripLabel.Size = new System.Drawing.Size(61, 22);
+            this.categoriaToolStripLabel.Text = "Categoria:";
+            // 
+            // categoriaToolStripTextBox
+            // 
+            this.categoriaToolStripTextBox.Name = "categoriaToolStripTextBox";
+            this.categoriaToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            // 
+            // fillByCategoriaToolStripButton
+            // 
+            this.fillByCategoriaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByCategoriaToolStripButton.Name = "fillByCategoriaToolStripButton";
+            this.fillByCategoriaToolStripButton.Size = new System.Drawing.Size(90, 22);
+            this.fillByCategoriaToolStripButton.Text = "FillByCategoria";
+            this.fillByCategoriaToolStripButton.Click += new System.EventHandler(this.fillByCategoriaToolStripButton_Click);
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(22, 280);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 71);
             this.button1.TabIndex = 3;
@@ -230,20 +284,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(300, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 25);
+=======
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 305);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 21);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.label1.TabIndex = 4;
             this.label1.Text = "Cantidad a agregar:";
             // 
             // numericUpDown1
             // 
+<<<<<<< HEAD
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(509, 370);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
+=======
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(382, 301);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(90, 29);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.numericUpDown1.TabIndex = 5;
             // 
             // productoTableAdapter
@@ -293,14 +363,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(800, 450);
+=======
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(600, 366);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fillByNombre2ToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Name = "FormAgregarNuevoProducto";
             this.Text = "FormAgregarNuevoProducto";
             this.Load += new System.EventHandler(this.FormAgregarNuevoProducto_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
@@ -50,6 +51,18 @@
             this.Name = "FormFacturas";
             this.Text = "Generar Factura";
             this.Load += new System.EventHandler(this.FormFacturas_Load);
+=======
+            this.SuspendLayout();
+            // 
+            // FormFacturas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormFacturas";
+            this.Text = "FormFacturas";
+>>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.ResumeLayout(false);
 
         }
