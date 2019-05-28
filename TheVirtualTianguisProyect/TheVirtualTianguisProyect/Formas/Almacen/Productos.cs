@@ -12,6 +12,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
 {
     public partial class Productos : Form
     {
+        public string pageAction;
         public Productos()
         {
             InitializeComponent();
@@ -24,18 +25,82 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             marca.Text = String.Empty;
             categoria.Text = String.Empty;
             descripcion.Text = String.Empty;
-            proveedor.Value = 0;
-            precio.Value = 0;
+            proveedor.Text = String.Empty;
+            precio.Text = String.Empty;
         }
 
         private void Productos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.datosTianguis.Producto);
-
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)
+        {
+            pageAction = "add";
+            ClearFields();
+            EstablecerEstadoEditable(true);
+            nombre.Focus();
+        }
+
+        private void NombretextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModifButton_Click(object sender, EventArgs e)
+        {
+            pageAction = "mod";
+            CargaProveedorActual();
+            nombre.Focus();
+            EstablecerEstadoEditable(true);
+        }
+
+        private void EstablecerEstadoEditable(bool edit)
+        {
+            AgregarButton.Enabled = !edit;
+            ModifButton.Enabled = !edit;
+            ElmButton.Enabled = !edit;
+
+            dgproductos.Enabled = !edit;
+
+            CanButton.Enabled = edit;
+            GuarButton.Enabled = edit;
+
+            nombre.ReadOnly = !edit;
+            descripcion.ReadOnly = !edit;
+            proveedor.Enabled = edit;
+            precio.Enabled = edit;
+            categoria.ReadOnly = !edit;
+
+        }
+        private void CargaProveedorActual()
+        {
+            if (dgproductos.CurrentCell == null)  // Is there any row selected now?
+            {
+                ModifButton.Enabled = false;
+                ElmButton.Enabled = false;
+                return;
+            }
+
+            double Id = double.Parse(dgproductos[0, dgproductos.CurrentRow.Index].Value.ToString());
+
+            TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosUsuario = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ObtenerDatosProducto(Id);
+            if (DatosUsuario == null)
+            {
+                MessageBox.Show("No se pueden obtener los datos del Producto", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            nombre.Text = DatosUsuario.Nombre;
+            descripcion.Text = DatosUsuario.Descripcion;
+            marca.Text = DatosUsuario.Marca;
+            categoria.Text = DatosUsuario.Categoria;
+            precio.Text = DatosUsuario.Precio.ToString();
+            proveedor.Text = DatosUsuario.Proveedor.ToString();
+        }
+
+        private void GuarButton_Click(object sender, EventArgs e)
         {
             if (nombre.Text.Trim() == String.Empty)
             {
@@ -61,7 +126,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                 descripcion.Focus();
                 return;
             }
-            if (precio.Value == 0)
+            if (float.Parse(precio.Text) == 0)
             {
                 MessageBox.Show("No has introducido el precio.", "Virtual Tianguis 2019", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 precio.Focus();
@@ -73,35 +138,82 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             Double Bandera;
 
             Bandera = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.VerificaProductoAlta(nombre.Text);
+            if (pageAction == "add")
+            {
+                if (Bandera == -1)
+                {
+                    DatosProductos.Nombre = nombre.Text;
+                    DatosProductos.Marca = marca.Text;
+                    DatosProductos.Precio = float.Parse(precio.Text);
+                    DatosProductos.Categoria = categoria.Text;
+                    DatosProductos.Descripcion = descripcion.Text;
+                    DatosProductos.Proveedor = Int32.Parse(proveedor.Text);
+                    DatosProductos.ProductoActivo = true;
 
-            MessageBox.Show("Producto ingresado2");
-            if (Bandera == -1) {
-                DatosProductos.Nombre = nombre.Text;
-                DatosProductos.Marca = marca.Text;
-                DatosProductos.Precio = float.Parse(precio.Value.ToString());
-                DatosProductos.Categoria = categoria.Text;
-                DatosProductos.Descripcion = descripcion.Text;
-                DatosProductos.Proveedor = Int32.Parse(proveedor.Value.ToString());
+                    TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
+
+                    MessageBox.Show("Producto ingresado");
+                }
+                else
+                {
+                    MessageBox.Show("Ya Existe un Producto con los mismos DATOS");
+                    //EstablecerEstadoEditable(false);
+                    ClearFields();
+                }
+
+                this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+            }
+            if (pageAction == "mod")
+            {
+                double Id = double.Parse(dgproductos[0, dgproductos.CurrentRow.Index].Value.ToString());
+                DatosProductos.Id_producto = int.Parse(Id.ToString());
+                DatosProductos.Nombre = nombre.Text.ToUpper();
+                DatosProductos.Descripcion = descripcion.Text.ToUpper();
+                DatosProductos.Proveedor = int.Parse(proveedor.Text);
+                DatosProductos.Categoria = categoria.Text.ToUpper();
+                DatosProductos.Precio = float.Parse(precio.Text);
                 DatosProductos.ProductoActivo = true;
 
-                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ActualizaDatosProducto(DatosProductos);
+            }
 
-                MessageBox.Show("Producto ingresado3");
+            EstablecerEstadoEditable(false);
+        }
+
+        private void ElmButton_Click(object sender, EventArgs e)
+        {
+
+            if (dgproductos.CurrentCell == null)
+            {
+                return;
+            }
+
+            double Id = double.Parse(dgproductos[0, dgproductos.CurrentRow.Index].Value.ToString());
+
+            TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosUsuario = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ObtenerDatosProducto(Id);
+
+            if (DatosUsuario == null)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("Seguro que deseas eliminar el registro ?", "Virtual Tianguis", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.BajaProducto(DatosUsuario);
             }
             else
             {
-                MessageBox.Show("Ya Existe un Producto con los mismos DATOS");
-                //EstablecerEstadoEditable(false);
-                ClearFields();
+                return;
             }
 
-            ;
+            this.productoTableAdapter.GetData();
             this.productoTableAdapter.Fill(this.datosTianguis.Producto);
-        }
 
-        private void NombretextBox1_TextChanged(object sender, EventArgs e)
-        {
+            EstablecerEstadoEditable(false);
 
+            ClearFields();
+
+            CargaProveedorActual();
         }
     }
 }
