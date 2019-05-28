@@ -70,20 +70,32 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
 
             TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProductos = new TheVirtualTianguisProyect.Negocios.Datos.DatosProducto();
 
+            Double Bandera;
 
-            DatosProductos.Nombre = nombre.Text;
-            DatosProductos.Marca = marca.Text;
-            DatosProductos.Precio = float.Parse(precio.Value.ToString());
-            DatosProductos.Categoria = categoria.Text;
-            DatosProductos.Descripcion = descripcion.Text;
-            DatosProductos.Proveedor = Int32.Parse(proveedor.Value.ToString());
-            DatosProductos.ProductoActivo = true;
+            Bandera = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.VerificaProductoAlta(nombre.Text);
 
-            TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
+            MessageBox.Show("Producto ingresado2");
+            if (Bandera == -1) {
+                DatosProductos.Nombre = nombre.Text;
+                DatosProductos.Marca = marca.Text;
+                DatosProductos.Precio = float.Parse(precio.Value.ToString());
+                DatosProductos.Categoria = categoria.Text;
+                DatosProductos.Descripcion = descripcion.Text;
+                DatosProductos.Proveedor = Int32.Parse(proveedor.Value.ToString());
+                DatosProductos.ProductoActivo = true;
 
-            MessageBox.Show("Producto ingresado");
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
 
-            ClearFields();
+                MessageBox.Show("Producto ingresado3");
+            }
+            else
+            {
+                MessageBox.Show("Ya Existe un Producto con los mismos DATOS");
+                //EstablecerEstadoEditable(false);
+                ClearFields();
+            }
+
+            ;
             this.productoTableAdapter.Fill(this.datosTianguis.Producto);
         }
 
