@@ -80,7 +80,7 @@
             this.productoActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.productoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(22, 49);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(540, 219);
@@ -150,6 +150,7 @@
             // 
             // fillByNombre2ToolStrip
             // 
+            this.fillByNombre2ToolStrip.BackColor = System.Drawing.Color.Gold;
             this.fillByNombre2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByNombre2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nombreToolStripLabel,
@@ -209,6 +210,7 @@
             // 
             // fillByCategoriaToolStrip
             // 
+            this.fillByCategoriaToolStrip.BackColor = System.Drawing.Color.Gold;
             this.fillByCategoriaToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByCategoriaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.categoriaToolStripLabel,
@@ -247,7 +249,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(22, 280);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 58);
             this.button1.TabIndex = 3;
@@ -270,7 +272,7 @@
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(382, 301);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(90, 26);
             this.numericUpDown1.TabIndex = 5;
@@ -279,6 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
@@ -287,7 +290,7 @@
             this.Controls.Add(this.fillByNombre2ToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAgregarNuevoProducto";
             this.Text = "FormAgregarNuevoProducto";
             this.Load += new System.EventHandler(this.FormAgregarNuevoProducto_Load);

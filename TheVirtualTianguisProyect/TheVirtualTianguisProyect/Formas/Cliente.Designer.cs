@@ -226,7 +226,7 @@
             // NumExt
             // 
             this.NumExt.Location = new System.Drawing.Point(340, 146);
-            this.NumExt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NumExt.Margin = new System.Windows.Forms.Padding(2);
             this.NumExt.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -239,7 +239,7 @@
             // NumInt
             // 
             this.NumInt.Location = new System.Drawing.Point(340, 182);
-            this.NumInt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NumInt.Margin = new System.Windows.Forms.Padding(2);
             this.NumInt.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -252,7 +252,7 @@
             // CodPost
             // 
             this.CodPost.Location = new System.Drawing.Point(340, 221);
-            this.CodPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CodPost.Margin = new System.Windows.Forms.Padding(2);
             this.CodPost.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -266,6 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(523, 299);
             this.Controls.Add(this.CodPost);
             this.Controls.Add(this.NumInt);

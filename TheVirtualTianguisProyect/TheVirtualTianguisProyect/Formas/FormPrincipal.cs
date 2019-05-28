@@ -116,5 +116,10 @@ namespace TheVirtualTianguisProyect.Formas
             Forma.MdiParent = this;
             Forma.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

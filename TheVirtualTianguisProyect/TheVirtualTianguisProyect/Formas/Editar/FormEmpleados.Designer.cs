@@ -84,6 +84,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Gold;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgregarButton,
@@ -163,7 +164,7 @@
             // 
             this.conTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conTextBox.Location = new System.Drawing.Point(351, 390);
-            this.conTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.conTextBox.Name = "conTextBox";
             this.conTextBox.Size = new System.Drawing.Size(158, 26);
             this.conTextBox.TabIndex = 57;
@@ -183,7 +184,7 @@
             // 
             this.salNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salNumeric.Location = new System.Drawing.Point(351, 317);
-            this.salNumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.salNumeric.Margin = new System.Windows.Forms.Padding(2);
             this.salNumeric.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -209,7 +210,7 @@
             this.fechAltDateTime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechAltDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechAltDateTime.Location = new System.Drawing.Point(351, 244);
-            this.fechAltDateTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechAltDateTime.Margin = new System.Windows.Forms.Padding(2);
             this.fechAltDateTime.Name = "fechAltDateTime";
             this.fechAltDateTime.Size = new System.Drawing.Size(248, 26);
             this.fechAltDateTime.TabIndex = 53;
@@ -229,7 +230,7 @@
             // 
             this.ofiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ofiTextBox.Location = new System.Drawing.Point(180, 390);
-            this.ofiTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ofiTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ofiTextBox.Name = "ofiTextBox";
             this.ofiTextBox.Size = new System.Drawing.Size(158, 26);
             this.ofiTextBox.TabIndex = 51;
@@ -249,7 +250,7 @@
             // 
             this.edadNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edadNumeric.Location = new System.Drawing.Point(180, 317);
-            this.edadNumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.edadNumeric.Margin = new System.Windows.Forms.Padding(2);
             this.edadNumeric.Name = "edadNumeric";
             this.edadNumeric.Size = new System.Drawing.Size(90, 26);
             this.edadNumeric.TabIndex = 49;
@@ -269,7 +270,7 @@
             // 
             this.usuTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuTextBox1.Location = new System.Drawing.Point(180, 244);
-            this.usuTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usuTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.usuTextBox1.Name = "usuTextBox1";
             this.usuTextBox1.Size = new System.Drawing.Size(158, 26);
             this.usuTextBox1.TabIndex = 47;
@@ -289,7 +290,7 @@
             // 
             this.aMatTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aMatTextBox1.Location = new System.Drawing.Point(9, 390);
-            this.aMatTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aMatTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.aMatTextBox1.Name = "aMatTextBox1";
             this.aMatTextBox1.Size = new System.Drawing.Size(158, 26);
             this.aMatTextBox1.TabIndex = 45;
@@ -309,7 +310,7 @@
             // 
             this.aPatTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aPatTextBox2.Location = new System.Drawing.Point(9, 317);
-            this.aPatTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aPatTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.aPatTextBox2.Name = "aPatTextBox2";
             this.aPatTextBox2.Size = new System.Drawing.Size(158, 26);
             this.aPatTextBox2.TabIndex = 43;
@@ -329,7 +330,7 @@
             // 
             this.nomtTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomtTextBox.Location = new System.Drawing.Point(9, 244);
-            this.nomtTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomtTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomtTextBox.Name = "nomtTextBox";
             this.nomtTextBox.Size = new System.Drawing.Size(158, 26);
             this.nomtTextBox.TabIndex = 41;
@@ -382,7 +383,7 @@
             this.empleadoActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.empleadoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(14, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -514,6 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(618, 553);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.conTextBox);
@@ -536,7 +538,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(634, 592);
             this.MinimumSize = new System.Drawing.Size(634, 592);
             this.Name = "FormEmpleados";

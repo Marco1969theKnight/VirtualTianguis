@@ -88,6 +88,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Gold;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgregarButton,
@@ -183,7 +184,7 @@
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(14, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(562, 146);
@@ -306,7 +307,7 @@
             // 
             this.RFCTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFCTextBox.Location = new System.Drawing.Point(9, 244);
-            this.RFCTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RFCTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.RFCTextBox.Name = "RFCTextBox";
             this.RFCTextBox.Size = new System.Drawing.Size(158, 26);
             this.RFCTextBox.TabIndex = 25;
@@ -327,7 +328,7 @@
             // 
             this.NomtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomtextBox.Location = new System.Drawing.Point(9, 317);
-            this.NomtextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NomtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NomtextBox.Name = "NomtextBox";
             this.NomtextBox.Size = new System.Drawing.Size(158, 26);
             this.NomtextBox.TabIndex = 27;
@@ -358,7 +359,7 @@
             // 
             this.APattextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.APattextBox.Location = new System.Drawing.Point(9, 390);
-            this.APattextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.APattextBox.Margin = new System.Windows.Forms.Padding(2);
             this.APattextBox.Name = "APattextBox";
             this.APattextBox.Size = new System.Drawing.Size(158, 26);
             this.APattextBox.TabIndex = 29;
@@ -378,7 +379,7 @@
             // 
             this.AMattextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AMattextBox.Location = new System.Drawing.Point(9, 463);
-            this.AMattextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AMattextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AMattextBox.Name = "AMattextBox";
             this.AMattextBox.Size = new System.Drawing.Size(158, 26);
             this.AMattextBox.TabIndex = 31;
@@ -387,7 +388,7 @@
             // 
             this.EsttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EsttextBox.Location = new System.Drawing.Point(180, 244);
-            this.EsttextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EsttextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EsttextBox.Name = "EsttextBox";
             this.EsttextBox.Size = new System.Drawing.Size(158, 26);
             this.EsttextBox.TabIndex = 33;
@@ -407,7 +408,7 @@
             // 
             this.CiutextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CiutextBox.Location = new System.Drawing.Point(180, 317);
-            this.CiutextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CiutextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CiutextBox.Name = "CiutextBox";
             this.CiutextBox.Size = new System.Drawing.Size(158, 26);
             this.CiutextBox.TabIndex = 35;
@@ -427,7 +428,7 @@
             // 
             this.ColtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColtextBox.Location = new System.Drawing.Point(180, 390);
-            this.ColtextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ColtextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ColtextBox.Name = "ColtextBox";
             this.ColtextBox.Size = new System.Drawing.Size(158, 26);
             this.ColtextBox.TabIndex = 37;
@@ -447,7 +448,7 @@
             // 
             this.CaltextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaltextBox.Location = new System.Drawing.Point(180, 463);
-            this.CaltextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CaltextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CaltextBox.Name = "CaltextBox";
             this.CaltextBox.Size = new System.Drawing.Size(158, 26);
             this.CaltextBox.TabIndex = 39;
@@ -478,7 +479,7 @@
             // 
             this.NoExtnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoExtnumeric.Location = new System.Drawing.Point(355, 244);
-            this.NoExtnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NoExtnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.NoExtnumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -492,7 +493,7 @@
             // 
             this.NoIntnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoIntnumeric.Location = new System.Drawing.Point(355, 318);
-            this.NoIntnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NoIntnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.NoIntnumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -517,7 +518,7 @@
             // 
             this.CPosnumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPosnumeric.Location = new System.Drawing.Point(355, 391);
-            this.CPosnumeric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CPosnumeric.Margin = new System.Windows.Forms.Padding(2);
             this.CPosnumeric.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -546,6 +547,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(618, 553);
             this.Controls.Add(this.CPosnumeric);
             this.Controls.Add(this.label11);
@@ -572,7 +574,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(634, 592);
             this.MinimumSize = new System.Drawing.Size(634, 592);
             this.Name = "FormClientes";
