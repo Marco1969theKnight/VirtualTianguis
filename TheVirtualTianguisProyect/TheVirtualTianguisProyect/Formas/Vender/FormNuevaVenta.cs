@@ -143,13 +143,13 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         private void Facbutton_Click(object sender, EventArgs e)
         {
-            TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura = new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura();
+            /*TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura = new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura();
             DatosFactura.FechaFacturacion = dateTimePicker1.Value.ToShortDateString();
             DatosFactura.UsuarioEmisor = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosEmpleado.ObtenerUsuarioEmpleado(TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados);
             DatosFactura.Pago = float.Parse(numericUpDown1.Value.ToString());
             DatosFactura.Productos = 0;
             DatosFactura.NoVenta = TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct;
-            DatosFactura.Cliente =
+            DatosFactura.Cliente =*/
             TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
             Form.Show();
         }
