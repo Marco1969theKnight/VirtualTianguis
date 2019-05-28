@@ -68,11 +68,13 @@
             this.codigoPostalToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.codigoPostalToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByCodigoPostalToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.fillByEstadoToolStrip = new System.Windows.Forms.ToolStrip();
             this.estadoToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.estadoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByEstadoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.fillByEstadoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.coloniaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.coloniaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByColoniaToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -92,8 +94,6 @@
             this.noIntToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.noIntToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByNoIntToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -103,15 +103,9 @@
             // 
             // button1
             // 
-<<<<<<< HEAD
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(43, 478);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 66);
             this.button1.TabIndex = 10;
@@ -138,13 +132,8 @@
             this.codigoPostalDataGridViewTextBoxColumn,
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
-<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(269, 90);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.dataGridView1.Location = new System.Drawing.Point(202, 73);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1200, 450);
@@ -414,6 +403,21 @@
             this.fillByCodigoPostalToolStripButton.Text = "Buscar";
             this.fillByCodigoPostalToolStripButton.Click += new System.EventHandler(this.fillByCodigoPostalToolStripButton_Click_1);
             // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Text = "Todos los clientes";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // fillByEstadoToolStrip
             // 
             this.fillByEstadoToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
@@ -459,6 +463,11 @@
             this.estadoToolStripTextBox.Name = "estadoToolStripTextBox";
             this.estadoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            // 
             // fillByEstadoToolStripButton
             // 
             this.fillByEstadoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -467,16 +476,12 @@
             this.fillByEstadoToolStripButton.Text = "Buscar";
             this.fillByEstadoToolStripButton.Click += new System.EventHandler(this.fillByEstadoToolStripButton_Click);
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
-            // 
             // coloniaToolStripLabel
             // 
             this.coloniaToolStripLabel.Name = "coloniaToolStripLabel";
             this.coloniaToolStripLabel.Size = new System.Drawing.Size(63, 24);
             this.coloniaToolStripLabel.Text = "Colonia:";
+            this.coloniaToolStripLabel.Click += new System.EventHandler(this.coloniaToolStripLabel_Click);
             // 
             // coloniaToolStripTextBox
             // 
@@ -587,41 +592,17 @@
             this.fillByNoIntToolStripButton.Text = "Buscar";
             this.fillByNoIntToolStripButton.Click += new System.EventHandler(this.fillByNoIntToolStripButton_Click_1);
             // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
-            this.toolStripButton1.Text = "Todos los clientes";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1371, 583);
-=======
-            this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1028, 474);
->>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Controls.Add(this.fillByEstadoToolStrip);
             this.Controls.Add(this.fillByRFCToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
             this.Name = "FormBuscarCliente";
             this.Text = "FormBuscarCliente";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);

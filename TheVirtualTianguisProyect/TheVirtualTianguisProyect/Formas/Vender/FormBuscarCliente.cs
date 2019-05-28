@@ -182,5 +182,10 @@ namespace TheVirtualTianguisProyect.Formas.Vender
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+
+        private void coloniaToolStripLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
