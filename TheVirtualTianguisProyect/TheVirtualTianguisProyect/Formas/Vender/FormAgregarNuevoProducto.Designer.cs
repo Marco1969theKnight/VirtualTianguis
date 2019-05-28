@@ -49,16 +49,16 @@
             this.marcaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.marcaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByMarcaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.categoriaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.categoriaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillByCategoriaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
-            this.categoriaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.categoriaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByCategoriaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -69,6 +69,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproductoDataGridViewTextBoxColumn,
@@ -84,7 +85,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 270);
             this.dataGridView1.TabIndex = 0;
             // 
             // idproductoDataGridViewTextBoxColumn
@@ -162,16 +163,16 @@
             this.marcaToolStripTextBox,
             this.fillByMarcaToolStripButton,
             this.toolStripSeparator2,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
             this.categoriaToolStripLabel,
             this.categoriaToolStripTextBox,
-            this.fillByCategoriaToolStripButton,
-            this.toolStripSeparator3,
-            this.toolStripButton1});
+            this.fillByCategoriaToolStripButton});
             this.fillByNombre2ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByNombre2ToolStrip.Name = "fillByNombre2ToolStrip";
-            this.fillByNombre2ToolStrip.Size = new System.Drawing.Size(800, 27);
-            this.fillByNombre2ToolStrip.TabIndex = 1;
-            this.fillByNombre2ToolStrip.Text = "fillByNombre2ToolStrip";
+            this.fillByNombre2ToolStrip.Size = new System.Drawing.Size(792, 27);
+            this.fillByNombre2ToolStrip.TabIndex = 2;
+            this.fillByNombre2ToolStrip.Text = "fillByCategoriaToolStrip";
             // 
             // nombreToolStripLabel
             // 
@@ -212,81 +213,13 @@
             // 
             this.fillByMarcaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByMarcaToolStripButton.Name = "fillByMarcaToolStripButton";
-            this.fillByMarcaToolStripButton.Size = new System.Drawing.Size(72, 22);
+            this.fillByMarcaToolStripButton.Size = new System.Drawing.Size(89, 24);
             this.fillByMarcaToolStripButton.Text = "FillByMarca";
             // 
-            // fillByCategoriaToolStrip
+            // toolStripSeparator2
             // 
-            this.fillByNombre2ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
-            this.fillByNombre2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByNombre2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.categoriaToolStripLabel,
-            this.categoriaToolStripTextBox,
-            this.fillByCategoriaToolStripButton});
-            this.fillByNombre2ToolStrip.Location = new System.Drawing.Point(0, 25);
-            this.fillByNombre2ToolStrip.Name = "fillByCategoriaToolStrip";
-            this.fillByNombre2ToolStrip.Size = new System.Drawing.Size(600, 25);
-            this.fillByNombre2ToolStrip.TabIndex = 2;
-            this.fillByNombre2ToolStrip.Text = "fillByCategoriaToolStrip";
-            // 
-            // categoriaToolStripLabel
-            // 
-            this.categoriaToolStripLabel.Name = "categoriaToolStripLabel";
-            this.categoriaToolStripLabel.Size = new System.Drawing.Size(61, 22);
-            this.categoriaToolStripLabel.Text = "Categoria:";
-            // 
-            // categoriaToolStripTextBox
-            // 
-            this.categoriaToolStripTextBox.Name = "categoriaToolStripTextBox";
-            this.categoriaToolStripTextBox.Size = new System.Drawing.Size(76, 25);
-            // 
-            // fillByCategoriaToolStripButton
-            // 
-            this.fillByCategoriaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByCategoriaToolStripButton.Name = "fillByCategoriaToolStripButton";
-            this.fillByCategoriaToolStripButton.Size = new System.Drawing.Size(90, 22);
-            this.fillByCategoriaToolStripButton.Text = "FillByCategoria";
-            this.fillByCategoriaToolStripButton.Click += new System.EventHandler(this.fillByCategoriaToolStripButton_Click_1);
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 280);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 71);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Agregar Producto Seleccionado";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 305);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Cantidad a agregar:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(382, 301);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(90, 29);
-            this.numericUpDown1.TabIndex = 5;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // categoriaToolStripLabel
             // 
@@ -307,11 +240,6 @@
             this.fillByCategoriaToolStripButton.Text = "Buscar";
             this.fillByCategoriaToolStripButton.Click += new System.EventHandler(this.fillByCategoriaToolStripButton_Click_1);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -327,12 +255,48 @@
             this.toolStripButton1.Text = "Todo";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(22, 333);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(211, 71);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Agregar Producto Seleccionado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(270, 360);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 28);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Cantidad a agregar:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(480, 360);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(90, 34);
+            this.numericUpDown1.TabIndex = 5;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
             // FormAgregarNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(792, 433);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

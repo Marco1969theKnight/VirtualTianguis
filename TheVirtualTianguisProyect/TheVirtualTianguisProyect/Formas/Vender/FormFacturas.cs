@@ -22,5 +22,11 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void FormFacturas_Load_1(object sender, EventArgs e)
+        {
+
+            this.reportViewer2.RefreshReport();
+        }
     }
 }

@@ -144,6 +144,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
         private void Facbutton_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
+            Form.Show();
         }
     }
 }

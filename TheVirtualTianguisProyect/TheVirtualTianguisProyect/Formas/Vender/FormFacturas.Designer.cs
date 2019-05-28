@@ -28,41 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(821, 671);
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // reportViewer2
+            // 
+            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "TheVirtualTianguisProyect.Formas.Vender.ReportFactura.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(1067, 554);
+            this.reportViewer2.TabIndex = 0;
             // 
             // FormFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 671);
-            this.Controls.Add(this.reportViewer1);
-            this.MaximumSize = new System.Drawing.Size(839, 718);
-            this.Name = "FormFacturas";
-            this.Text = "Generar Factura";
-            this.Load += new System.EventHandler(this.FormFacturas_Load);
-=======
-            this.SuspendLayout();
-            // 
-            // FormFacturas
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.reportViewer2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormFacturas";
             this.Text = "FormFacturas";
->>>>>>> 4c7fafdbd156f36e785e7104fe39f120d577655c
+            this.Load += new System.EventHandler(this.FormFacturas_Load_1);
             this.ResumeLayout(false);
 
         }
@@ -70,5 +68,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }
