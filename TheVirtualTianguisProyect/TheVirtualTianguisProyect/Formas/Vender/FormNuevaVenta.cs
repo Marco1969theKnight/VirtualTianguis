@@ -23,7 +23,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.DetalleVentas' Puede moverla o quitarla según sea necesario.
             this.detalleVentasTableAdapter.FillByNoVenta(this.datosTianguis.DetalleVentas, 1);
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Ventas' Puede moverla o quitarla según sea necesario.
-            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByVentaActivaActual(this.datosTianguis.Ventas);
             dataGridView2.AutoGenerateColumns = true;
         }
 
@@ -94,7 +94,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
                 TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.ActualizaPrecioVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct, Int32.Parse(numericUpDown1.Value.ToString()));
             }
 
-            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByVentaActivaActual(this.datosTianguis.Ventas);
         }
 
         private void NVenbutton_Click(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             DatosVenta.VentaActiva = true;
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.AltaVenta(DatosVenta);
             TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct = id;
-            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByVentaActivaActual(this.datosTianguis.Ventas);
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -138,7 +138,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
                 numericUpDown1.Value = Decimal.Parse(this.detalleVentasTableAdapter.TotalVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct).ToString());
                 TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosVenta.ActualizaPrecioVenta(TheVirtualTianguisProyect.Properties.Settings.Default.NoVentaAct, Int32.Parse(numericUpDown1.Value.ToString()));
             }
-            this.ventasTableAdapter.FillByAtctivo(this.datosTianguis.Ventas);
+            this.ventasTableAdapter.FillByVentaActivaActual(this.datosTianguis.Ventas);
         }
     }
 }

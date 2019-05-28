@@ -92,6 +92,8 @@
             this.noIntToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.noIntToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByNoIntToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -102,10 +104,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(43, 478);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 54);
+            this.button1.Size = new System.Drawing.Size(180, 66);
             this.button1.TabIndex = 10;
             this.button1.Text = "Seleccionar Cliente";
             this.button1.UseVisualStyleBackColor = true;
@@ -130,11 +132,11 @@
             this.codigoPostalDataGridViewTextBoxColumn,
             this.clienteActivoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(202, 73);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(269, 90);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 450);
             this.dataGridView1.TabIndex = 23;
             // 
             // iDDataGridViewTextBoxColumn
@@ -151,7 +153,7 @@
             this.rFCDataGridViewTextBoxColumn.DataPropertyName = "RFC";
             this.rFCDataGridViewTextBoxColumn.HeaderText = "RFC";
             this.rFCDataGridViewTextBoxColumn.Name = "rFCDataGridViewTextBoxColumn";
-            this.rFCDataGridViewTextBoxColumn.Width = 53;
+            this.rFCDataGridViewTextBoxColumn.Width = 64;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -159,7 +161,7 @@
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 69;
+            this.nombreDataGridViewTextBoxColumn.Width = 87;
             // 
             // aPaternoDataGridViewTextBoxColumn
             // 
@@ -167,7 +169,7 @@
             this.aPaternoDataGridViewTextBoxColumn.DataPropertyName = "APaterno";
             this.aPaternoDataGridViewTextBoxColumn.HeaderText = "APaterno";
             this.aPaternoDataGridViewTextBoxColumn.Name = "aPaternoDataGridViewTextBoxColumn";
-            this.aPaternoDataGridViewTextBoxColumn.Width = 76;
+            this.aPaternoDataGridViewTextBoxColumn.Width = 96;
             // 
             // aMaternoDataGridViewTextBoxColumn
             // 
@@ -175,7 +177,7 @@
             this.aMaternoDataGridViewTextBoxColumn.DataPropertyName = "AMaterno";
             this.aMaternoDataGridViewTextBoxColumn.HeaderText = "AMaterno";
             this.aMaternoDataGridViewTextBoxColumn.Name = "aMaternoDataGridViewTextBoxColumn";
-            this.aMaternoDataGridViewTextBoxColumn.Width = 78;
+            this.aMaternoDataGridViewTextBoxColumn.Width = 98;
             // 
             // estadoDataGridViewTextBoxColumn
             // 
@@ -183,7 +185,7 @@
             this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
             this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.Width = 65;
+            this.estadoDataGridViewTextBoxColumn.Width = 81;
             // 
             // ciudadDataGridViewTextBoxColumn
             // 
@@ -191,7 +193,7 @@
             this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "Ciudad";
             this.ciudadDataGridViewTextBoxColumn.HeaderText = "Ciudad";
             this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
-            this.ciudadDataGridViewTextBoxColumn.Width = 65;
+            this.ciudadDataGridViewTextBoxColumn.Width = 81;
             // 
             // calleDataGridViewTextBoxColumn
             // 
@@ -199,7 +201,7 @@
             this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
             this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
             this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
-            this.calleDataGridViewTextBoxColumn.Width = 55;
+            this.calleDataGridViewTextBoxColumn.Width = 68;
             // 
             // noExtDataGridViewTextBoxColumn
             // 
@@ -207,7 +209,7 @@
             this.noExtDataGridViewTextBoxColumn.DataPropertyName = "NoExt";
             this.noExtDataGridViewTextBoxColumn.HeaderText = "NoExt";
             this.noExtDataGridViewTextBoxColumn.Name = "noExtDataGridViewTextBoxColumn";
-            this.noExtDataGridViewTextBoxColumn.Width = 61;
+            this.noExtDataGridViewTextBoxColumn.Width = 74;
             // 
             // noIntDataGridViewTextBoxColumn
             // 
@@ -215,7 +217,7 @@
             this.noIntDataGridViewTextBoxColumn.DataPropertyName = "NoInt";
             this.noIntDataGridViewTextBoxColumn.HeaderText = "NoInt";
             this.noIntDataGridViewTextBoxColumn.Name = "noIntDataGridViewTextBoxColumn";
-            this.noIntDataGridViewTextBoxColumn.Width = 58;
+            this.noIntDataGridViewTextBoxColumn.Width = 70;
             // 
             // coloniaDataGridViewTextBoxColumn
             // 
@@ -223,7 +225,7 @@
             this.coloniaDataGridViewTextBoxColumn.DataPropertyName = "Colonia";
             this.coloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
             this.coloniaDataGridViewTextBoxColumn.Name = "coloniaDataGridViewTextBoxColumn";
-            this.coloniaDataGridViewTextBoxColumn.Width = 67;
+            this.coloniaDataGridViewTextBoxColumn.Width = 84;
             // 
             // codigoPostalDataGridViewTextBoxColumn
             // 
@@ -231,7 +233,7 @@
             this.codigoPostalDataGridViewTextBoxColumn.DataPropertyName = "CodigoPostal";
             this.codigoPostalDataGridViewTextBoxColumn.HeaderText = "CodigoPostal";
             this.codigoPostalDataGridViewTextBoxColumn.Name = "codigoPostalDataGridViewTextBoxColumn";
-            this.codigoPostalDataGridViewTextBoxColumn.Width = 94;
+            this.codigoPostalDataGridViewTextBoxColumn.Width = 120;
             // 
             // clienteActivoDataGridViewCheckBoxColumn
             // 
@@ -276,123 +278,129 @@
             this.toolStripSeparator4,
             this.codigoPostalToolStripLabel,
             this.codigoPostalToolStripTextBox,
-            this.fillByCodigoPostalToolStripButton});
+            this.fillByCodigoPostalToolStripButton,
+            this.toolStripSeparator10,
+            this.toolStripButton1});
             this.fillByRFCToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByRFCToolStrip.Name = "fillByRFCToolStrip";
-            this.fillByRFCToolStrip.Size = new System.Drawing.Size(1028, 25);
+            this.fillByRFCToolStrip.Size = new System.Drawing.Size(1371, 27);
             this.fillByRFCToolStrip.TabIndex = 24;
             this.fillByRFCToolStrip.Text = "fillByRFCToolStrip";
             // 
             // rFCToolStripLabel
             // 
             this.rFCToolStripLabel.Name = "rFCToolStripLabel";
-            this.rFCToolStripLabel.Size = new System.Drawing.Size(31, 22);
+            this.rFCToolStripLabel.Size = new System.Drawing.Size(37, 24);
             this.rFCToolStripLabel.Text = "RFC:";
             // 
             // rFCToolStripTextBox
             // 
             this.rFCToolStripTextBox.Name = "rFCToolStripTextBox";
-            this.rFCToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.rFCToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByRFCToolStripButton
             // 
             this.fillByRFCToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByRFCToolStripButton.Name = "fillByRFCToolStripButton";
-            this.fillByRFCToolStripButton.Size = new System.Drawing.Size(60, 22);
-            this.fillByRFCToolStripButton.Text = "FillByRFC";
+            this.fillByRFCToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByRFCToolStripButton.Text = "Buscar";
             this.fillByRFCToolStripButton.Click += new System.EventHandler(this.fillByRFCToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // nombreToolStripLabel
             // 
             this.nombreToolStripLabel.Name = "nombreToolStripLabel";
-            this.nombreToolStripLabel.Size = new System.Drawing.Size(54, 22);
+            this.nombreToolStripLabel.Size = new System.Drawing.Size(67, 24);
             this.nombreToolStripLabel.Text = "Nombre:";
             // 
             // nombreToolStripTextBox
             // 
             this.nombreToolStripTextBox.Name = "nombreToolStripTextBox";
-            this.nombreToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.nombreToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByNombre1ToolStripButton
             // 
             this.fillByNombre1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNombre1ToolStripButton.Name = "fillByNombre1ToolStripButton";
-            this.fillByNombre1ToolStripButton.Size = new System.Drawing.Size(89, 22);
-            this.fillByNombre1ToolStripButton.Text = "FillByNombre1";
+            this.fillByNombre1ToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByNombre1ToolStripButton.Text = "Buscar";
+            this.fillByNombre1ToolStripButton.Click += new System.EventHandler(this.fillByNombre1ToolStripButton_Click_1);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // aPaternoToolStripLabel
             // 
             this.aPaternoToolStripLabel.Name = "aPaternoToolStripLabel";
-            this.aPaternoToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.aPaternoToolStripLabel.Size = new System.Drawing.Size(72, 24);
             this.aPaternoToolStripLabel.Text = "APaterno:";
             // 
             // aPaternoToolStripTextBox
             // 
             this.aPaternoToolStripTextBox.Name = "aPaternoToolStripTextBox";
-            this.aPaternoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.aPaternoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByAPaterno1ToolStripButton
             // 
             this.fillByAPaterno1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByAPaterno1ToolStripButton.Name = "fillByAPaterno1ToolStripButton";
-            this.fillByAPaterno1ToolStripButton.Size = new System.Drawing.Size(94, 22);
-            this.fillByAPaterno1ToolStripButton.Text = "FillByAPaterno1";
+            this.fillByAPaterno1ToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByAPaterno1ToolStripButton.Text = "Buscar";
+            this.fillByAPaterno1ToolStripButton.Click += new System.EventHandler(this.fillByAPaterno1ToolStripButton_Click_1);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // aMaternoToolStripLabel
             // 
             this.aMaternoToolStripLabel.Name = "aMaternoToolStripLabel";
-            this.aMaternoToolStripLabel.Size = new System.Drawing.Size(63, 22);
+            this.aMaternoToolStripLabel.Size = new System.Drawing.Size(78, 24);
             this.aMaternoToolStripLabel.Text = "AMaterno:";
             // 
             // aMaternoToolStripTextBox
             // 
             this.aMaternoToolStripTextBox.Name = "aMaternoToolStripTextBox";
-            this.aMaternoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.aMaternoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByAMaterno1ToolStripButton
             // 
             this.fillByAMaterno1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByAMaterno1ToolStripButton.Name = "fillByAMaterno1ToolStripButton";
-            this.fillByAMaterno1ToolStripButton.Size = new System.Drawing.Size(98, 22);
-            this.fillByAMaterno1ToolStripButton.Text = "FillByAMaterno1";
+            this.fillByAMaterno1ToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByAMaterno1ToolStripButton.Text = "Buscar";
+            this.fillByAMaterno1ToolStripButton.Click += new System.EventHandler(this.fillByAMaterno1ToolStripButton_Click_1);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // codigoPostalToolStripLabel
             // 
             this.codigoPostalToolStripLabel.Name = "codigoPostalToolStripLabel";
-            this.codigoPostalToolStripLabel.Size = new System.Drawing.Size(81, 22);
+            this.codigoPostalToolStripLabel.Size = new System.Drawing.Size(100, 24);
             this.codigoPostalToolStripLabel.Text = "CodigoPostal:";
             // 
             // codigoPostalToolStripTextBox
             // 
             this.codigoPostalToolStripTextBox.Name = "codigoPostalToolStripTextBox";
-            this.codigoPostalToolStripTextBox.Size = new System.Drawing.Size(76, 23);
+            this.codigoPostalToolStripTextBox.Size = new System.Drawing.Size(76, 27);
             // 
             // fillByCodigoPostalToolStripButton
             // 
             this.fillByCodigoPostalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCodigoPostalToolStripButton.Name = "fillByCodigoPostalToolStripButton";
-            this.fillByCodigoPostalToolStripButton.Size = new System.Drawing.Size(110, 19);
-            this.fillByCodigoPostalToolStripButton.Text = "FillByCodigoPostal";
+            this.fillByCodigoPostalToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByCodigoPostalToolStripButton.Text = "Buscar";
+            this.fillByCodigoPostalToolStripButton.Click += new System.EventHandler(this.fillByCodigoPostalToolStripButton_Click_1);
             // 
             // fillByEstadoToolStrip
             // 
@@ -400,8 +408,8 @@
             this.fillByEstadoToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadoToolStripLabel,
             this.estadoToolStripTextBox,
-            this.fillByEstadoToolStripButton,
             this.toolStripSeparator5,
+            this.fillByEstadoToolStripButton,
             this.coloniaToolStripLabel,
             this.coloniaToolStripTextBox,
             this.fillByColoniaToolStripButton,
@@ -421,122 +429,126 @@
             this.noIntToolStripLabel,
             this.noIntToolStripTextBox,
             this.fillByNoIntToolStripButton});
-            this.fillByEstadoToolStrip.Location = new System.Drawing.Point(0, 25);
+            this.fillByEstadoToolStrip.Location = new System.Drawing.Point(0, 27);
             this.fillByEstadoToolStrip.Name = "fillByEstadoToolStrip";
-            this.fillByEstadoToolStrip.Size = new System.Drawing.Size(1028, 25);
+            this.fillByEstadoToolStrip.Size = new System.Drawing.Size(1371, 27);
             this.fillByEstadoToolStrip.TabIndex = 25;
             this.fillByEstadoToolStrip.Text = "fillByEstadoToolStrip";
             // 
             // estadoToolStripLabel
             // 
             this.estadoToolStripLabel.Name = "estadoToolStripLabel";
-            this.estadoToolStripLabel.Size = new System.Drawing.Size(45, 22);
+            this.estadoToolStripLabel.Size = new System.Drawing.Size(57, 24);
             this.estadoToolStripLabel.Text = "Estado:";
             // 
             // estadoToolStripTextBox
             // 
             this.estadoToolStripTextBox.Name = "estadoToolStripTextBox";
-            this.estadoToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.estadoToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByEstadoToolStripButton
             // 
             this.fillByEstadoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByEstadoToolStripButton.Name = "fillByEstadoToolStripButton";
-            this.fillByEstadoToolStripButton.Size = new System.Drawing.Size(74, 22);
-            this.fillByEstadoToolStripButton.Text = "FillByEstado";
+            this.fillByEstadoToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByEstadoToolStripButton.Text = "Buscar";
             this.fillByEstadoToolStripButton.Click += new System.EventHandler(this.fillByEstadoToolStripButton_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // coloniaToolStripLabel
             // 
             this.coloniaToolStripLabel.Name = "coloniaToolStripLabel";
-            this.coloniaToolStripLabel.Size = new System.Drawing.Size(51, 22);
+            this.coloniaToolStripLabel.Size = new System.Drawing.Size(63, 24);
             this.coloniaToolStripLabel.Text = "Colonia:";
             // 
             // coloniaToolStripTextBox
             // 
             this.coloniaToolStripTextBox.Name = "coloniaToolStripTextBox";
-            this.coloniaToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.coloniaToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByColoniaToolStripButton
             // 
             this.fillByColoniaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByColoniaToolStripButton.Name = "fillByColoniaToolStripButton";
-            this.fillByColoniaToolStripButton.Size = new System.Drawing.Size(80, 22);
-            this.fillByColoniaToolStripButton.Text = "FillByColonia";
+            this.fillByColoniaToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByColoniaToolStripButton.Text = "Buscar";
+            this.fillByColoniaToolStripButton.Click += new System.EventHandler(this.fillByColoniaToolStripButton_Click_1);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // ciudadToolStripLabel
             // 
             this.ciudadToolStripLabel.Name = "ciudadToolStripLabel";
-            this.ciudadToolStripLabel.Size = new System.Drawing.Size(48, 22);
+            this.ciudadToolStripLabel.Size = new System.Drawing.Size(59, 24);
             this.ciudadToolStripLabel.Text = "Ciudad:";
             // 
             // ciudadToolStripTextBox
             // 
             this.ciudadToolStripTextBox.Name = "ciudadToolStripTextBox";
-            this.ciudadToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.ciudadToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByCiudadToolStripButton
             // 
             this.fillByCiudadToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCiudadToolStripButton.Name = "fillByCiudadToolStripButton";
-            this.fillByCiudadToolStripButton.Size = new System.Drawing.Size(77, 22);
-            this.fillByCiudadToolStripButton.Text = "FillByCiudad";
+            this.fillByCiudadToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByCiudadToolStripButton.Text = "Buscar";
+            this.fillByCiudadToolStripButton.Click += new System.EventHandler(this.fillByCiudadToolStripButton_Click_1);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
             // 
             // calleToolStripLabel
             // 
             this.calleToolStripLabel.Name = "calleToolStripLabel";
-            this.calleToolStripLabel.Size = new System.Drawing.Size(36, 22);
+            this.calleToolStripLabel.Size = new System.Drawing.Size(45, 24);
             this.calleToolStripLabel.Text = "Calle:";
             // 
             // calleToolStripTextBox
             // 
             this.calleToolStripTextBox.Name = "calleToolStripTextBox";
-            this.calleToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.calleToolStripTextBox.Size = new System.Drawing.Size(100, 27);
             // 
             // fillByCalleToolStripButton
             // 
             this.fillByCalleToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByCalleToolStripButton.Name = "fillByCalleToolStripButton";
-            this.fillByCalleToolStripButton.Size = new System.Drawing.Size(65, 22);
-            this.fillByCalleToolStripButton.Text = "FillByCalle";
+            this.fillByCalleToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByCalleToolStripButton.Text = "Buscar";
+            this.fillByCalleToolStripButton.Click += new System.EventHandler(this.fillByCalleToolStripButton_Click_1);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
             // noExtToolStripLabel
             // 
             this.noExtToolStripLabel.Name = "noExtToolStripLabel";
-            this.noExtToolStripLabel.Size = new System.Drawing.Size(41, 22);
+            this.noExtToolStripLabel.Size = new System.Drawing.Size(52, 24);
             this.noExtToolStripLabel.Text = "NoExt:";
             // 
             // noExtToolStripTextBox
             // 
             this.noExtToolStripTextBox.Name = "noExtToolStripTextBox";
-            this.noExtToolStripTextBox.Size = new System.Drawing.Size(76, 25);
+            this.noExtToolStripTextBox.Size = new System.Drawing.Size(76, 27);
             // 
             // fillByNoExtToolStripButton
             // 
             this.fillByNoExtToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNoExtToolStripButton.Name = "fillByNoExtToolStripButton";
-            this.fillByNoExtToolStripButton.Size = new System.Drawing.Size(70, 22);
-            this.fillByNoExtToolStripButton.Text = "FillByNoExt";
+            this.fillByNoExtToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByNoExtToolStripButton.Text = "Buscar";
+            this.fillByNoExtToolStripButton.Click += new System.EventHandler(this.fillByNoExtToolStripButton_Click_1);
             // 
             // toolStripSeparator9
             // 
@@ -546,32 +558,48 @@
             // noIntToolStripLabel
             // 
             this.noIntToolStripLabel.Name = "noIntToolStripLabel";
-            this.noIntToolStripLabel.Size = new System.Drawing.Size(40, 15);
+            this.noIntToolStripLabel.Size = new System.Drawing.Size(49, 24);
             this.noIntToolStripLabel.Text = "NoInt:";
             // 
             // noIntToolStripTextBox
             // 
             this.noIntToolStripTextBox.Name = "noIntToolStripTextBox";
-            this.noIntToolStripTextBox.Size = new System.Drawing.Size(76, 23);
+            this.noIntToolStripTextBox.Size = new System.Drawing.Size(76, 27);
             // 
             // fillByNoIntToolStripButton
             // 
             this.fillByNoIntToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByNoIntToolStripButton.Name = "fillByNoIntToolStripButton";
-            this.fillByNoIntToolStripButton.Size = new System.Drawing.Size(69, 19);
-            this.fillByNoIntToolStripButton.Text = "FillByNoInt";
+            this.fillByNoIntToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillByNoIntToolStripButton.Text = "Buscar";
+            this.fillByNoIntToolStripButton.Click += new System.EventHandler(this.fillByNoIntToolStripButton_Click_1);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Text = "Todos los clientes";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FormBuscarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 474);
+            this.ClientSize = new System.Drawing.Size(1371, 583);
             this.Controls.Add(this.fillByEstadoToolStrip);
             this.Controls.Add(this.fillByRFCToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormBuscarCliente";
             this.Text = "FormBuscarCliente";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
@@ -650,5 +678,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coloniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoPostalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clienteActivoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

@@ -37,32 +37,6 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         }
 
-        private void fillByMarcaToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productoTableAdapter.FillByMarca(this.datosTianguis.Producto, marcaToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByCategoriaToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productoTableAdapter.FillByCategoria(this.datosTianguis.Producto, categoriaToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentCell == null)  // Is there any row selected now?
@@ -92,6 +66,42 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosInventario.ActualizaExistenciasInventario(id_producto, Vendido);
 
             this.Close();
+        }
+
+        private void fillByCategoriaToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.FillByCategoria(this.datosTianguis.Producto, categoriaToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByMarcaToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.FillByMarca(this.datosTianguis.Producto, marcaToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }

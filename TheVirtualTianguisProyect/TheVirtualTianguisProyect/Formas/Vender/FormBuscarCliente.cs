@@ -37,143 +37,11 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         }
 
-        private void fillByNombre1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByNombre1(this.datosTianguis.Clientes, nombreToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void nombreToolStripTextBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillByNombre1ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void fillByAPaterno1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByAPaterno1(this.datosTianguis.Clientes, aPaternoToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByAMaterno1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByAMaterno1(this.datosTianguis.Clientes, aMaternoToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByCodigoPostalToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByCodigoPostal(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(codigoPostalToolStripTextBox.Text, typeof(int))))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void fillByEstadoToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
                 this.clientesTableAdapter.FillByEstado(this.datosTianguis.Clientes, estadoToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByColoniaToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByColonia(this.datosTianguis.Clientes, coloniaToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByCiudadToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByCiudad(this.datosTianguis.Clientes, ciudadToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void ciudadToolStripLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillByCalleToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByCalle(this.datosTianguis.Clientes, calleToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByNoExtToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByNoExt(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(noExtToolStripTextBox.Text, typeof(int))))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByNoIntToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillByNoInt(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(noIntToolStripTextBox.Text, typeof(int))))));
             }
             catch (System.Exception ex)
             {
@@ -193,6 +61,126 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             TheVirtualTianguisProyect.Properties.Settings.Default.RFCCliente = RFC;
 
             this.Close();
+        }
+
+        private void fillByNombre1ToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByNombre1(this.datosTianguis.Clientes, nombreToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByAPaterno1ToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByAPaterno1(this.datosTianguis.Clientes, aPaternoToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByAMaterno1ToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByAMaterno1(this.datosTianguis.Clientes, aMaternoToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByCodigoPostalToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByCodigoPostal(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(codigoPostalToolStripTextBox.Text, typeof(int))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByColoniaToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByColonia(this.datosTianguis.Clientes, coloniaToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByCiudadToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByCiudad(this.datosTianguis.Clientes, ciudadToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByCalleToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByCalle(this.datosTianguis.Clientes, calleToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByNoExtToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByNoExt(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(noExtToolStripTextBox.Text, typeof(int))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillByNoIntToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.FillByNoInt(this.datosTianguis.Clientes, new System.Nullable<int>(((int)(System.Convert.ChangeType(noIntToolStripTextBox.Text, typeof(int))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.Fill(this.datosTianguis.Clientes);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
