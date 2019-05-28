@@ -140,5 +140,10 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             }
             this.ventasTableAdapter.FillByVentaActivaActual(this.datosTianguis.Ventas);
         }
+
+        private void Facbutton_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
+        }
     }
 }
