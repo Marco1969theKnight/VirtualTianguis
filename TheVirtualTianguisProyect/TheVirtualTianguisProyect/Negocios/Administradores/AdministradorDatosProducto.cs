@@ -80,8 +80,8 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosProducto(TheVirtualTianguisProyect.Negocios.Datos.DatosProducto DatosProducto)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Producto set Marca = '" + DatosProducto.Marca + "', Precio = " + DatosProducto.Precio + ", Categoria = '" + DatosProducto.Categoria + "', Descripcion = '" + DatosProducto.Descripcion + "', Proveedor = " + DatosProducto.Proveedor + ", ProductoActivo = '" + DatosProducto.ProductoActivo + "' where Id_producto = " + DatosProducto.Id_producto;
-
+            String query = "update Producto set Nombre = '" + DatosProducto.Nombre + "', Marca = '" + DatosProducto.Marca + "', Precio = " + DatosProducto.Precio + ", Categoria = '" + DatosProducto.Categoria + "', Descripcion = '" + DatosProducto.Descripcion + "', Proveedor = " + DatosProducto.Proveedor + ", ProductoActivo = '" + DatosProducto.ProductoActivo + "' where Id_producto = " + DatosProducto.Id_producto;
+            
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 

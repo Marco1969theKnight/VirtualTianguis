@@ -113,6 +113,7 @@
             this.ModifButton.Name = "ModifButton";
             this.ModifButton.Size = new System.Drawing.Size(82, 24);
             this.ModifButton.Text = "Modificar";
+            this.ModifButton.Click += new System.EventHandler(this.ModifButton_Click_1);
             // 
             // ElmButton
             // 
@@ -129,6 +130,7 @@
             this.GuarButton.Name = "GuarButton";
             this.GuarButton.Size = new System.Drawing.Size(73, 24);
             this.GuarButton.Text = "Guardar";
+            this.GuarButton.Click += new System.EventHandler(this.GuarButton_Click_1);
             // 
             // CanButton
             // 

@@ -48,14 +48,6 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
 
         }
 
-        private void ModifButton_Click(object sender, EventArgs e)
-        {
-            pageAction = "mod";
-            CargaProveedorActual();
-            nombre.Focus();
-            EstablecerEstadoEditable(true);
-        }
-
         private void EstablecerEstadoEditable(bool edit)
         {
             AgregarButton.Enabled = !edit;
@@ -100,7 +92,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             proveedor.Text = DatosUsuario.Proveedor.ToString();
         }
 
-        private void GuarButton_Click(object sender, EventArgs e)
+        private void GuarButton_Click_1(object sender, EventArgs e)
         {
             if (nombre.Text.Trim() == String.Empty)
             {
@@ -168,10 +160,11 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                 double Id = double.Parse(dgproductos[0, dgproductos.CurrentRow.Index].Value.ToString());
                 DatosProductos.Id_producto = int.Parse(Id.ToString());
                 DatosProductos.Nombre = nombre.Text.ToUpper();
+                DatosProductos.Marca = marca.Text.ToUpper();
+                DatosProductos.Precio = float.Parse(precio.Text);
+                DatosProductos.Categoria = categoria.Text.ToUpper();
                 DatosProductos.Descripcion = descripcion.Text.ToUpper();
                 DatosProductos.Proveedor = int.Parse(proveedor.Text);
-                DatosProductos.Categoria = categoria.Text.ToUpper();
-                DatosProductos.Precio = float.Parse(precio.Text);
                 DatosProductos.ProductoActivo = true;
 
                 TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ActualizaDatosProducto(DatosProductos);
@@ -214,6 +207,14 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             ClearFields();
 
             CargaProveedorActual();
+        }
+
+        private void ModifButton_Click_1(object sender, EventArgs e)
+        {
+            pageAction = "mod";
+            CargaProveedorActual();
+            nombre.Focus();
+            EstablecerEstadoEditable(true);
         }
     }
 }
