@@ -29,8 +29,8 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
 
         }
 
-        private void agregar_Click(object sender, EventArgs e) { }
-        /*private void agregar_Click(object sender, EventArgs e)
+       
+        private void agregar_Click(object sender, EventArgs e)
         {
             if (nombre.Text.Trim() == String.Empty)
             {
@@ -43,33 +43,31 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
 
             Double Bandera;
 
-            Bandera = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.VerificaProveedorAlta(nombre.Text);
-            if (pageAction == "add")
+            Bandera = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProveedor.VerificaProveedorAlta(nombre.Text);
+            if (Bandera == -1)
             {
-                if (Bandera == -1)
-                {
-                    DatosProductos.Nombre = nombre.Text;
-                    DatosProductos.Marca = marca.Text;
-                    DatosProductos.Precio = float.Parse(precio.Text);
-                    DatosProductos.Categoria = categoria.Text;
-                    DatosProductos.Descripcion = descripcion.Text;
-                    //DatosProductos.Proveedor = Int32.Parse(proveedor.Text);
-                    DatosProductos.ProductoActivo = true;
-                    DatosProductos.Proveedor = int.Parse(proveedores.SelectedIndex.ToString()) + 1;
+                DatosProveedor.Nombre = nombre.Text;
+                DatosProveedor.ProveedorActivo = true;
 
-                    TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
+                TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProveedor.AltaProveedor(DatosProveedor);
 
-                    MessageBox.Show("Producto ingresado");
-                }
-                else
-                {
-                    MessageBox.Show("Ya Existe un Producto con los mismos DATOS");
-                    EstablecerEstadoEditable(false);
-                    ClearFields();
-                }
-
-                this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+                 MessageBox.Show("Proveedor ingresado");
             }
-        }*/
+            else
+            {
+                MessageBox.Show("Ya Existe el Proveedor");
+                //EstablecerEstadoEditable(false);
+                //ClearFields();
+            }
+
+            this.proveedorTableAdapter.Fill(this.datosTianguis.Proveedor);
+        }
+
+        private void EstablecerEstadoEditable(bool edit)
+        {
+            nombre.ReadOnly = !edit;
+            agregar.Enabled = !edit;
+        }
+
     }
 }

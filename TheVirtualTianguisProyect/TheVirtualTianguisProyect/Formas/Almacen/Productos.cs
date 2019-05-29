@@ -76,7 +76,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         }
         private void CargaProveedorActual()
         {
-            if (dgproductos.CurrentCell == null)  // Is there any row selected now?
+            if (dgproductos.CurrentCell == null)
             {
                 ModifButton.Enabled = false;
                 ElmButton.Enabled = false;
