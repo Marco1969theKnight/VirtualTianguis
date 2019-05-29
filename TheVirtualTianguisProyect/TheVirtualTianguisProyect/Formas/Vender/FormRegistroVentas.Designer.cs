@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroVentas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
-=======
->>>>>>> 73c7bd903543f031744cc8d190d4131c21e1b10d
             this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +45,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // dataGridView1
-            //
+            // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -75,109 +70,86 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 363);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            //
-            // button1
-            //
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(446, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Detalle Venta";
-            this.button1.UseVisualStyleBackColor = false;
-            //
-            // ventasBindingSource
-            //
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.datosTianguis;
-            //
-            // ventasTableAdapter
-            //
-            this.ventasTableAdapter.ClearBeforeFill = true;
-            //
-=======
->>>>>>> 73c7bd903543f031744cc8d190d4131c21e1b10d
+            // 
             // noVentaDataGridViewTextBoxColumn
-            //
+            // 
             this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
             this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
             this.noVentaDataGridViewTextBoxColumn.Width = 92;
-            //
+            // 
             // fechaDataGridViewTextBoxColumn
-            //
+            // 
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
             this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaDataGridViewTextBoxColumn.Width = 62;
-            //
+            this.fechaDataGridViewTextBoxColumn.Width = 76;
+            // 
             // totalDataGridViewTextBoxColumn
-            //
+            // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalDataGridViewTextBoxColumn.Width = 56;
-            //
+            this.totalDataGridViewTextBoxColumn.Width = 69;
+            // 
             // empleadoDataGridViewTextBoxColumn
-            //
+            // 
             this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
             this.empleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.empleadoDataGridViewTextBoxColumn.Width = 79;
-            //
+            // 
             // detalleDataGridViewTextBoxColumn
-            //
+            // 
             this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
             this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
             this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
             this.detalleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.detalleDataGridViewTextBoxColumn.Width = 65;
-            //
+            this.detalleDataGridViewTextBoxColumn.Width = 81;
+            // 
             // ventaActivaDataGridViewCheckBoxColumn
-            //
+            // 
             this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
             this.ventaActivaDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.ventaActivaDataGridViewCheckBoxColumn.Width = 71;
-            //
+            this.ventaActivaDataGridViewCheckBoxColumn.Width = 89;
+            // 
             // ventasBindingSource
-            //
+            // 
             this.ventasBindingSource.DataMember = "Ventas";
             this.ventasBindingSource.DataSource = this.datosTianguis;
-            //
+            // 
             // datosTianguis
-            //
+            // 
             this.datosTianguis.DataSetName = "DatosTianguis";
             this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            //
+            // 
             // button1
-            //
+            // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(446, 363);
+            this.button1.Location = new System.Drawing.Point(523, 418);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 35);
             this.button1.TabIndex = 2;
             this.button1.Text = "Detalle Venta";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
+            // 
             // ventasTableAdapter
-            //
+            // 
             this.ventasTableAdapter.ClearBeforeFill = true;
-            //
+            // 
             // FormRegistroVentas
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(616, 427);
+            this.ClientSize = new System.Drawing.Size(796, 465);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
