@@ -16,6 +16,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         public Productos()
         {
             InitializeComponent();
+            EstablecerEstadoEditable(false);
         }
 
 
@@ -32,7 +33,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         private void Productos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+            this.productoTableAdapter.FillBy1(this.datosTianguis.Producto);
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             GuarButton.Enabled = edit;
 
             nombre.ReadOnly = !edit;
+            marca.ReadOnly = !edit;
             descripcion.ReadOnly = !edit;
             proveedor.Enabled = edit;
             precio.Enabled = edit;
@@ -173,7 +175,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             EstablecerEstadoEditable(false);
         }
 
-        private void ElmButton_Click(object sender, EventArgs e)
+        private void ElmButton_Click_1(object sender, EventArgs e)
         {
 
             if (dgproductos.CurrentCell == null)
@@ -215,6 +217,24 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             CargaProveedorActual();
             nombre.Focus();
             EstablecerEstadoEditable(true);
+        }
+
+        private void CanButton_Click(object sender, EventArgs e)
+        {
+            EstablecerEstadoEditable(false);
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.FillBy1(this.datosTianguis.Producto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

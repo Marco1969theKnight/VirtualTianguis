@@ -46,7 +46,7 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             int Bandera;
             SqlDataReader Encontrado;
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Producto WHERE Nombre = '" + Nombre + "'";
+            String query = "SELECT * FROM Producto WHERE Nombre = '" + Nombre +"' And ProductoActivo = 'true'";
 
             SqlConnection myConnection = new SqlConnection(ConnectionString);
             try
