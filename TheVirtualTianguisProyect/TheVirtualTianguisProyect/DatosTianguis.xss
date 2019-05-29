@@ -14,7 +14,7 @@
     <Shape ID="DesignTable:Proveedor" ZOrder="6" X="1018" Y="49" Height="158" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:Relacion_Proveedor_Producto" ZOrder="5" X="1016" Y="225" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
     <Shape ID="DesignTable:DetalleVentas" ZOrder="3" X="397" Y="362" Height="250" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:Factura" ZOrder="1" X="62" Y="483" Height="273" Width="219" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
+    <Shape ID="DesignTable:Factura" ZOrder="1" X="62" Y="483" Height="296" Width="219" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
   </Shapes>
   <Connectors />
 </DiagramLayout>
