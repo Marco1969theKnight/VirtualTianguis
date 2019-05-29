@@ -28,5 +28,22 @@ namespace TheVirtualTianguisProyect.Formas.Vender
         {
 
         }
+<<<<<<< HEAD
+=======
+
+
+        private void fillByToolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ventasTableAdapter.FillBy(this.datosTianguis.Ventas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+>>>>>>> ebf0494c5d84aba24b75cc63e4b4e55bf76f68f0
     }
 }
