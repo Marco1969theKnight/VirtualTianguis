@@ -76,7 +76,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         }
         private void CargaProveedorActual()
         {
-            if (dgproductos.CurrentCell == null)  // Is there any row selected now?
+            if (dgproductos.CurrentCell == null)
             {
                 ModifButton.Enabled = false;
                 ElmButton.Enabled = false;
@@ -161,7 +161,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                     ClearFields();
                 }
 
-                this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+                this.productoTableAdapter.FillBy1(this.datosTianguis.Producto);
             }
             if (pageAction == "mod")
             {
@@ -208,7 +208,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             }
 
             this.productoTableAdapter.GetData();
-            this.productoTableAdapter.Fill(this.datosTianguis.Producto);
+            this.productoTableAdapter.FillBy1(this.datosTianguis.Producto);
 
             EstablecerEstadoEditable(false);
 
@@ -248,6 +248,12 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
             this.Close();
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Almacen.NuevoProveedor Forma = new TheVirtualTianguisProyect.Formas.Almacen.NuevoProveedor();
+            Forma.Show();
         }
     }
 }

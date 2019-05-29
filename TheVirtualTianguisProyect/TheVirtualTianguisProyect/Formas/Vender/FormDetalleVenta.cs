@@ -12,9 +12,20 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 {
     public partial class FormDetalleVenta : Form
     {
-        public FormDetalleVenta()
+        int NoVenta;
+        public FormDetalleVenta(double venta)
         {
             InitializeComponent();
+            NoVenta = (int)venta;
+        }
+
+        private void FormDetalleVenta_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis1.DetalleVentas' Puede moverla o quitarla según sea necesario.
+            this.detalleVentasTableAdapter.FillByNoVenta(this.datosTianguis1.DetalleVentas,NoVenta);
+            
+
+            dgDetalleVenta.AutoGenerateColumns = true;
         }
     }
 }

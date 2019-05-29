@@ -104,7 +104,8 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             Int32 id = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("Ventas", "NoVenta");
             Int32 idDetalle = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("DetalleVentas", "IdDetalleVenta");
             DatosVenta.NoVenta = id;
-            DatosVenta.Fecha = dateTimePicker1.Value.ToShortDateString();
+            DatosVenta.Fecha = dateTimePicker1.Value;
+            
             DatosVenta.Total = 0;
             DatosVenta.Detalle = idDetalle;
             DatosVenta.Empleado = TheVirtualTianguisProyect.Properties.Settings.Default.IDEmpleados;

@@ -33,17 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.agregar = new System.Windows.Forms.Button();
             this.dgproveedor = new System.Windows.Forms.DataGridView();
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.datosTianguisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
             this.proveedorTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProveedorTableAdapter();
             this.idproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorActivoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgproveedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             this.SuspendLayout();
             // 
             // nombre
@@ -71,10 +71,12 @@
             this.agregar.TabIndex = 2;
             this.agregar.Text = "Aceptar";
             this.agregar.UseVisualStyleBackColor = true;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // dgproveedor
             // 
             this.dgproveedor.AutoGenerateColumns = false;
+            this.dgproveedor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgproveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgproveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproveedorDataGridViewTextBoxColumn,
@@ -86,20 +88,20 @@
             this.dgproveedor.Size = new System.Drawing.Size(546, 176);
             this.dgproveedor.TabIndex = 3;
             // 
-            // datosTianguis
+            // proveedorBindingSource
             // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.proveedorBindingSource.DataMember = "Proveedor";
+            this.proveedorBindingSource.DataSource = this.datosTianguisBindingSource;
             // 
             // datosTianguisBindingSource
             // 
             this.datosTianguisBindingSource.DataSource = this.datosTianguis;
             this.datosTianguisBindingSource.Position = 0;
             // 
-            // proveedorBindingSource
+            // datosTianguis
             // 
-            this.proveedorBindingSource.DataMember = "Proveedor";
-            this.proveedorBindingSource.DataSource = this.datosTianguisBindingSource;
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // proveedorTableAdapter
             // 
@@ -111,6 +113,7 @@
             this.idproveedorDataGridViewTextBoxColumn.HeaderText = "Id_proveedor";
             this.idproveedorDataGridViewTextBoxColumn.Name = "idproveedorDataGridViewTextBoxColumn";
             this.idproveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idproveedorDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -128,18 +131,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(600, 316);
             this.Controls.Add(this.dgproveedor);
             this.Controls.Add(this.agregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nombre);
             this.Name = "NuevoProveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Proveedor";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgproveedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -67,9 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // Agrbutton
-            // 
+            //
             this.Agrbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agrbutton.Location = new System.Drawing.Point(600, 60);
             this.Agrbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -79,9 +79,9 @@
             this.Agrbutton.Text = "Agregar Nuevo Producto";
             this.Agrbutton.UseVisualStyleBackColor = true;
             this.Agrbutton.Click += new System.EventHandler(this.Agrbutton_Click);
-            // 
+            //
             // Salbutton
-            // 
+            //
             this.Salbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salbutton.Location = new System.Drawing.Point(600, 150);
             this.Salbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -91,9 +91,9 @@
             this.Salbutton.Text = "Salir";
             this.Salbutton.UseVisualStyleBackColor = true;
             this.Salbutton.Click += new System.EventHandler(this.Salbutton_Click);
-            // 
+            //
             // Canbutton
-            // 
+            //
             this.Canbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Canbutton.Location = new System.Drawing.Point(600, 210);
             this.Canbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -103,9 +103,9 @@
             this.Canbutton.Text = "Cancelar";
             this.Canbutton.UseVisualStyleBackColor = true;
             this.Canbutton.Click += new System.EventHandler(this.Canbutton_Click);
-            // 
+            //
             // Busbutton
-            // 
+            //
             this.Busbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Busbutton.Location = new System.Drawing.Point(600, 270);
             this.Busbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -115,9 +115,9 @@
             this.Busbutton.Text = "Asignar Cliente";
             this.Busbutton.UseVisualStyleBackColor = true;
             this.Busbutton.Click += new System.EventHandler(this.Busbutton_Click);
-            // 
+            //
             // dataGridView1
-            // 
+            //
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -140,9 +140,9 @@
             this.dataGridView1.Size = new System.Drawing.Size(520, 180);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(309, 480);
@@ -150,9 +150,9 @@
             this.label1.Size = new System.Drawing.Size(58, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Total:";
-            // 
+            //
             // numericUpDown1
-            // 
+            //
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(389, 480);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -166,9 +166,9 @@
             this.numericUpDown1.Size = new System.Drawing.Size(180, 34);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(211, 580);
@@ -176,9 +176,9 @@
             this.label2.Size = new System.Drawing.Size(50, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "RFC:";
-            // 
+            //
             // textBox1
-            // 
+            //
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(300, 580);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -187,9 +187,9 @@
             this.textBox1.Size = new System.Drawing.Size(300, 34);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
+            //
             // Facbutton
-            // 
+            //
             this.Facbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Facbutton.Location = new System.Drawing.Point(600, 450);
             this.Facbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,9 +199,9 @@
             this.Facbutton.Text = "Facturar Compra";
             this.Facbutton.UseVisualStyleBackColor = true;
             this.Facbutton.Click += new System.EventHandler(this.Facbutton_Click);
-            // 
+            //
             // NVenbutton
-            // 
+            //
             this.NVenbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NVenbutton.Location = new System.Drawing.Point(600, 330);
             this.NVenbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -211,9 +211,9 @@
             this.NVenbutton.Text = "Nueva Venta";
             this.NVenbutton.UseVisualStyleBackColor = true;
             this.NVenbutton.Click += new System.EventHandler(this.NVenbutton_Click);
-            // 
+            //
             // dateTimePicker1
-            // 
+            //
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,9 +222,9 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(360, 34);
             this.dateTimePicker1.TabIndex = 11;
-            // 
+            //
             // label3
-            // 
+            //
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(75, 530);
@@ -232,9 +232,9 @@
             this.label3.Size = new System.Drawing.Size(113, 28);
             this.label3.TabIndex = 12;
             this.label3.Text = "Dia de Hoy:";
-            // 
+            //
             // SelVbutton
-            // 
+            //
             this.SelVbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelVbutton.Location = new System.Drawing.Point(600, 390);
             this.SelVbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -244,9 +244,9 @@
             this.SelVbutton.Text = "Seleccionar venta";
             this.SelVbutton.UseVisualStyleBackColor = true;
             this.SelVbutton.Click += new System.EventHandler(this.SelVbutton_Click);
-            // 
+            //
             // dataGridView2
-            // 
+            //
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
@@ -267,93 +267,98 @@
             this.dataGridView2.Size = new System.Drawing.Size(520, 180);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
+            //
             // idDetalleVentaDataGridViewTextBoxColumn
-            // 
+            //
             this.idDetalleVentaDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleVenta";
             this.idDetalleVentaDataGridViewTextBoxColumn.HeaderText = "IdDetalleVenta";
             this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
             this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDetalleVentaDataGridViewTextBoxColumn.Visible = false;
+
             this.idDetalleVentaDataGridViewTextBoxColumn.Width = 129;
-            // 
+
+            //
             // productoDataGridViewTextBoxColumn
-            // 
+            //
             this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+      this.productoDataGridViewTextBoxColumn.Width = 75;
             this.productoDataGridViewTextBoxColumn.ReadOnly = true;
             this.productoDataGridViewTextBoxColumn.Visible = false;
             this.productoDataGridViewTextBoxColumn.Width = 94;
-            // 
+
+            //
             // cantidadDataGridViewTextBoxColumn
-            // 
+            //
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
             this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Width = 93;
-            // 
+            //
             // noVentaDataGridViewTextBoxColumn1
-            // 
+            //
             this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+
             this.noVentaDataGridViewTextBoxColumn1.ReadOnly = true;
             this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 92;
-            // 
+            //
             // detalleVentasBindingSource
-            // 
+            //
             this.detalleVentasBindingSource.DataMember = "DetalleVentas";
             this.detalleVentasBindingSource.DataSource = this.datosTianguis;
-            // 
+            //
             // datosTianguis
-            // 
+            //
             this.datosTianguis.DataSetName = "DatosTianguis";
             this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            //
             // noVentaDataGridViewTextBoxColumn
-            // 
+            //
             this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
             this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
             this.noVentaDataGridViewTextBoxColumn.Width = 92;
-            // 
+            //
             // fechaDataGridViewTextBoxColumn
-            // 
+            //
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
             this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 76;
-            // 
+            //
             // totalDataGridViewTextBoxColumn
-            // 
+            //
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             this.totalDataGridViewTextBoxColumn.Width = 69;
-            // 
+            //
             // empleadoDataGridViewTextBoxColumn
-            // 
+            //
             this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
             this.empleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // detalleDataGridViewTextBoxColumn
-            // 
+            //
             this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
             this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
             this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
             this.detalleDataGridViewTextBoxColumn.ReadOnly = true;
             this.detalleDataGridViewTextBoxColumn.Width = 81;
-            // 
+            //
             // ventaActivaDataGridViewCheckBoxColumn
-            // 
+            //
             this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
@@ -362,20 +367,20 @@
             this.ventaActivaDataGridViewCheckBoxColumn.Width = 89;
             // 
             // ventasBindingSource
-            // 
+            //
             this.ventasBindingSource.DataMember = "Ventas";
             this.ventasBindingSource.DataSource = this.datosTianguis;
-            // 
+            //
             // ventasTableAdapter
-            // 
+            //
             this.ventasTableAdapter.ClearBeforeFill = true;
-            // 
+            //
             // detalleVentasTableAdapter
-            // 
+            //
             this.detalleVentasTableAdapter.ClearBeforeFill = true;
-            // 
+            //
             // FormNuevaVenta
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;

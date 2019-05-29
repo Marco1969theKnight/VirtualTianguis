@@ -11,7 +11,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
     class DatosVenta
     {
         public Int32 NoVenta;
-        public String Fecha;
+        public DateTime Fecha;
         public Int32 Total;
         public Int32 Empleado;
         public Int32 Detalle;
@@ -31,7 +31,7 @@ namespace TheVirtualTianguisProyect.Negocios.Datos
 
             if (dr["Fecha"] != DBNull.Value)
             {
-                this.Fecha = dr["Fecha"].ToString();
+                this.Fecha = DateTime.Parse(dr["Fecha"].ToString());
             }
 
             if (dr["Total"] != DBNull.Value)
