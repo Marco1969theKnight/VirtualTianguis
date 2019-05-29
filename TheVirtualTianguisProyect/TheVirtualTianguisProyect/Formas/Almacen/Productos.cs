@@ -236,5 +236,12 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             }
 
         }
+
+        private void SalButton_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
+            Application.Exit();
+
+        }
     }
 }

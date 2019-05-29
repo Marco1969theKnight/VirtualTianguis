@@ -28,8 +28,7 @@ namespace TheVirtualTianguisProyect.Formas.Vender
         {
 
         }
-<<<<<<< HEAD
-=======
+
 
 
         private void fillByToolStripButton1_Click(object sender, EventArgs e)
@@ -44,6 +43,11 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             }
 
         }
->>>>>>> ebf0494c5d84aba24b75cc63e4b4e55bf76f68f0
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Formas.Vender.FormDetalleVenta dv = new TheVirtualTianguisProyect.Formas.Vender.FormDetalleVenta();
+            dv.Show();
+        }
     }
 }
