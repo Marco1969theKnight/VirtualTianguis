@@ -338,6 +338,7 @@
             this.idDetalleVentaDataGridViewTextBoxColumn.HeaderText = "IdDetalleVenta";
             this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
             this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDetalleVentaDataGridViewTextBoxColumn.Visible = false;
             this.idDetalleVentaDataGridViewTextBoxColumn.Width = 102;
             // 
             // productoDataGridViewTextBoxColumn
@@ -345,6 +346,7 @@
             this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            this.productoDataGridViewTextBoxColumn.Visible = false;
             this.productoDataGridViewTextBoxColumn.Width = 75;
             // 
             // cantidadDataGridViewTextBoxColumn
@@ -359,6 +361,7 @@
             this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+            this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 74;
             // 
             // FormNuevaVenta
