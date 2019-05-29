@@ -36,17 +36,17 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void AltaFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "insert into Factura( FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( '" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", " + DatosFactura.Cliente + ", '" + DatosFactura.FacturaActiva + "') ";
+            String query = "insert into Factura( FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, FacturaActiva ) values ( '" + DatosFactura.FechaFacturacion + "', " + "'" + DatosFactura.UsuarioEmisor + "', " + DatosFactura.Pago + ", " + DatosFactura.Productos + " , " + DatosFactura.NoVenta + ", '" + DatosFactura.Cliente + "', '" + DatosFactura.FacturaActiva + "') ";
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static Double VerificaFacturaAlta(System.Int32 NoVenta)
+        public static Double VerificaFacturaAlta(System.Int32 ID)
         {
             int Bandera;
             SqlDataReader Encontrado;
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Factura WHERE ID= " + ID;
 
             SqlConnection myConnection = new SqlConnection(ConnectionString);
             try
@@ -80,15 +80,15 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
         public static void ActualizaDatosFactura(TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "update Factura set FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = " + DatosFactura.Cliente + ", FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
+            String query = "update Factura set FechaFacturacion = '" + DatosFactura.FechaFacturacion + "', UsuarioEmisor = '" + DatosFactura.UsuarioEmisor + "', Pago = " + DatosFactura.Pago + ", Productos = " + DatosFactura.Productos + ", NoVenta = " + DatosFactura.NoVenta + ", Cliente = '" + DatosFactura.Cliente + "', FacturaActiva = '" + DatosFactura.FacturaActiva + "' where ID = " + DatosFactura.ID;
 
             TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteNonQuery(ConnectionString, query);
         }
 
-        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatos(System.String NoVenta)
+        public static TheVirtualTianguisProyect.Negocios.Datos.DatosFactura ObtenerDatos(System.String ID)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "SELECT * FROM Factura WHERE NoVenta= " + NoVenta;
+            String query = "SELECT * FROM Factura WHERE ID= " + ID;
 
             DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Factura");
             if (Dt.Rows.Count == 0)

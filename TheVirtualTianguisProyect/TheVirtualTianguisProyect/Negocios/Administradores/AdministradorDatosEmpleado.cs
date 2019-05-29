@@ -63,19 +63,6 @@ namespace TheVirtualTianguisProyect.Negocios.Administradores
             return new TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado(Dt.Rows[0]);
         }
 
-        public static String ObtenerUsuarioEmpleado(System.Int32 IDEmpleado)
-        {
-            String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);
-            String query = "select Nombre_usuario from Empleado where id_empleado = " + IDEmpleado;
-            DataTable Dt = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.ExecuteQuery(ConnectionString, query, "Empleado");
-            if (Dt.Rows.Count == 0)
-            {
-                return null;
-            }
-
-            return Dt.Rows[0].ToString();
-        }
-
         public static TheVirtualTianguisProyect.Negocios.Datos.DatosEmpleado ObtenerDatosEmpleado_Usuario(System.String Usuario, System.String Contraseña)
         {
             String ConnectionString = String.Format(TheVirtualTianguisProyect.Properties.Settings.Default.Conexion);

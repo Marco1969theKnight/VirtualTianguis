@@ -128,5 +128,17 @@ namespace TheVirtualTianguisProyect.Properties {
                 this["NoVentaAct"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IDFacturaAct {
+            get {
+                return ((int)(this["IDFacturaAct"]));
+            }
+            set {
+                this["IDFacturaAct"] = value;
+            }
+        }
     }
 }
