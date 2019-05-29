@@ -238,7 +238,7 @@
     <EmbeddedResource Include="Formas\Vender\FormRegistroVentas.resx">
       <DependentUpon>FormRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\Vender\ReportFactura.rdlc" />
+    <EmbeddedResource Include="Formas\Vender\ReportFactura1.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

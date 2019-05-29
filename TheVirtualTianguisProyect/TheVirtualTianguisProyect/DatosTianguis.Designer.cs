@@ -10409,10 +10409,9 @@ SELECT ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, F
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, Fa" +
-                "cturaActiva\r\nFROM     Factura AS WH\r\nWHERE  (FacturaActiva = 1) AND (NoVenta = @" +
-                "NoVenta)";
+                "cturaActiva\r\nFROM     Factura AS WH\r\nWHERE  (FacturaActiva = 1) AND (ID = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NoVenta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10443,14 +10442,9 @@ SELECT ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByNoVentaFactura(DatosTianguis.FacturaDataTable dataTable, global::System.Nullable<int> NoVenta) {
+        public virtual int FillByNoVentaFactura(DatosTianguis.FacturaDataTable dataTable, int ID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((NoVenta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoVenta.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -10462,14 +10456,9 @@ SELECT ID, FechaFacturacion, UsuarioEmisor, Pago, Productos, NoVenta, Cliente, F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DatosTianguis.FacturaDataTable GetDataByNoVentaFactura(global::System.Nullable<int> NoVenta) {
+        public virtual DatosTianguis.FacturaDataTable GetDataByNoVentaFactura(int ID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((NoVenta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NoVenta.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
             DatosTianguis.FacturaDataTable dataTable = new DatosTianguis.FacturaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
