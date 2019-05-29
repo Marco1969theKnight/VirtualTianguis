@@ -31,26 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroVentas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datosTianguis1 = new TheVirtualTianguisProyect.DatosTianguis();
-            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.noVentaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.noVentaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.VentasTableAdapter();
-            this.ventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventaActivaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,8 +55,13 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.noVentaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ventasBindingSource1;
+            this.noVentaDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.empleadoDataGridViewTextBoxColumn,
+            this.detalleDataGridViewTextBoxColumn,
+            this.ventaActivaDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.ventasBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 44);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -73,70 +71,10 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // noVentaDataGridViewTextBoxColumn
-            // 
-            this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
-            this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
-            this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
-            this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noVentaDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.datosTianguis1;
-            // 
-            // datosTianguis1
-            // 
-            this.datosTianguis1.DataSetName = "DatosTianguis";
-            this.datosTianguis1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // detalleVentasBindingSource
-            // 
-            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
-            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
-            // 
             // datosTianguis
             // 
             this.datosTianguis.DataSetName = "DatosTianguis";
             this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.noVentaToolStripLabel,
-            this.noVentaToolStripTextBox,
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(616, 25);
-            this.fillByToolStrip.TabIndex = 1;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // noVentaToolStripLabel
-            // 
-            this.noVentaToolStripLabel.Name = "noVentaToolStripLabel";
-            this.noVentaToolStripLabel.Size = new System.Drawing.Size(55, 22);
-            this.noVentaToolStripLabel.Text = "NoVenta:";
-            // 
-            // noVentaToolStripTextBox
-            // 
-            this.noVentaToolStripTextBox.Name = "noVentaToolStripTextBox";
-            this.noVentaToolStripTextBox.Size = new System.Drawing.Size(76, 25);
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(46, 22);
-            this.fillByToolStripButton.Text = "Buscar";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
-            // detalleVentasTableAdapter
-            // 
-            this.detalleVentasTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -149,14 +87,62 @@
             this.button1.Text = "Detalle Venta";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.datosTianguis;
+            // 
             // ventasTableAdapter
             // 
             this.ventasTableAdapter.ClearBeforeFill = true;
             // 
-            // ventasBindingSource1
+            // noVentaDataGridViewTextBoxColumn
             // 
-            this.ventasBindingSource1.DataMember = "Ventas";
-            this.ventasBindingSource1.DataSource = this.datosTianguis1;
+            this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
+            this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noVentaDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // empleadoDataGridViewTextBoxColumn
+            // 
+            this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
+            this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
+            this.empleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.empleadoDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // detalleDataGridViewTextBoxColumn
+            // 
+            this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
+            this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
+            this.detalleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.detalleDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // ventaActivaDataGridViewCheckBoxColumn
+            // 
+            this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
+            this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
+            this.ventaActivaDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ventaActivaDataGridViewCheckBoxColumn.Width = 71;
             // 
             // FormRegistroVentas
             // 
@@ -165,7 +151,6 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(616, 427);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -175,15 +160,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormRegistroVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -191,17 +170,14 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private DatosTianguis datosTianguis;
-        private System.Windows.Forms.BindingSource detalleVentasBindingSource;
-        private DatosTianguisTableAdapters.DetalleVentasTableAdapter detalleVentasTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripLabel noVentaToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox noVentaToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn;
-        private DatosTianguis datosTianguis1;
         private System.Windows.Forms.BindingSource ventasBindingSource;
         private DatosTianguisTableAdapters.VentasTableAdapter ventasTableAdapter;
-        private System.Windows.Forms.BindingSource ventasBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detalleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ventaActivaDataGridViewCheckBoxColumn;
     }
 }
