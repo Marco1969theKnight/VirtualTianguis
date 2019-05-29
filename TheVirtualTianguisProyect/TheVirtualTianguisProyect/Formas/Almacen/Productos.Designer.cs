@@ -58,12 +58,15 @@
             this.proveedor = new System.Windows.Forms.TextBox();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
+            this.Id_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoActivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
@@ -267,12 +270,15 @@
             this.dgproductos.AutoGenerateColumns = false;
             this.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_producto,
             this.nombreDataGridViewTextBoxColumn,
+            this.Column1,
             this.marcaDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.categoriaDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
-            this.proveedorDataGridViewTextBoxColumn});
+            this.proveedorDataGridViewTextBoxColumn,
+            this.ProductoActivo});
             this.dgproductos.DataSource = this.productoBindingSource1;
             this.dgproductos.Location = new System.Drawing.Point(22, 66);
             this.dgproductos.Name = "dgproductos";
@@ -325,12 +331,26 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
+            // Id_producto
+            // 
+            this.Id_producto.DataPropertyName = "Id_producto";
+            this.Id_producto.HeaderText = "Id_producto";
+            this.Id_producto.Name = "Id_producto";
+            this.Id_producto.ReadOnly = true;
+            // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id_producto";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // marcaDataGridViewTextBoxColumn
             // 
@@ -366,6 +386,13 @@
             this.proveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
             this.proveedorDataGridViewTextBoxColumn.Name = "proveedorDataGridViewTextBoxColumn";
             this.proveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ProductoActivo
+            // 
+            this.ProductoActivo.DataPropertyName = "ProductoActivo";
+            this.ProductoActivo.HeaderText = "ProductoActivo";
+            this.ProductoActivo.Name = "ProductoActivo";
+            this.ProductoActivo.ReadOnly = true;
             // 
             // Productos
             // 
@@ -436,11 +463,14 @@
         private System.Windows.Forms.TextBox precio;
         private System.Windows.Forms.TextBox proveedor;
         private System.Windows.Forms.BindingSource productoBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn proveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ProductoActivo;
     }
 }
