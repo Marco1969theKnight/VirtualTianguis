@@ -714,12 +714,13 @@ WHERE  (Proveedor = @Proveedor)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Conexion (Settings)" DbObjectName="VirTian.dbo.Producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, ProductoActivo
-FROM            Producto
-WHERE        (ProductoActivo = 'TRUE')</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, P.Descripcion, P.Proveedor, P.ProductoActivo, PR.Nombre AS Proveedores
+FROM            Producto AS P INNER JOIN
+                         Proveedor AS PR ON P.Proveedor = PR.Id_proveedor
+WHERE        (P.ProductoActivo = 'TRUE')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -734,7 +735,7 @@ FROM     Producto AS P INNER JOIN
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCategoria" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByCategoria" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByCategoria">
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCategoria" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByCategoria" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByCategoria">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias,  P.Descripcion, P.Proveedor, P.ProductoActivo
@@ -747,7 +748,7 @@ WHERE  (P.Categoria = @Categoria) AND (P.ProductoActivo = 1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByMarca" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByMarca" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByMarca">
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByMarca" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByMarca" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByMarca">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias, P.Descripcion, P.Proveedor, P.ProductoActivo
@@ -760,7 +761,7 @@ WHERE  (P.Marca = @Marca) AND (P.ProductoActivo = 1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNombre2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByNombre2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByNombre2">
+              <DbSource ConnectionRef="Conexion (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNombre2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByNombre2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByNombre2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, I.NumeroExistencias, P.Descripcion, P.Proveedor, P.ProductoActivo
@@ -1059,7 +1060,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
   <xs:element name="DatosTianguis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosTianguis" msprop:Generator_UserDSName="DatosTianguis">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1126,7 +1127,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_RowClassName="VentasRow" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowEvArgName="VentasRowChangeEvent">
+        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_RowEvArgName="VentasRowChangeEvent" msprop:Generator_RowClassName="VentasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NoVenta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNoVenta" msprop:Generator_ColumnPropNameInRow="NoVenta" msprop:Generator_ColumnPropNameInTable="NoVentaColumn" msprop:Generator_UserColumnName="NoVenta" type="xs:int" />
@@ -1138,7 +1139,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Empleado" msprop:Generator_TableClassName="EmpleadoDataTable" msprop:Generator_TableVarName="tableEmpleado" msprop:Generator_RowChangedName="EmpleadoRowChanged" msprop:Generator_TablePropName="Empleado" msprop:Generator_RowDeletingName="EmpleadoRowDeleting" msprop:Generator_RowChangingName="EmpleadoRowChanging" msprop:Generator_RowEvHandlerName="EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadoRowDeleted" msprop:Generator_RowClassName="EmpleadoRow" msprop:Generator_UserTableName="Empleado" msprop:Generator_RowEvArgName="EmpleadoRowChangeEvent">
+        <xs:element name="Empleado" msprop:Generator_TableClassName="EmpleadoDataTable" msprop:Generator_TableVarName="tableEmpleado" msprop:Generator_TablePropName="Empleado" msprop:Generator_RowDeletingName="EmpleadoRowDeleting" msprop:Generator_RowChangingName="EmpleadoRowChanging" msprop:Generator_RowEvHandlerName="EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadoRowDeleted" msprop:Generator_UserTableName="Empleado" msprop:Generator_RowChangedName="EmpleadoRowChanged" msprop:Generator_RowEvArgName="EmpleadoRowChangeEvent" msprop:Generator_RowClassName="EmpleadoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_empleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_empleado" msprop:Generator_ColumnPropNameInRow="Id_empleado" msprop:Generator_ColumnPropNameInTable="Id_empleadoColumn" msprop:Generator_UserColumnName="Id_empleado" type="xs:int" />
@@ -1194,7 +1195,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Inventario" msprop:Generator_TableClassName="InventarioDataTable" msprop:Generator_TableVarName="tableInventario" msprop:Generator_RowChangedName="InventarioRowChanged" msprop:Generator_TablePropName="Inventario" msprop:Generator_RowDeletingName="InventarioRowDeleting" msprop:Generator_RowChangingName="InventarioRowChanging" msprop:Generator_RowEvHandlerName="InventarioRowChangeEventHandler" msprop:Generator_RowDeletedName="InventarioRowDeleted" msprop:Generator_RowClassName="InventarioRow" msprop:Generator_UserTableName="Inventario" msprop:Generator_RowEvArgName="InventarioRowChangeEvent">
+        <xs:element name="Inventario" msprop:Generator_TableClassName="InventarioDataTable" msprop:Generator_TableVarName="tableInventario" msprop:Generator_TablePropName="Inventario" msprop:Generator_RowDeletingName="InventarioRowDeleting" msprop:Generator_RowChangingName="InventarioRowChanging" msprop:Generator_RowEvHandlerName="InventarioRowChangeEventHandler" msprop:Generator_RowDeletedName="InventarioRowDeleted" msprop:Generator_UserTableName="Inventario" msprop:Generator_RowChangedName="InventarioRowChanged" msprop:Generator_RowEvArgName="InventarioRowChangeEvent" msprop:Generator_RowClassName="InventarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Productos" msprop:Generator_ColumnVarNameInTable="columnProductos" msprop:Generator_ColumnPropNameInRow="Productos" msprop:Generator_ColumnPropNameInTable="ProductosColumn" msprop:Generator_UserColumnName="Productos" type="xs:int" minOccurs="0" />
@@ -1202,7 +1203,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_RowClassName="ProductoRow" msprop:Generator_UserTableName="Producto" msprop:Generator_RowEvArgName="ProductoRowChangeEvent">
+        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_UserTableName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_RowClassName="ProductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_producto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_producto" msprop:Generator_ColumnPropNameInRow="Id_producto" msprop:Generator_ColumnPropNameInTable="Id_productoColumn" msprop:Generator_UserColumnName="Id_producto" type="xs:int" />
@@ -1240,7 +1241,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Proveedor" msprop:Generator_TableClassName="ProveedorDataTable" msprop:Generator_TableVarName="tableProveedor" msprop:Generator_RowChangedName="ProveedorRowChanged" msprop:Generator_TablePropName="Proveedor" msprop:Generator_RowDeletingName="ProveedorRowDeleting" msprop:Generator_RowChangingName="ProveedorRowChanging" msprop:Generator_RowEvHandlerName="ProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedorRowDeleted" msprop:Generator_RowClassName="ProveedorRow" msprop:Generator_UserTableName="Proveedor" msprop:Generator_RowEvArgName="ProveedorRowChangeEvent">
+        <xs:element name="Proveedor" msprop:Generator_TableClassName="ProveedorDataTable" msprop:Generator_TableVarName="tableProveedor" msprop:Generator_TablePropName="Proveedor" msprop:Generator_RowDeletingName="ProveedorRowDeleting" msprop:Generator_RowChangingName="ProveedorRowChanging" msprop:Generator_RowEvHandlerName="ProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedorRowDeleted" msprop:Generator_UserTableName="Proveedor" msprop:Generator_RowChangedName="ProveedorRowChanged" msprop:Generator_RowEvArgName="ProveedorRowChangeEvent" msprop:Generator_RowClassName="ProveedorRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_proveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_proveedor" msprop:Generator_ColumnPropNameInRow="Id_proveedor" msprop:Generator_ColumnPropNameInTable="Id_proveedorColumn" msprop:Generator_UserColumnName="Id_proveedor" type="xs:int" />
@@ -1255,7 +1256,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Relacion_Proveedor_Producto" msprop:Generator_TableClassName="Relacion_Proveedor_ProductoDataTable" msprop:Generator_TableVarName="tableRelacion_Proveedor_Producto" msprop:Generator_RowChangedName="Relacion_Proveedor_ProductoRowChanged" msprop:Generator_TablePropName="Relacion_Proveedor_Producto" msprop:Generator_RowDeletingName="Relacion_Proveedor_ProductoRowDeleting" msprop:Generator_RowChangingName="Relacion_Proveedor_ProductoRowChanging" msprop:Generator_RowEvHandlerName="Relacion_Proveedor_ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="Relacion_Proveedor_ProductoRowDeleted" msprop:Generator_RowClassName="Relacion_Proveedor_ProductoRow" msprop:Generator_UserTableName="Relacion_Proveedor_Producto" msprop:Generator_RowEvArgName="Relacion_Proveedor_ProductoRowChangeEvent">
+        <xs:element name="Relacion_Proveedor_Producto" msprop:Generator_TableClassName="Relacion_Proveedor_ProductoDataTable" msprop:Generator_TableVarName="tableRelacion_Proveedor_Producto" msprop:Generator_TablePropName="Relacion_Proveedor_Producto" msprop:Generator_RowDeletingName="Relacion_Proveedor_ProductoRowDeleting" msprop:Generator_RowChangingName="Relacion_Proveedor_ProductoRowChanging" msprop:Generator_RowEvHandlerName="Relacion_Proveedor_ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="Relacion_Proveedor_ProductoRowDeleted" msprop:Generator_UserTableName="Relacion_Proveedor_Producto" msprop:Generator_RowChangedName="Relacion_Proveedor_ProductoRowChanged" msprop:Generator_RowEvArgName="Relacion_Proveedor_ProductoRowChangeEvent" msprop:Generator_RowClassName="Relacion_Proveedor_ProductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" msprop:Generator_UserColumnName="Proveedor" type="xs:int" minOccurs="0" />
@@ -1263,7 +1264,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DetalleVentas" msprop:Generator_TableClassName="DetalleVentasDataTable" msprop:Generator_TableVarName="tableDetalleVentas" msprop:Generator_TablePropName="DetalleVentas" msprop:Generator_RowDeletingName="DetalleVentasRowDeleting" msprop:Generator_RowChangingName="DetalleVentasRowChanging" msprop:Generator_RowEvHandlerName="DetalleVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleVentasRowDeleted" msprop:Generator_UserTableName="DetalleVentas" msprop:Generator_RowChangedName="DetalleVentasRowChanged" msprop:Generator_RowEvArgName="DetalleVentasRowChangeEvent" msprop:Generator_RowClassName="DetalleVentasRow">
+        <xs:element name="DetalleVentas" msprop:Generator_TableClassName="DetalleVentasDataTable" msprop:Generator_TableVarName="tableDetalleVentas" msprop:Generator_RowChangedName="DetalleVentasRowChanged" msprop:Generator_TablePropName="DetalleVentas" msprop:Generator_RowDeletingName="DetalleVentasRowDeleting" msprop:Generator_RowChangingName="DetalleVentasRowChanging" msprop:Generator_RowEvHandlerName="DetalleVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleVentasRowDeleted" msprop:Generator_RowClassName="DetalleVentasRow" msprop:Generator_UserTableName="DetalleVentas" msprop:Generator_RowEvArgName="DetalleVentasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdDetalleVenta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdDetalleVenta" msprop:Generator_ColumnPropNameInRow="IdDetalleVenta" msprop:Generator_ColumnPropNameInTable="IdDetalleVentaColumn" msprop:Generator_UserColumnName="IdDetalleVenta" type="xs:int" />
@@ -1273,7 +1274,7 @@ WHERE  (FacturaActiva = 1) AND (NoVenta = @NoVenta)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_RowClassName="FacturaRow" msprop:Generator_UserTableName="Factura" msprop:Generator_RowEvArgName="FacturaRowChangeEvent">
+        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_UserTableName="Factura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_RowEvArgName="FacturaRowChangeEvent" msprop:Generator_RowClassName="FacturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

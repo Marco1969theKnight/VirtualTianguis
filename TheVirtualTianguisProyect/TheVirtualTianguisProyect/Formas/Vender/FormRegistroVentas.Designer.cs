@@ -67,7 +67,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 363);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 363);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(796, 465);
+            this.ClientSize = new System.Drawing.Size(819, 668);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

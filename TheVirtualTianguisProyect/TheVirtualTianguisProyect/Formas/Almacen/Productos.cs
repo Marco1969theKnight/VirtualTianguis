@@ -26,14 +26,20 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             marca.Text = String.Empty;
             categoria.Text = String.Empty;
             descripcion.Text = String.Empty;
-            proveedor.Text = String.Empty;
             precio.Text = String.Empty;
         }
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis1.Proveedor' Puede moverla o quitarla según sea necesario.
+            this.proveedorTableAdapter.Fill(this.datosTianguis1.Proveedor);
             // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.FillBy1(this.datosTianguis.Producto);
+            dgproductos.AutoGenerateColumns = true;
+            if (proveedores.Text == string.Empty)
+            {
+                proveedores.Enabled = false;
+            }
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)
@@ -63,9 +69,9 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             nombre.ReadOnly = !edit;
             marca.ReadOnly = !edit;
             descripcion.ReadOnly = !edit;
-            proveedor.Enabled = edit;
             precio.Enabled = edit;
             categoria.ReadOnly = !edit;
+            proveedores.Enabled = edit;
 
         }
         private void CargaProveedorActual()
@@ -91,7 +97,6 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
             marca.Text = DatosUsuario.Marca;
             categoria.Text = DatosUsuario.Categoria;
             precio.Text = DatosUsuario.Precio.ToString();
-            proveedor.Text = DatosUsuario.Proveedor.ToString();
         }
 
         private void GuarButton_Click_1(object sender, EventArgs e)
@@ -141,8 +146,9 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                     DatosProductos.Precio = float.Parse(precio.Text);
                     DatosProductos.Categoria = categoria.Text;
                     DatosProductos.Descripcion = descripcion.Text;
-                    DatosProductos.Proveedor = Int32.Parse(proveedor.Text);
+                    //DatosProductos.Proveedor = Int32.Parse(proveedor.Text);
                     DatosProductos.ProductoActivo = true;
+                    DatosProductos.Proveedor = int.Parse(proveedores.SelectedIndex.ToString()) + 1;
 
                     TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.AltaProducto(DatosProductos);
 
@@ -151,7 +157,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                 else
                 {
                     MessageBox.Show("Ya Existe un Producto con los mismos DATOS");
-                    //EstablecerEstadoEditable(false);
+                    EstablecerEstadoEditable(false);
                     ClearFields();
                 }
 
@@ -166,7 +172,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
                 DatosProductos.Precio = float.Parse(precio.Text);
                 DatosProductos.Categoria = categoria.Text.ToUpper();
                 DatosProductos.Descripcion = descripcion.Text.ToUpper();
-                DatosProductos.Proveedor = int.Parse(proveedor.Text);
+                DatosProductos.Proveedor = int.Parse(proveedores.SelectedIndex.ToString()) + 1;
                 DatosProductos.ProductoActivo = true;
 
                 TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosProducto.ActualizaDatosProducto(DatosProductos);
@@ -240,8 +246,8 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         private void SalButton_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
+            this.Close();
             Application.Exit();
-
         }
     }
 }

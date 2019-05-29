@@ -51,13 +51,6 @@
             this.nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgproductos = new System.Windows.Forms.DataGridView();
-            this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
-            this.label7 = new System.Windows.Forms.Label();
-            this.precio = new System.Windows.Forms.TextBox();
-            this.proveedor = new System.Windows.Forms.TextBox();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
             this.Id_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +60,24 @@
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoActivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.label7 = new System.Windows.Forms.Label();
+            this.precio = new System.Windows.Forms.TextBox();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProductoTableAdapter();
+            this.proveedores = new System.Windows.Forms.ComboBox();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosTianguis1 = new TheVirtualTianguisProyect.DatosTianguis();
+            this.proveedorTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.ProveedorTableAdapter();
+            this.label8 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -163,36 +169,36 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(357, 342);
+            this.button2.Location = new System.Drawing.Point(41, 450);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 85);
             this.button2.TabIndex = 32;
-            this.button2.Text = "Realizar nuevo pedido";
+            this.button2.Text = "Realizar pedido de producto";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(458, 248);
+            this.button1.Location = new System.Drawing.Point(473, 332);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 85);
+            this.button1.Size = new System.Drawing.Size(100, 75);
             this.button1.TabIndex = 31;
-            this.button1.Text = "Agregar Nuevo Proveedor";
+            this.button1.Text = "Agregar Proveedor";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // descripcion
             // 
             this.descripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcion.Location = new System.Drawing.Point(205, 365);
+            this.descripcion.Location = new System.Drawing.Point(41, 356);
             this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(100, 29);
+            this.descripcion.Size = new System.Drawing.Size(244, 29);
             this.descripcion.TabIndex = 30;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(201, 342);
+            this.label6.Location = new System.Drawing.Point(37, 332);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 21);
             this.label6.TabIndex = 29;
@@ -202,7 +208,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 342);
+            this.label5.Location = new System.Drawing.Point(480, 247);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 27;
@@ -211,7 +217,7 @@
             // categoria
             // 
             this.categoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoria.Location = new System.Drawing.Point(349, 271);
+            this.categoria.Location = new System.Drawing.Point(333, 271);
             this.categoria.Name = "categoria";
             this.categoria.Size = new System.Drawing.Size(100, 29);
             this.categoria.TabIndex = 26;
@@ -220,7 +226,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(345, 248);
+            this.label4.Location = new System.Drawing.Point(329, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 21);
             this.label4.TabIndex = 25;
@@ -229,7 +235,7 @@
             // marca
             // 
             this.marca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marca.Location = new System.Drawing.Point(205, 271);
+            this.marca.Location = new System.Drawing.Point(185, 271);
             this.marca.Name = "marca";
             this.marca.Size = new System.Drawing.Size(100, 29);
             this.marca.TabIndex = 24;
@@ -238,7 +244,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(201, 248);
+            this.label3.Location = new System.Drawing.Point(181, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 21);
             this.label3.TabIndex = 23;
@@ -286,57 +292,13 @@
             this.dgproductos.Size = new System.Drawing.Size(562, 150);
             this.dgproductos.TabIndex = 20;
             // 
-            // productoBindingSource1
-            // 
-            this.productoBindingSource1.DataMember = "Producto";
-            this.productoBindingSource1.DataSource = this.datosTianguis;
-            // 
-            // datosTianguis
-            // 
-            this.datosTianguis.DataSetName = "DatosTianguis";
-            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 418);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 21);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Proveedor:";
-            // 
-            // precio
-            // 
-            this.precio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(41, 366);
-            this.precio.Name = "precio";
-            this.precio.Size = new System.Drawing.Size(100, 29);
-            this.precio.TabIndex = 37;
-            // 
-            // proveedor
-            // 
-            this.proveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proveedor.Location = new System.Drawing.Point(41, 457);
-            this.proveedor.Name = "proveedor";
-            this.proveedor.Size = new System.Drawing.Size(100, 29);
-            this.proveedor.TabIndex = 38;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.datosTianguis;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
             // Id_producto
             // 
             this.Id_producto.DataPropertyName = "Id_producto";
             this.Id_producto.HeaderText = "Id_producto";
             this.Id_producto.Name = "Id_producto";
             this.Id_producto.ReadOnly = true;
+            this.Id_producto.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -386,6 +348,7 @@
             this.proveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
             this.proveedorDataGridViewTextBoxColumn.Name = "proveedorDataGridViewTextBoxColumn";
             this.proveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.proveedorDataGridViewTextBoxColumn.Visible = false;
             // 
             // ProductoActivo
             // 
@@ -393,6 +356,80 @@
             this.ProductoActivo.HeaderText = "ProductoActivo";
             this.ProductoActivo.Name = "ProductoActivo";
             this.ProductoActivo.ReadOnly = true;
+            this.ProductoActivo.Visible = false;
+            // 
+            // productoBindingSource1
+            // 
+            this.productoBindingSource1.DataMember = "Producto";
+            this.productoBindingSource1.DataSource = this.datosTianguis;
+            // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(324, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 21);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Proveedor:";
+            // 
+            // precio
+            // 
+            this.precio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precio.Location = new System.Drawing.Point(484, 271);
+            this.precio.Name = "precio";
+            this.precio.Size = new System.Drawing.Size(100, 29);
+            this.precio.TabIndex = 37;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.datosTianguis;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // proveedores
+            // 
+            this.proveedores.DataSource = this.proveedorBindingSource;
+            this.proveedores.DisplayMember = "Nombre";
+            this.proveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.proveedores.FormattingEnabled = true;
+            this.proveedores.Location = new System.Drawing.Point(328, 356);
+            this.proveedores.Name = "proveedores";
+            this.proveedores.Size = new System.Drawing.Size(100, 28);
+            this.proveedores.TabIndex = 39;
+            this.proveedores.ValueMember = "Id_proveedor";
+            // 
+            // proveedorBindingSource
+            // 
+            this.proveedorBindingSource.DataMember = "Proveedor";
+            this.proveedorBindingSource.DataSource = this.datosTianguis1;
+            // 
+            // datosTianguis1
+            // 
+            this.datosTianguis1.DataSetName = "DatosTianguis";
+            this.datosTianguis1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proveedorTableAdapter
+            // 
+            this.proveedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(37, 426);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(175, 21);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Seleccione un producto:";
             // 
             // Productos
             // 
@@ -400,7 +437,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(616, 547);
-            this.Controls.Add(this.proveedor);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.proveedores);
             this.Controls.Add(this.precio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -428,6 +466,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,7 +501,6 @@
         private DatosTianguisTableAdapters.ProductoTableAdapter productoTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox precio;
-        private System.Windows.Forms.TextBox proveedor;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -472,5 +511,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn proveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ProductoActivo;
+        private System.Windows.Forms.ComboBox proveedores;
+        private DatosTianguis datosTianguis1;
+        private System.Windows.Forms.BindingSource proveedorBindingSource;
+        private DatosTianguisTableAdapters.ProveedorTableAdapter proveedorTableAdapter;
+        private System.Windows.Forms.Label label8;
     }
 }

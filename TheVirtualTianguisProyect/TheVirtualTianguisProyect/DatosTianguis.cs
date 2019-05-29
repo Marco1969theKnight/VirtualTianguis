@@ -19,6 +19,10 @@ namespace TheVirtualTianguisProyect {
 
 namespace TheVirtualTianguisProyect.DatosTianguisTableAdapters
 {
+    partial class ProductoTableAdapter
+    {
+    }
+
     partial class VentasTableAdapter
     {
     }
