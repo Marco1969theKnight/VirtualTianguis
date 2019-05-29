@@ -67,7 +67,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(582, 295);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 363);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -77,7 +77,7 @@
             this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
             this.noVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noVentaDataGridViewTextBoxColumn.Width = 74;
+            this.noVentaDataGridViewTextBoxColumn.Width = 92;
             // 
             // fechaDataGridViewTextBoxColumn
             // 
@@ -85,7 +85,7 @@
             this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaDataGridViewTextBoxColumn.Width = 62;
+            this.fechaDataGridViewTextBoxColumn.Width = 76;
             // 
             // totalDataGridViewTextBoxColumn
             // 
@@ -93,7 +93,7 @@
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalDataGridViewTextBoxColumn.Width = 56;
+            this.totalDataGridViewTextBoxColumn.Width = 69;
             // 
             // empleadoDataGridViewTextBoxColumn
             // 
@@ -101,7 +101,6 @@
             this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
             this.empleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.empleadoDataGridViewTextBoxColumn.Width = 79;
             // 
             // detalleDataGridViewTextBoxColumn
             // 
@@ -109,7 +108,7 @@
             this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
             this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
             this.detalleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.detalleDataGridViewTextBoxColumn.Width = 65;
+            this.detalleDataGridViewTextBoxColumn.Width = 81;
             // 
             // ventaActivaDataGridViewCheckBoxColumn
             // 
@@ -117,7 +116,7 @@
             this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
             this.ventaActivaDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.ventaActivaDataGridViewCheckBoxColumn.Width = 71;
+            this.ventaActivaDataGridViewCheckBoxColumn.Width = 89;
             // 
             // ventasBindingSource
             // 
@@ -133,7 +132,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(446, 363);
+            this.button1.Location = new System.Drawing.Point(523, 418);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 35);
             this.button1.TabIndex = 2;
@@ -147,10 +146,10 @@
             // 
             // FormRegistroVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(616, 427);
+            this.ClientSize = new System.Drawing.Size(819, 668);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

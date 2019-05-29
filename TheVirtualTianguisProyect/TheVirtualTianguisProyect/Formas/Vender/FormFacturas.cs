@@ -17,16 +17,24 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             InitializeComponent();
         }
 
-        private void FormFacturas_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
-        }
-
         private void FormFacturas_Load_1(object sender, EventArgs e)
         {
+            TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosFactura.ObtenerDatosFactura(TheVirtualTianguisProyect.Properties.Settings.Default.IDFacturaAct);
+
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.DetalleVentas' Puede moverla o quitarla según sea necesario.
+            this.detalleVentasTableAdapter.FillByNoVenta(this.datosTianguis.DetalleVentas, DatosFactura.NoVenta);
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Factura' Puede moverla o quitarla según sea necesario.
+            this.facturaTableAdapter.FillByNoVentaFactura(this.datosTianguis.Factura, DatosFactura.ID);
 
             this.reportViewer2.RefreshReport();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura = TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosFactura.ObtenerDatosFactura(TheVirtualTianguisProyect.Properties.Settings.Default.IDFacturaAct);
+
+            // TODO: esta línea de código carga datos en la tabla 'datosTianguis.Factura' Puede moverla o quitarla según sea necesario.
+            this.facturaTableAdapter.FillByNoVentaFactura(this.datosTianguis.Factura, DatosFactura.ID);
         }
     }
 }
