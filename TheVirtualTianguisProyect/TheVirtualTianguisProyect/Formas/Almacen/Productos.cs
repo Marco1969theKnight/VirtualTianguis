@@ -76,7 +76,7 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         }
         private void CargaProveedorActual()
         {
-            if (dgproductos.CurrentCell == null)  // Is there any row selected now?
+            if (dgproductos.CurrentCell == null)
             {
                 ModifButton.Enabled = false;
                 ElmButton.Enabled = false;
@@ -220,9 +220,6 @@ namespace TheVirtualTianguisProyect.Formas.Almacen
         private void ModifButton_Click_1(object sender, EventArgs e)
         {
             pageAction = "mod";
-            CargaProveedorActual();
-            nombre.Focus();
-            EstablecerEstadoEditable(true);
         }
 
         private void CanButton_Click(object sender, EventArgs e)
