@@ -66,6 +66,7 @@ namespace TheVirtualTianguisProyect.Formas
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TheVirtualTianguisProyect.Properties.Settings.Default.CloseApplication = true;
+            this.Close();
             Application.Exit();
         }
 

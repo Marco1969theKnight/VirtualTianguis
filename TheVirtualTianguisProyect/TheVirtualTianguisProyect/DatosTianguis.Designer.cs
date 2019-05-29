@@ -8730,9 +8730,10 @@ SELECT Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveedor, Pr
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proveedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Proveedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        Id_producto, Nombre, Marca, Precio, Categoria, Descripcion, Proveed" +
-                "or, ProductoActivo\r\nFROM            Producto\r\nWHERE        (ProductoActivo = \'TR" +
-                "UE\')";
+            this._commandCollection[2].CommandText = @"SELECT        P.Id_producto, P.Nombre, P.Marca, P.Precio, P.Categoria, P.Descripcion, P.Proveedor, P.ProductoActivo, PR.Nombre AS Proveedores
+FROM            Producto AS P INNER JOIN
+                         Proveedor AS PR ON P.Proveedor = PR.Id_proveedor
+WHERE        (P.ProductoActivo = 'TRUE')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
