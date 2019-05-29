@@ -60,6 +60,7 @@
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
@@ -118,6 +119,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -133,6 +136,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(60, 60);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(520, 180);
             this.dataGridView1.TabIndex = 4;
@@ -151,6 +155,7 @@
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
             this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 76;
             // 
             // totalDataGridViewTextBoxColumn
@@ -158,6 +163,7 @@
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             this.totalDataGridViewTextBoxColumn.Width = 69;
             // 
             // empleadoDataGridViewTextBoxColumn
@@ -165,12 +171,14 @@
             this.empleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.HeaderText = "Empleado";
             this.empleadoDataGridViewTextBoxColumn.Name = "empleadoDataGridViewTextBoxColumn";
+            this.empleadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // detalleDataGridViewTextBoxColumn
             // 
             this.detalleDataGridViewTextBoxColumn.DataPropertyName = "Detalle";
             this.detalleDataGridViewTextBoxColumn.HeaderText = "Detalle";
             this.detalleDataGridViewTextBoxColumn.Name = "detalleDataGridViewTextBoxColumn";
+            this.detalleDataGridViewTextBoxColumn.ReadOnly = true;
             this.detalleDataGridViewTextBoxColumn.Width = 81;
             // 
             // ventaActivaDataGridViewCheckBoxColumn
@@ -178,6 +186,7 @@
             this.ventaActivaDataGridViewCheckBoxColumn.DataPropertyName = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.HeaderText = "VentaActiva";
             this.ventaActivaDataGridViewCheckBoxColumn.Name = "ventaActivaDataGridViewCheckBoxColumn";
+            this.ventaActivaDataGridViewCheckBoxColumn.ReadOnly = true;
             this.ventaActivaDataGridViewCheckBoxColumn.Visible = false;
             this.ventaActivaDataGridViewCheckBoxColumn.Width = 71;
             // 
@@ -297,6 +306,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -310,6 +321,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(60, 270);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(520, 180);
             this.dataGridView2.TabIndex = 14;
@@ -342,6 +354,7 @@
             this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            this.productoDataGridViewTextBoxColumn.ReadOnly = true;
             this.productoDataGridViewTextBoxColumn.Visible = false;
             this.productoDataGridViewTextBoxColumn.Width = 94;
             // 
@@ -350,6 +363,7 @@
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Width = 93;
             // 
             // noVentaDataGridViewTextBoxColumn1
@@ -357,8 +371,21 @@
             this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+            this.noVentaDataGridViewTextBoxColumn1.ReadOnly = true;
             this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 92;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(600, 510);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 39);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Crear Factura";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormNuevaVenta
             // 
@@ -366,6 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(819, 668);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.SelVbutton);
             this.Controls.Add(this.label3);
@@ -433,5 +461,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button button1;
     }
 }

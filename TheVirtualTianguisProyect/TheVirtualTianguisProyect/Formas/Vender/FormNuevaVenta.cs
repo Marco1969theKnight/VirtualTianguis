@@ -143,6 +143,12 @@ namespace TheVirtualTianguisProyect.Formas.Vender
 
         private void Facbutton_Click(object sender, EventArgs e)
         {
+            TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
+            Form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             Int32 id_factura = TheVirtualTianguisProyect.Persistencia.AdministradorDatos.SiguienteID("Factura", "ID");
             TheVirtualTianguisProyect.Negocios.Datos.DatosFactura DatosFactura = new TheVirtualTianguisProyect.Negocios.Datos.DatosFactura();
             DatosFactura.FechaFacturacion = dateTimePicker1.Value.ToShortDateString();
@@ -156,8 +162,6 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosFactura.AltaFactura(DatosFactura);
             MessageBox.Show(id_factura.ToString());
             TheVirtualTianguisProyect.Properties.Settings.Default.IDFacturaAct = id_factura;
-            TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
-            Form.Show();
         }
     }
 }
