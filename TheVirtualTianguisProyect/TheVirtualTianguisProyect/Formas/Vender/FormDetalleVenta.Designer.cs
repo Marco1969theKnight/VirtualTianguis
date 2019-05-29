@@ -28,20 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetalleVenta));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgDetalleVenta = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.datosTianguis = new TheVirtualTianguisProyect.DatosTianguis();
+            this.detalleVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detalleVentasTableAdapter = new TheVirtualTianguisProyect.DatosTianguisTableAdapters.DetalleVentasTableAdapter();
+            this.idDetalleVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datosTianguis1 = new TheVirtualTianguisProyect.DatosTianguis();
+            this.detalleVentasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalleVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgDetalleVenta
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(482, 279);
-            this.dataGridView1.TabIndex = 0;
+            this.dgDetalleVenta.AutoGenerateColumns = false;
+            this.dgDetalleVenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDetalleVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDetalleVentaDataGridViewTextBoxColumn,
+            this.productoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.noVentaDataGridViewTextBoxColumn});
+            this.dgDetalleVenta.DataSource = this.detalleVentasBindingSource1;
+            this.dgDetalleVenta.Location = new System.Drawing.Point(27, 49);
+            this.dgDetalleVenta.Name = "dgDetalleVenta";
+            this.dgDetalleVenta.Size = new System.Drawing.Size(482, 279);
+            this.dgDetalleVenta.TabIndex = 0;
             // 
             // label1
             // 
@@ -53,6 +74,55 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mostrandose Detalle de Venta seleccionada:";
             // 
+            // datosTianguis
+            // 
+            this.datosTianguis.DataSetName = "DatosTianguis";
+            this.datosTianguis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detalleVentasBindingSource
+            // 
+            this.detalleVentasBindingSource.DataMember = "DetalleVentas";
+            this.detalleVentasBindingSource.DataSource = this.datosTianguis;
+            // 
+            // detalleVentasTableAdapter
+            // 
+            this.detalleVentasTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDetalleVentaDataGridViewTextBoxColumn
+            // 
+            this.idDetalleVentaDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleVenta";
+            this.idDetalleVentaDataGridViewTextBoxColumn.HeaderText = "IdDetalleVenta";
+            this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
+            this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productoDataGridViewTextBoxColumn
+            // 
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // noVentaDataGridViewTextBoxColumn
+            // 
+            this.noVentaDataGridViewTextBoxColumn.DataPropertyName = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.HeaderText = "NoVenta";
+            this.noVentaDataGridViewTextBoxColumn.Name = "noVentaDataGridViewTextBoxColumn";
+            // 
+            // datosTianguis1
+            // 
+            this.datosTianguis1.DataSetName = "DatosTianguis";
+            this.datosTianguis1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detalleVentasBindingSource1
+            // 
+            this.detalleVentasBindingSource1.DataMember = "DetalleVentas";
+            this.detalleVentasBindingSource1.DataSource = this.datosTianguis1;
+            // 
             // FormDetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -60,13 +130,18 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(534, 366);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgDetalleVenta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormDetalleVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle Venta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDetalleVenta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalleVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosTianguis1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,7 +149,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgDetalleVenta;
         private System.Windows.Forms.Label label1;
+        private DatosTianguis datosTianguis;
+        private System.Windows.Forms.BindingSource detalleVentasBindingSource;
+        private DatosTianguisTableAdapters.DetalleVentasTableAdapter detalleVentasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalleVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noVentaDataGridViewTextBoxColumn;
+        private DatosTianguis datosTianguis1;
+        private System.Windows.Forms.BindingSource detalleVentasBindingSource1;
     }
 }
