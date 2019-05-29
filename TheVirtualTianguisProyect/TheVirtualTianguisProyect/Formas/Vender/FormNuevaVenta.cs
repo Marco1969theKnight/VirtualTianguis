@@ -155,7 +155,6 @@ namespace TheVirtualTianguisProyect.Formas.Vender
             DatosFactura.Cliente = TheVirtualTianguisProyect.Properties.Settings.Default.RFCCliente;
             DatosFactura.FacturaActiva = true;
             TheVirtualTianguisProyect.Negocios.Administradores.AdministradorDatosFactura.AltaFactura(DatosFactura);
-            MessageBox.Show(id_factura.ToString());
             TheVirtualTianguisProyect.Properties.Settings.Default.IDFacturaAct = id_factura;
             TheVirtualTianguisProyect.Formas.Vender.FormFacturas Form = new TheVirtualTianguisProyect.Formas.Vender.FormFacturas();
             Form.Show();
