@@ -347,16 +347,20 @@
             this.idDetalleVentaDataGridViewTextBoxColumn.Name = "idDetalleVentaDataGridViewTextBoxColumn";
             this.idDetalleVentaDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDetalleVentaDataGridViewTextBoxColumn.Visible = false;
+
             this.idDetalleVentaDataGridViewTextBoxColumn.Width = 129;
+
             // 
             // productoDataGridViewTextBoxColumn
             // 
             this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+      this.productoDataGridViewTextBoxColumn.Width = 75;
             this.productoDataGridViewTextBoxColumn.ReadOnly = true;
             this.productoDataGridViewTextBoxColumn.Visible = false;
             this.productoDataGridViewTextBoxColumn.Width = 94;
+
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
@@ -371,6 +375,7 @@
             this.noVentaDataGridViewTextBoxColumn1.DataPropertyName = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.HeaderText = "NoVenta";
             this.noVentaDataGridViewTextBoxColumn1.Name = "noVentaDataGridViewTextBoxColumn1";
+
             this.noVentaDataGridViewTextBoxColumn1.ReadOnly = true;
             this.noVentaDataGridViewTextBoxColumn1.Visible = false;
             this.noVentaDataGridViewTextBoxColumn1.Width = 92;
@@ -386,6 +391,7 @@
             this.button1.Text = "Crear Factura";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // FormNuevaVenta
             // 
