@@ -24,9 +24,10 @@ CREATE TABLE Factura (
 	Pago FLOAT,
 	Productos INT,
 	NoVenta INT,
-	Cliente NVARCHAR(50),
+	Cliente nvarchar(50),
 	FacturaActiva BIT
 )
+
 
 CREATE TABLE Ventas (
 	NoVenta INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
