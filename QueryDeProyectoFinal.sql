@@ -24,7 +24,7 @@ CREATE TABLE Factura (
 	Pago FLOAT,
 	Productos INT,
 	NoVenta INT,
-	Cliente INT,
+	Cliente NVARCHAR(50),
 	FacturaActiva BIT
 )
 
